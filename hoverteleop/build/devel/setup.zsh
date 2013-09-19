@@ -3,5 +3,5 @@
 
 CATKIN_SHELL=zsh
 emulate sh # emulate POSIX
-. "/opt/ros/groovy/sandbox/hoverteleop/build/devel/setup.sh"
+. "/projects/ros/surfer-main/hoverteleop/build/devel/setup.sh"
 emulate zsh # back to zsh mode

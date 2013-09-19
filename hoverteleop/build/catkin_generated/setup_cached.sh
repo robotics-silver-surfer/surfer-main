@@ -5,15 +5,15 @@
 # it emulates the modifications of the setup script without recurring computations
 
 # new environment variables
-export CATKIN_TEST_RESULTS_DIR="/opt/ros/groovy/sandbox/hoverteleop/build/test_results"
-export ROS_TEST_RESULTS_DIR="/opt/ros/groovy/sandbox/hoverteleop/build/test_results"
+export CATKIN_TEST_RESULTS_DIR="/projects/ros/surfer-main/hoverteleop/build/test_results"
+export ROS_TEST_RESULTS_DIR="/projects/ros/surfer-main/hoverteleop/build/test_results"
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel:$CMAKE_PREFIX_PATH"
-export CPATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel/include:$CPATH"
-export LD_LIBRARY_PATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel/lib:$LD_LIBRARY_PATH"
-export PATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel/bin:$PATH"
-export PKG_CONFIG_PATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PYTHONPATH="/opt/ros/groovy/sandbox/hoverteleop/build/devel/lib/python2.7/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/opt/ros/groovy/sandbox/hoverteleop/build/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/opt/ros/groovy/sandbox/hoverteleop:/opt/ros/groovy/share:/opt/ros/groovy/stacks"
+export CMAKE_PREFIX_PATH="/projects/ros/surfer-main/hoverteleop/build/devel:$CMAKE_PREFIX_PATH"
+export CPATH="/projects/ros/surfer-main/hoverteleop/build/devel/include:$CPATH"
+export LD_LIBRARY_PATH="/projects/ros/surfer-main/hoverteleop/build/devel/lib:$LD_LIBRARY_PATH"
+export PATH="/projects/ros/surfer-main/hoverteleop/build/devel/bin:$PATH"
+export PKG_CONFIG_PATH="/projects/ros/surfer-main/hoverteleop/build/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PYTHONPATH="/projects/ros/surfer-main/hoverteleop/build/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/projects/ros/surfer-main/hoverteleop/build/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/projects/ros/surfer-main/hoverteleop:/opt/ros/groovy/share:/opt/ros/groovy/stacks"

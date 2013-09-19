@@ -6,6 +6,6 @@ if [ $# -eq 0 ] ; then
   /bin/echo "Calling env.sh without arguments is not supported anymore. Instead spawn a subshell and source a setup file manually."
   exit 1
 else
-  . "/opt/ros/groovy/sandbox/hoverteleop/build/devel/setup.sh"
+  . "/projects/ros/surfer-main/hoverteleop/build/devel/setup.sh"
   exec "$@"
 fi

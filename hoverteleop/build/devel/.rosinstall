@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /opt/ros/groovy/sandbox/hoverteleop/build/devel/setup.sh
+    local-name: /projects/ros/surfer-main/hoverteleop/build/devel/setup.sh

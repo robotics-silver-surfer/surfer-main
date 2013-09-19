@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-  "/opt/ros/groovy/sandbox/hoverteleop/lib/libgtest.pdb"
-  "/opt/ros/groovy/sandbox/hoverteleop/lib/libgtest.so"
+  "/projects/ros/surfer-main/hoverteleop/lib/libgtest.pdb"
+  "/projects/ros/surfer-main/hoverteleop/lib/libgtest.so"
 )
 
 # Per-language clean rules from dependency scanning.

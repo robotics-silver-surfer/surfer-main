@@ -58,6 +58,6 @@ CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o
  /opt/ros/groovy/include/rosconsole/macros_generated.h
  /opt/ros/groovy/include/sensor_msgs/Joy.h
  /opt/ros/groovy/include/std_msgs/Header.h
- /opt/ros/groovy/sandbox/hoverteleop/src/hover_teleop.cpp
  /opt/ros/groovy/sandbox/lab1/hovercraft/msg_gen/cpp/include/hovercraft/Gyro.h
  /opt/ros/groovy/sandbox/lab1/hovercraft/msg_gen/cpp/include/hovercraft/Thruster.h
+ /projects/ros/surfer-main/hoverteleop/src/hover_teleop.cpp

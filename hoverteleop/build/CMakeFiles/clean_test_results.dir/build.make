@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /opt/ros/groovy/sandbox/hoverteleop
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/hoverteleop
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /opt/ros/groovy/sandbox/hoverteleop/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/hoverteleop/build
 
 # Utility rule file for clean_test_results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /opt/ros/groovy/sandbox/hoverteleop/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/cmake -E remove_directory /opt/ros/groovy/sandbox/hoverteleop/build/test_results
+	/usr/bin/cmake -E remove_directory /projects/ros/surfer-main/hoverteleop/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /opt/ros/groovy/sandbox/hoverteleop/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /opt/ros/groovy/sandbox/hoverteleop /opt/ros/groovy/sandbox/hoverteleop /opt/ros/groovy/sandbox/hoverteleop/build /opt/ros/groovy/sandbox/hoverteleop/build /opt/ros/groovy/sandbox/hoverteleop/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/hoverteleop/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/hoverteleop /projects/ros/surfer-main/hoverteleop /projects/ros/surfer-main/hoverteleop/build /projects/ros/surfer-main/hoverteleop/build /projects/ros/surfer-main/hoverteleop/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 
