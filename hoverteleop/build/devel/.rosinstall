@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /opt/ros/groovy/sandbox/hoverteleop/build/devel/setup.sh
