@@ -3,9 +3,34 @@
 #include <hovercraft/Thruster.h>
 #include <hovercraft/Gyro.h>
 
-#define LSXAXIS 0 
-#define LSYAXIS 1
+/* Defines for the XBOX 360 Joy Stick */
+/**
+Thrust Control
+axes go from -1 to 1
+LS = Left Stick, RS = Right Stick
+axes: [ LS X, LS Y, L Trigger, RS X, RS Y, R Trigger]
+buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D pad Down ]
+**/
+//TODO: RECHECK THIS - IMB  9/19 - Probably shouldn't do it this way, but I like it
+#define XBOX_LS_X_AXIS 	float( joy->axes[0] )
+#define XBOX_LS_Y_AXIS 	float( joy->axes[1] )
+#define XBOX_R_TRIGGER	float( joy->axes[2] )
+#define XBOX_L_TRIGGER	float( joy->axes[3] )
+#define XBOX_RS_X_AXIS 	float( joy->axes[4] )
+#define XBOX_RS_Y_AXIS 	float( joy->axes[5] )
 
+#define XBOX_A_BTN		float( joy->buttons[0] )
+#define XBOX_B_BTN		float( joy->buttons[1] )
+#define XBOX_X_BTN		float( joy->buttons[2] )
+#define XBOX_Y_BTN		float( joy->buttons[3] )
+#define XBOX_L_BUMPER	float( joy->buttons[4] )
+#define XBOX_R_BUMPER	float( joy->buttons[5] )
+#define XBOX_BACK_BTN	float( joy->buttons[6] )
+#define XBOX_START_BTN	float( joy->buttons[7] )
+#define XBOX_XBOX_BTN	float( joy->buttons[8] )
+
+#define TURN_SCALAR		0.3   /* Scalar for the turning motors power 0 to 1 */
+#define THRUST_SCALAR	0.3   /* Scalar for the thruster motors power 0 to 1 */
 
 
 class TeleopHover
@@ -63,13 +88,13 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 	thruster1 = back thruster
 	thruster2 = Left front thruster
 	thruster3 = Not attached
-	thruster4 = right fron thruster
+	thruster4 = right front thruster
 	thruster5 = Rotate Counter Clockwise
 	thruster6 = Rotate Clockwise
   */ 
 
   /* Emergency Kill logic */ 
-  if( float(joy->buttons[8]) == 0 ) 
+  while( XBOX_XBOX_BTN == 1 )
   {
     thrust.lift = 0;
     thrust.thruster1 = 0;
@@ -78,10 +103,13 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     thrust.thruster4 = 0;
     thrust.thruster5 = 0; 
     thrust.thruster6 = 0;
+
+    thruster_pub_.publish(thrust);
+
   }
   
   /*  Power Button Logic */ 
-  if( joy->buttons[7] == 1 )
+  if( XBOX_START_BTN == 1 )
   {
     if( lift_on )
     {
@@ -91,7 +119,7 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     {  
       thrust.lift = 0.5;
       lift_on = true;
-     }
+    }
  
   }else
   {
@@ -104,22 +132,28 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     }
   }
   
-  /* Translational  logic */ 
-  if( float(joy->axes[5]) > 0 )
+  /* Translational logic */
+  if( XBOX_RS_Y_AXIS > 0 )
   {
-   thrust.thruster1 = .3 * float( joy->axes[4] ); 
+	  int magnitude = XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS +  XBOX_RS_X_AXIS * XBOX_RS_X_AXIS;
+	  thrust.thruster1 = THRUST_SCALAR * magnitude * XBOX_RS_Y_AXIS;
   }
 
+
+  /* End Translation logic */
+
   /* Turning Logic */ 
-  if( float(joy->axes[0]) > 0 )
+  if( XBOX_LS_X_AXIS > 0 )
   {
-   thrust.thruster5 = 1.0 * (.2 * float( joy->axes[0] ) );
-   thrust.thruster6 = 0; 
+	  thrust.thruster5 = 1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );
+	  thrust.thruster6 = 0;
   }else
   {
-   thrust.thruster6 = -1.0 * (.2 * float( joy->axes[0] ) );
-   thrust.thruster5 = 0; 
+	  thrust.thruster6 = -1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );  /* The Joy value is inverted */
+	  thrust.thruster5 = 0;
   }
+  /* End Turning Logic*/
+
   
   /* Publish the thrust message */ 
   thruster_pub_.publish(thrust);
