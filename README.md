@@ -17,4 +17,4 @@ After intial checkout use
 
 "git checkout" to checkout files
 and 
-"git commit" to checkin files
+"git commit" and then "get push" to checkin files to the Git Repo
