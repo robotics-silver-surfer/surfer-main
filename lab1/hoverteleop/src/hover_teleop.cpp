@@ -14,10 +14,10 @@ buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D 
 //TODO: RECHECK THIS - IMB  9/19 - Probably shouldn't do it this way, but I like it
 #define XBOX_LS_X_AXIS 	float( joy->axes[0] )
 #define XBOX_LS_Y_AXIS 	float( joy->axes[1] )
-#define XBOX_R_TRIGGER	float( joy->axes[2] )
-#define XBOX_L_TRIGGER	float( joy->axes[3] )
-#define XBOX_RS_X_AXIS 	float( joy->axes[4] )
-#define XBOX_RS_Y_AXIS 	float( joy->axes[5] )
+#define XBOX_R_TRIGGER	float( joy->axes[5] )
+#define XBOX_L_TRIGGER	float( joy->axes[2] )
+#define XBOX_RS_X_AXIS 	float( joy->axes[3] )
+#define XBOX_RS_Y_AXIS 	float( joy->axes[4] )
 
 #define XBOX_A_BTN		float( joy->buttons[0] )
 #define XBOX_B_BTN		float( joy->buttons[1] )
@@ -62,6 +62,7 @@ TeleopHover::TeleopHover():
   nh_.param("scale_angular", a_scale_, a_scale_);
   nh_.param("scale_linear", l_scale_, l_scale_);
 
+  lift_on;
 
   thruster_pub_ = nh_.advertise<hovercraft::Thruster>("hovercraft/Thruster", 1);
 
@@ -77,7 +78,7 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
  
   /**
   Thrust Control 
-  axes go from -1 to 1 
+  Values of axes go from -1 to 1 
   LS = Left Stick, RS = Right Stick 
   axes: [ LS X, LS Y, L Trigger, RS X, RS Y, R Trigger] 
   buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D pad Down ]
@@ -94,7 +95,7 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
   */ 
 
   /* Emergency Kill logic */ 
-  while( XBOX_XBOX_BTN == 1 )
+  if( XBOX_XBOX_BTN == 1 )
   {
     thrust.lift = 0;
     thrust.thruster1 = 0;
@@ -132,12 +133,66 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     }
   }
   
+  float magnitude;
+
   /* Translational logic */
-  if( XBOX_RS_Y_AXIS > 0 )
+  
+  //North
+  if( XBOX_RS_Y_AXIS > 0 && XBOX_RS_X_AXIS == 0 )
   {
-	  int magnitude = XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS +  XBOX_RS_X_AXIS * XBOX_RS_X_AXIS;
-	  thrust.thruster1 = THRUST_SCALAR * magnitude * XBOX_RS_Y_AXIS;
+	magnitude = XBOX_RS_Y_AXIS;
+
+	if( magnitude > 0.7 )
+	  magnitude = 0.75;
+	else
+	  magnitude = XBOX_RS_Y_AXIS;
+
+	thrust.thruster1 = magnitude;
   }
+
+  //South
+  else if( XBOX_RS_Y_AXIS < 0 && XBOX_RS_X_AXIS == 0)
+  {
+  	magnitude = XBOX_RS_Y_AXIS * -1;
+
+	if( magnitude > 0.7 )
+          magnitude = 0.75;
+        else
+          magnitude = XBOX_RS_Y_AXIS * -1;
+
+        thrust.thruster2 = magnitude;
+	thrust.thruster4 = magnitude;
+
+  }
+
+  //East
+  else if( XBOX_RS_X_AXIS > 0 && XBOX_RS_Y_AXIS == 0)
+  {
+	magnitude = XBOX_RS_X_AXIS;
+
+  	if( magnitude > 0.7 )
+	  magnitude = 0.75;
+	else
+	  magnitude = XBOX_RS_X_AXIS;
+
+	thrust.thruster2 = magnitude;
+	thrust.thruster1 = magnitude * 0.5;
+  }
+
+  //West
+  else if ( XBOX_RS_X_AXIS < 0  && XBOX_RS_Y_AXIS == 0)
+  {
+  	magnitude = XBOX_RS_X_AXIS * -1;
+
+	if( magnitude > 0.7 )
+	  magnitude = 0.75;
+	else
+	  magnitude = XBOX_RS_X_AXIS * -1;
+
+	thrust.thruster4 = magnitude;
+	thrust.thruster1 = 0.5*magnitude;
+  }
+
 
 
   /* End Translation logic */
