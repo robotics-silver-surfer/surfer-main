@@ -7,13 +7,13 @@
    "GYRORAW"
    "<ADCRAW>"
    "ADCRAW"
-   "<GPIORAW>"
-   "GPIORAW"
    "<THRUSTERRAW>"
    "THRUSTERRAW"
-   "<LEDRAW>"
-   "LEDRAW"
    "<SERVORAW>"
    "SERVORAW"
+   "<GPIORAW>"
+   "GPIORAW"
+   "<LEDRAW>"
+   "LEDRAW"
   ))
 

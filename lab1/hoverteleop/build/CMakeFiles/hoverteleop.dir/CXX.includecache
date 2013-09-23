@@ -674,6 +674,30 @@ ros/assert.h
 std_msgs/Header.h
 /projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/std_msgs/Header.h
 
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/LED.h
+string
+-
+vector
+-
+map
+-
+ostream
+-
+ros/serialization.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/serialization.h
+ros/builtin_message_traits.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/builtin_message_traits.h
+ros/message_operations.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/message_operations.h
+ros/time.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/time.h
+ros/macros.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/macros.h
+ros/assert.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/ros/assert.h
+std_msgs/Header.h
+/projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/std_msgs/Header.h
+
 /projects/ros/surfer-main/lab1/hovercraft/msg_gen/cpp/include/hovercraft/Thruster.h
 string
 -
@@ -706,5 +730,7 @@ sensor_msgs/Joy.h
 hovercraft/Thruster.h
 -
 hovercraft/Gyro.h
+-
+hovercraft/LED.h
 -
 

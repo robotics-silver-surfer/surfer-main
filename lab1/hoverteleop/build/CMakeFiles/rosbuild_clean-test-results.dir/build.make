@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab1/hoverteleop/build
 include CMakeFiles/rosbuild_clean-test-results.dir/progress.make
 
 CMakeFiles/rosbuild_clean-test-results:
-	if ! rm -rf /home/izzy/.ros/test_results/hoverteleop; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
+	if ! rm -rf /root/.ros/test_results/hoverteleop; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
 
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results.dir/build.make

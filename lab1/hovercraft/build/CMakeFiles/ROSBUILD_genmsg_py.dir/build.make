@@ -44,43 +44,14 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
-../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_Thruster.py
 ../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_Gyro.py
+../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_Thruster.py
 ../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_Current.py
-../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_BatteryVoltage.py
 ../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_LED.py
+../src/hovercraft/msg/__init__.py: ../src/hovercraft/msg/_BatteryVoltage.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg /projects/ros/surfer-main/lab1/hovercraft/msg/Gyro.msg /projects/ros/surfer-main/lab1/hovercraft/msg/Current.msg /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg /projects/ros/surfer-main/lab1/hovercraft/msg/LED.msg
-
-../src/hovercraft/msg/_Thruster.py: ../msg/Thruster.msg
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/lib/roslib/gendeps
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/hovercraft/msg/_Thruster.py: ../manifest.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/catkin/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rospack/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roslib/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rostime/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/genpy/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
-../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
-../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
-../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
-../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_Thruster.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab1/hovercraft/msg/Gyro.msg /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg /projects/ros/surfer-main/lab1/hovercraft/msg/Current.msg /projects/ros/surfer-main/lab1/hovercraft/msg/LED.msg /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg
 
 ../src/hovercraft/msg/_Gyro.py: ../msg/Gyro.msg
 ../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -107,9 +78,38 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 ../src/hovercraft/msg/_Gyro.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
 ../src/hovercraft/msg/_Gyro.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
 ../src/hovercraft/msg/_Gyro.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_Gyro.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/Gyro.msg
+
+../src/hovercraft/msg/_Thruster.py: ../msg/Thruster.msg
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/hovercraft/msg/_Thruster.py: ../manifest.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/catkin/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rospack/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roslib/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rostime/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/genpy/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
+../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
+../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
+../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
+../src/hovercraft/msg/_Thruster.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_Thruster.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg
 
 ../src/hovercraft/msg/_Current.py: ../msg/Current.msg
 ../src/hovercraft/msg/_Current.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -140,35 +140,6 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_Current.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/Current.msg
 
-../src/hovercraft/msg/_BatteryVoltage.py: ../msg/BatteryVoltage.msg
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/lib/roslib/gendeps
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/hovercraft/msg/_BatteryVoltage.py: ../manifest.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/catkin/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rospack/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roslib/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rostime/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/genpy/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
-../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
-../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_BatteryVoltage.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg
-
 ../src/hovercraft/msg/_LED.py: ../msg/LED.msg
 ../src/hovercraft/msg/_LED.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
 ../src/hovercraft/msg/_LED.py: /opt/ros/groovy/lib/roslib/gendeps
@@ -194,17 +165,46 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 ../src/hovercraft/msg/_LED.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
 ../src/hovercraft/msg/_LED.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
 ../src/hovercraft/msg/_LED.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_LED.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/LED.msg
 
+../src/hovercraft/msg/_BatteryVoltage.py: ../msg/BatteryVoltage.msg
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/hovercraft/msg/_BatteryVoltage.py: ../manifest.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/catkin/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rospack/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roslib/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rostime/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/genpy/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
+../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
+../src/hovercraft/msg/_BatteryVoltage.py: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hovercraft/msg/_BatteryVoltage.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg
+
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/hovercraft/msg/_Thruster.py
 ROSBUILD_genmsg_py: ../src/hovercraft/msg/_Gyro.py
+ROSBUILD_genmsg_py: ../src/hovercraft/msg/_Thruster.py
 ROSBUILD_genmsg_py: ../src/hovercraft/msg/_Current.py
-ROSBUILD_genmsg_py: ../src/hovercraft/msg/_BatteryVoltage.py
 ROSBUILD_genmsg_py: ../src/hovercraft/msg/_LED.py
+ROSBUILD_genmsg_py: ../src/hovercraft/msg/_BatteryVoltage.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 

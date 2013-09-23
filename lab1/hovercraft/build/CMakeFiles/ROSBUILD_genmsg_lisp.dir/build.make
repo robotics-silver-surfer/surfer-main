@@ -42,54 +42,21 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab1/hovercraft/build
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Thruster.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Thruster.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Gyro.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Gyro.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Thruster.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Thruster.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Current.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Current.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/BatteryVoltage.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/LED.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
-
-../msg_gen/lisp/Thruster.lisp: ../msg/Thruster.msg
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/lib/roslib/gendeps
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/Thruster.lisp: ../manifest.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
-../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
-../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
-../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
-../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Thruster.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Thruster.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Thruster.lisp
-
-../msg_gen/lisp/_package_Thruster.lisp: ../msg_gen/lisp/Thruster.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/BatteryVoltage.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/Gyro.lisp: ../msg/Gyro.msg
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -116,13 +83,46 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
 ../msg_gen/lisp/Gyro.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
 ../msg_gen/lisp/Gyro.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
 ../msg_gen/lisp/Gyro.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Gyro.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Gyro.lisp"
 	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/Gyro.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Gyro.lisp
 
 ../msg_gen/lisp/_package_Gyro.lisp: ../msg_gen/lisp/Gyro.lisp
+
+../msg_gen/lisp/Thruster.lisp: ../msg/Thruster.msg
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/Thruster.lisp: ../manifest.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
+../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
+../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
+../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
+../msg_gen/lisp/Thruster.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Thruster.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Thruster.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/Thruster.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Thruster.lisp
+
+../msg_gen/lisp/_package_Thruster.lisp: ../msg_gen/lisp/Thruster.lisp
 
 ../msg_gen/lisp/Current.lisp: ../msg/Current.msg
 ../msg_gen/lisp/Current.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -157,39 +157,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
 
 ../msg_gen/lisp/_package_Current.lisp: ../msg_gen/lisp/Current.lisp
 
-../msg_gen/lisp/BatteryVoltage.lisp: ../msg/BatteryVoltage.msg
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/lib/roslib/gendeps
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/BatteryVoltage.lisp: ../manifest.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
-../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
-../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/BatteryVoltage.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_BatteryVoltage.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/BatteryVoltage.lisp
-
-../msg_gen/lisp/_package_BatteryVoltage.lisp: ../msg_gen/lisp/BatteryVoltage.lisp
-
 ../msg_gen/lisp/LED.lisp: ../msg/LED.msg
 ../msg_gen/lisp/LED.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
 ../msg_gen/lisp/LED.lisp: /opt/ros/groovy/lib/roslib/gendeps
@@ -215,7 +182,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
 ../msg_gen/lisp/LED.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
 ../msg_gen/lisp/LED.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
 ../msg_gen/lisp/LED.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/LED.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_LED.lisp"
 	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/LED.msg
 
@@ -223,22 +190,55 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
 
 ../msg_gen/lisp/_package_LED.lisp: ../msg_gen/lisp/LED.lisp
 
+../msg_gen/lisp/BatteryVoltage.lisp: ../msg/BatteryVoltage.msg
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/BatteryVoltage.lisp: ../manifest.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/cereal_port/manifest.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/rxtx/manifest.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/hoverboard/manifest.xml
+../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/rxtx/msg_gen/generated
+../msg_gen/lisp/BatteryVoltage.lisp: /projects/ros/surfer-main/lab1/hoverboard/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab1/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/BatteryVoltage.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_BatteryVoltage.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab1/hovercraft/msg/BatteryVoltage.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/BatteryVoltage.lisp
+
+../msg_gen/lisp/_package_BatteryVoltage.lisp: ../msg_gen/lisp/BatteryVoltage.lisp
+
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Thruster.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Thruster.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Gyro.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Gyro.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Thruster.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Thruster.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Current.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Current.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/BatteryVoltage.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/LED.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LED.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/BatteryVoltage.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

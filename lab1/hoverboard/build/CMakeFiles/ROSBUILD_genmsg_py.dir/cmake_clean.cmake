@@ -7,10 +7,10 @@ FILE(REMOVE_RECURSE
   "../src/hoverboard/msg/_PWMRaw.py"
   "../src/hoverboard/msg/_GyroRaw.py"
   "../src/hoverboard/msg/_ADCRaw.py"
-  "../src/hoverboard/msg/_GPIORaw.py"
   "../src/hoverboard/msg/_ThrusterRaw.py"
-  "../src/hoverboard/msg/_LEDRaw.py"
   "../src/hoverboard/msg/_ServoRaw.py"
+  "../src/hoverboard/msg/_GPIORaw.py"
+  "../src/hoverboard/msg/_LEDRaw.py"
 )
 
 # Per-language clean rules from dependency scanning.
