@@ -3,6 +3,7 @@
 #include <hovercraft/Thruster.h>
 #include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h>
+#include <math.h>
 
 /* Defines for the XBOX 360 Joy Stick */
 /**
@@ -30,9 +31,14 @@ buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D 
 #define XBOX_START_BTN	float( joy->buttons[7] )
 #define XBOX_XBOX_BTN	float( joy->buttons[8] )
 
-#define TURN_SCALAR		0.3   /* Scalar for the turning motors power 0 to 1 */
-#define THRUST_SCALAR	0.9   /* Scalar for the thruster motors power 0 to 1 */
+#define TURN_SCALAR   0.3     /* Scalar for the turning motors power 0 to 1 */
+#define THRUST_SCALAR 0.9     /* Scalar for the thruster motors power 0 to 1 */
 
+#define DEGREES_120 2.094395102  /* 120 degrees in radians */
+#define DEGREES_60  1.047197551  /* 60 degrees in radians */
+#define T1_ANGLE    0.0          /* Angle of axis offset for thruster 1 (in radians)*/
+#define T2_ANGLE    2.094395102  /* Angle of axis offset for thruster 2 (in radians)*/
+#define T4_ANGLE   -2.094395102  /* Angle of axis offset for thruster 4 (in radians)*/
 
 class TeleopHover
 {
@@ -41,6 +47,9 @@ public:
 
 private:
   void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
+  void setThrusters(const sensor_msgs::Joy::ConstPtr& joy);
+  void rotateAxis(double &x_new, double &y_new, double theta, const sensor_msgs::Joy::ConstPtr& joy);
+  double setMagnitude(double x, double y);
   
   ros::NodeHandle nh_;
 
@@ -51,6 +60,8 @@ private:
   ros::Subscriber joy_sub_;
   ros::Publisher led_pub_;
 
+  hovercraft::Thruster thrust;
+  hovercraft::LED led_on;
 };
 
 
@@ -75,10 +86,6 @@ TeleopHover::TeleopHover():
 
 void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
- 
-  hovercraft::Thruster thrust;
-  hovercraft::LED led_on;
-
   led_on.led33_red = XBOX_B_BTN;
   led_on.led33_green = XBOX_A_BTN;
  
@@ -128,7 +135,8 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
       lift_on = true;
     }
  
-  }else
+  }
+  else
   {
     if( lift_on )
     {
@@ -139,130 +147,16 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     }
   }
 
-  float magnitude;
-
   /* Translational logic */
-
-  //North
-  if( XBOX_RS_Y_AXIS > 0.2 && XBOX_RS_X_AXIS > -0.2 && XBOX_RS_X_AXIS < 0.2 )
-  {
-	magnitude = XBOX_RS_Y_AXIS;
-
-	if( magnitude > 0.7 )
-	  magnitude = 0.75;
-	else
-	  magnitude = XBOX_RS_Y_AXIS;
-
-	thrust.thruster1 = magnitude;
-  }
-
-  //South
-  if( XBOX_RS_Y_AXIS < 0 && XBOX_RS_X_AXIS > -0.2 && XBOX_RS_X_AXIS < 0.2)
-  {
-  	magnitude = XBOX_RS_Y_AXIS * -1;
-
-	if( magnitude > 0.7 )
-          magnitude = 0.75;
-        else
-          magnitude = XBOX_RS_Y_AXIS * -1;
-
-	thrust.thruster2 = magnitude;
-	thrust.thruster4 = magnitude;
-  }
-
-  //East
-  if( XBOX_RS_X_AXIS > 0 && XBOX_RS_Y_AXIS > -0.2 && XBOX_RS_Y_AXIS < 0.2)
-  {
-	magnitude = XBOX_RS_X_AXIS;
-
-  	if( magnitude > 0.7 )
-	  magnitude = 0.75;
-	else
-	  magnitude = XBOX_RS_X_AXIS;
-
-	thrust.thruster4 = magnitude;
-	thrust.thruster1 = magnitude * 0.5;
-  }
-
-  //West
-  if ( XBOX_RS_X_AXIS < 0  && XBOX_RS_Y_AXIS > -0.2 && XBOX_RS_Y_AXIS < 0.2)
-  {
-  	magnitude = XBOX_RS_X_AXIS * -1;
-
-	if( magnitude > 0.7 )
-	  magnitude = 0.75;
-	else
-	  magnitude = XBOX_RS_X_AXIS * -1;
-
-
-	thrust.thruster2 = magnitude;
-	thrust.thruster1 = 0.5*magnitude;
-  }
-
- //North-East
-  if ( XBOX_RS_X_AXIS > 0.2  && XBOX_RS_Y_AXIS > 0.2)
-  {
-        magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        if( magnitude > 0.7 )
-          magnitude = 0.75;
-        else
-          magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        thrust.thruster4 = 0.5*magnitude;
-        thrust.thruster1 = magnitude;
-  }
-
- //South-East
-  if ( XBOX_RS_X_AXIS > 0.2  && XBOX_RS_Y_AXIS < -0.2)
-  {
-        magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        if( magnitude > 0.7 )
-          magnitude = 0.75;
-        else
-          magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        thrust.thruster4 = magnitude;
-  }
-
- //North-West
-  if ( XBOX_RS_X_AXIS < -0.2  && XBOX_RS_Y_AXIS > 0.2)
-  {
-        magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        if( magnitude > 0.7 )
-          magnitude = 0.75;
-        else
-          magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        thrust.thruster2 = 0.5*magnitude;
-        thrust.thruster1 = magnitude;
-
-  }
-
- //South-West
-  if ( XBOX_RS_X_AXIS < -0.2  && XBOX_RS_Y_AXIS < -0.2)
-  {
-        magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-        if( magnitude > 0.7 )
-          magnitude = 0.75;
-        else
-          magnitude =  THRUST_SCALAR * sqrt(XBOX_RS_X_AXIS*XBOX_RS_X_AXIS + XBOX_RS_Y_AXIS*XBOX_RS_Y_AXIS);
-
-          thrust.thruster2 = magnitude;
-  }
-
-
-  /* End Translation logic */
+  setThrusters(joy);
 
   /* Turning Logic */ 
   if( XBOX_LS_X_AXIS > 0 )
   {
 	  thrust.thruster5 = 1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );
 	  thrust.thruster6 = 0;
-  }else
+  }
+  else
   {
 	  thrust.thruster6 = -1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );  /* The Joy value is inverted */
 	  thrust.thruster5 = 0;
@@ -278,6 +172,66 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
   
 }
 
+//--------------------------------------------------------------------------------
+
+/* setThrusters
+ * Function used to set translational thruster magnitudes
+ * according to the controller's right analog stick position.
+ */
+void TeleopHover::setThrusters(const sensor_msgs::Joy::ConstPtr& joy)
+{
+  double x1, y1; //Thruster 1 axis
+  double x2, y2; //Thruster 2 axis
+  double x4, y4; //Thruster 4 axis
+
+  rotateAxis(x1, y1, T1_ANGLE, joy);
+  rotateAxis(x2, y2, T2_ANGLE, joy);
+  rotateAxis(x4, y4, T4_ANGLE, joy);
+
+  thrust.thruster1 = setMagnitude(x1, y1);
+  thrust.thruster2 = setMagnitude(x2, y2);
+  thrust.thruster4 = setMagnitude(x4, y4);
+}
+
+//--------------------------------------------------------------------------------
+
+/* rotateAxis
+ * Function used to rotate the hovercraft axis to the
+ * axis from the thruster's view point.
+ */
+void TeleopHover::rotateAxis(double &x_new, double &y_new, double theta, const sensor_msgs::Joy::ConstPtr& joy)
+{
+  x_new = XBOX_RS_X_AXIS * cos( theta ) + XBOX_RS_Y_AXIS * sin( theta );
+  y_new = XBOX_RS_X_AXIS * (-1) * sin( theta ) + XBOX_RS_Y_AXIS * cos( theta );
+}
+
+//--------------------------------------------------------------------------------
+
+/* setMagnitude
+ * Function used set the magnitude of the thruster according to
+ * the analog sticks position on its axis.
+ */
+double TeleopHover::setMagnitude(double x, double y)
+{
+  double theta = atan( x / y );
+  if ( x < 0 ) 
+  {
+    if ( atan( x / y ) < DEGREES_120 )
+    {
+      return sqrt( pow(x,2) + pow(y,2) ) * ( DEGREES_120 - atan( x / y ) );
+    }
+  }
+  else
+  {
+    if ( theta > DEGREES_60 )
+    {
+      return sqrt( pow(x,2) + pow(y,2) ) * ( atan( x / ( -1 * y ) ) - DEGREES_60 );
+    }
+  }
+  return 0.0;
+}
+
+//--------------------------------------------------------------------------------
 
 int main(int argc, char** argv)
 {
