@@ -13,26 +13,26 @@ LS = Left Stick, RS = Right Stick
 axes: [ LS X, LS Y, L Trigger, RS X, RS Y, R Trigger]
 buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D pad Down ]
 **/
-//TODO: RECHECK THIS - IMB  9/19 - Probably shouldn't do it this way, but I like it
-#define XBOX_LS_X_AXIS 	float( joy->axes[0] )
-#define XBOX_LS_Y_AXIS 	float( joy->axes[1] )
-#define XBOX_R_TRIGGER	float( joy->axes[5] )
-#define XBOX_L_TRIGGER	float( joy->axes[2] )
-#define XBOX_RS_X_AXIS 	float( joy->axes[3] )
-#define XBOX_RS_Y_AXIS 	float( joy->axes[4] )
 
-#define XBOX_A_BTN	float( joy->buttons[0] )
-#define XBOX_B_BTN	float( joy->buttons[1] )
-#define XBOX_X_BTN	float( joy->buttons[2] )
-#define XBOX_Y_BTN	float( joy->buttons[3] )
-#define XBOX_L_BUMPER	float( joy->buttons[4] )
-#define XBOX_R_BUMPER	float( joy->buttons[5] )
-#define XBOX_BACK_BTN	float( joy->buttons[6] )
-#define XBOX_START_BTN	float( joy->buttons[7] )
-#define XBOX_XBOX_BTN	float( joy->buttons[8] )
+#define XBOX_LS_X_AXIS 	0
+#define XBOX_LS_Y_AXIS 	1 
+#define XBOX_R_TRIGGER	5
+#define XBOX_L_TRIGGER	2
+#define XBOX_RS_X_AXIS 	3
+#define XBOX_RS_Y_AXIS 	4
 
-#define TURN_SCALAR   0.3     /* Scalar for the turning motors power 0 to 1 */
-#define THRUST_SCALAR 0.9     /* Scalar for the thruster motors power 0 to 1 */
+#define XBOX_A_BTN		0
+#define XBOX_B_BTN		1
+#define XBOX_X_BTN		2
+#define XBOX_Y_BTN		3
+#define XBOX_L_BUMPER	4
+#define XBOX_R_BUMPER	5
+#define XBOX_BACK_BTN	6
+#define XBOX_START_BTN	7
+#define XBOX_XBOX_BTN	8
+
+#define TURN_SCALAR   0.2     /* Scalar for the turning motors power 0 to 1 */
+#define THRUST_SCALAR 0.0     /* Scalar for the thruster motors power 0 to 1 */
 
 #define DEGREES_120 2.094395102  /* 120 degrees in radians */
 #define DEGREES_60  1.047197551  /* 60 degrees in radians */
@@ -86,17 +86,9 @@ TeleopHover::TeleopHover():
 
 void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
-  led_on.led33_red = XBOX_B_BTN;
-  led_on.led33_green = XBOX_A_BTN;
+  led_on.led33_red = float( joy->buttons[XBOX_B_BTN] );
+  led_on.led33_green = float( joy->buttons[XBOX_A_BTN] );
  
-  /**
-  Thrust Control 
-  Values of axes go from -1 to 1 
-  LS = Left Stick, RS = Right Stick 
-  axes: [ LS X, LS Y, L Trigger, RS X, RS Y, R Trigger] 
-  buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D pad Down ]
-  **/  
-
   /* 
 
 	thruster1 = back thruster
@@ -108,7 +100,7 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
   */ 
 
   /* Emergency Kill logic */ 
-  if( XBOX_XBOX_BTN == 1 )
+  if( float( joy->buttons[XBOX_XBOX_BTN] ) == 1 )
   {
     thrust.lift = 0;
     thrust.thruster1 = 0;
@@ -123,7 +115,7 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
   }
   
   /*  Power Button Logic */ 
-  if( XBOX_START_BTN == 1 )
+  if( float( joy->buttons[XBOX_START_BTN] ) == 1 )
   {
     if( lift_on )
     {
@@ -149,16 +141,17 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 
   /* Translational logic */
   setThrusters(joy);
+ 
 
   /* Turning Logic */ 
-  if( XBOX_LS_X_AXIS > 0 )
+  if( float( joy->axes[XBOX_LS_X_AXIS] ) > 0 )
   {
-	  thrust.thruster5 = 1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );
+	  thrust.thruster5 = 1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) );
 	  thrust.thruster6 = 0;
   }
   else
   {
-	  thrust.thruster6 = -1.0 * (TURN_SCALAR * XBOX_LS_X_AXIS );  /* The Joy value is inverted */
+	  thrust.thruster6 = -1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) );  /* The Joy value is inverted */
 	  thrust.thruster5 = 0;
   }
   /* End Turning Logic*/
@@ -201,8 +194,8 @@ void TeleopHover::setThrusters(const sensor_msgs::Joy::ConstPtr& joy)
  */
 void TeleopHover::rotateAxis(double &x_new, double &y_new, double theta, const sensor_msgs::Joy::ConstPtr& joy)
 {
-  x_new = XBOX_RS_X_AXIS * cos( theta ) + XBOX_RS_Y_AXIS * sin( theta );
-  y_new = XBOX_RS_X_AXIS * (-1) * sin( theta ) + XBOX_RS_Y_AXIS * cos( theta );
+  x_new = float( joy->axes[XBOX_RS_X_AXIS] ) * cos( theta ) + float( joy->axes[XBOX_RS_Y_AXIS] ) * sin( theta );
+  y_new = float( joy->axes[XBOX_RS_X_AXIS] ) * (-1) * sin( theta ) + float( joy->axes[XBOX_RS_Y_AXIS] ) * cos( theta );
 }
 
 //--------------------------------------------------------------------------------
@@ -218,14 +211,14 @@ double TeleopHover::setMagnitude(double x, double y)
   {
     if ( atan( x / y ) < DEGREES_120 )
     {
-      return sqrt( pow(x,2) + pow(y,2) ) * ( DEGREES_120 - atan( x / y ) );
+      return sqrt( pow(x,2) + pow(y,2) ) * ( ( DEGREES_120 - atan( x / y ) ) / DEGREES_120);
     }
   }
   else
   {
     if ( theta > DEGREES_60 )
     {
-      return sqrt( pow(x,2) + pow(y,2) ) * ( atan( x / ( -1 * y ) ) - DEGREES_60 );
+      return sqrt( pow(x,2) + pow(y,2) ) * ( ( atan( x / ( -1 * y ) ) - DEGREES_60 ) / DEGREES_120 );
     }
   }
   return 0.0;
