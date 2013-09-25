@@ -24,7 +24,7 @@
 #define XBOX_START_BTN	7
 #define XBOX_XBOX_BTN	8
 
-#define TURN_SCALAR   0.4     /* Scalar for the turning motors power 0 to 1 */
+#define TURN_SCALAR   0.6     /* Scalar for the turning motors power 0 to 1 */
 #define THRUST_SCALAR 0.7     /* Scalar for the thruster motors power 0 to 1 */
 #define PI 3.141592           /* PI */
 
@@ -53,7 +53,7 @@ private:
   int linear_, angular_;
   double l_scale_, a_scale_;
   bool lift_on, turn_on;
-  double gyro_rate;		
+  double gyro_rate;
   ros::Publisher thruster_pub_;
   ros::Subscriber joy_sub_;
   ros::Subscriber gyro_sub_;
@@ -94,9 +94,18 @@ void TeleopHover::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
   /* Gyro Rate Stops at -358 degrees/sec going cc  */ 
   //ROS_INFO( "Rate: %f Angle: %f", gyro->rate, gyro->angle);
   /* If the Gyro Rate is outside the limits, disable turning */
-  if( gyro->rate >= (GYRO_RATE_CCW_MAX - TURN_ON_THRESHOLD) || gyro->rate <= (GYRO_RATE_CC_MAX + TURN_ON_THRESHOLD) )
+  if( gyro->rate >= (GYRO_RATE_CCW_MAX - TURN_ON_THRESHOLD) )
   {
     /* Approaching Gyro limits disable turning */
+    turn_on = false;
+    thrust.thruster5 = 0.0;
+    thruster_pub_.publish(thrust);
+
+  }else if( gyro->rate <= (GYRO_RATE_CC_MAX + TURN_ON_THRESHOLD) )
+  {
+    /* Approaching Gyro limits disable turning */
+    thrust.thruster6 = 0.0;
+    thruster_pub_.publish(thrust);
     turn_on = false;
   }else
   {
@@ -111,6 +120,7 @@ void TeleopHover::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 /* joyCallback: Main function for all joy processing  */
 void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
+  
   /* Turning on and off the LEDs on the board */
   led_on.led33_red = float( joy->buttons[XBOX_B_BTN] );
   led_on.led33_green = float( joy->buttons[XBOX_A_BTN] );
