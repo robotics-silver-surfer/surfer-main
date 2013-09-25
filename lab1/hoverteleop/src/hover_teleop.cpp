@@ -6,13 +6,6 @@
 #include <math.h>
 
 /* Defines for the XBOX 360 Joy Stick */
-/**
-Thrust Control
-axes go from -1 to 1
-LS = Left Stick, RS = Right Stick
-axes: [ LS X, LS Y, L Trigger, RS X, RS Y, R Trigger]
-buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D pad Down ]
-**/
 
 #define XBOX_LS_X_AXIS 	0
 #define XBOX_LS_Y_AXIS 	1 
@@ -31,8 +24,8 @@ buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D 
 #define XBOX_START_BTN	7
 #define XBOX_XBOX_BTN	8
 
-#define TURN_SCALAR   0.2     /* Scalar for the turning motors power 0 to 1 */
-#define THRUST_SCALAR 0.5     /* Scalar for the thruster motors power 0 to 1 */
+#define TURN_SCALAR   0.4     /* Scalar for the turning motors power 0 to 1 */
+#define THRUST_SCALAR 0.7     /* Scalar for the thruster motors power 0 to 1 */
 #define PI 3.141592           /* PI */
 
 #define DEGREES_240 4.188790205  /* 240 degrees in radians */
@@ -42,6 +35,10 @@ buttons: [ A, B, X, Y, LB, RB, Back, Start, XBOX, D pad L, D pad R, D pad Up, D 
 #define T2_ANGLE    2.094395102  /* Angle of axis offset for thruster 2 (in radians)*/
 #define T4_ANGLE    4.188790205  /* Angle of axis offset for thruster 4 (in radians)*/
 
+#define GYRO_RATE_CCW_MAX 628	/* Maximum deg/sec reading of the Gyro CCW  */
+#define GYRO_RATE_CC_MAX  -315	/* Maximum deg/sec reading of the Gyro CC  */
+#define TURN_ON_THRESHOLD  100	/* deg/sec before the Gyro Max is reached & shuts of turning motors */
+
 class TeleopHover
 {
 public:
@@ -49,19 +46,20 @@ public:
 
 private:
   void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
-  void setThrusters(const sensor_msgs::Joy::ConstPtr& joy);
-  void rotateAxis(double &x_new, double &y_new, double theta, const sensor_msgs::Joy::ConstPtr& joy);
-  double setMagnitude(double x, double y);
+  void gyroCallback(const hovercraft::Gyro::ConstPtr& gyro); 
   
   ros::NodeHandle nh_;
 
   int linear_, angular_;
   double l_scale_, a_scale_;
-  bool lift_on;
+  bool lift_on, turn_on;
+  double gyro_rate;		
   ros::Publisher thruster_pub_;
   ros::Subscriber joy_sub_;
+  ros::Subscriber gyro_sub_;
   ros::Publisher led_pub_;
-
+  
+  /* Hover Craft Messages */ 
   hovercraft::Thruster thrust;
   hovercraft::LED led_on;
 };
@@ -77,45 +75,46 @@ TeleopHover::TeleopHover():
   nh_.param("scale_angular", a_scale_, a_scale_);
   nh_.param("scale_linear", l_scale_, l_scale_);
 
-  lift_on;
+  lift_on = false;
+  turn_on = true; 
 
   thruster_pub_ = nh_.advertise<hovercraft::Thruster>("hovercraft/Thruster", 1);
   led_pub_ = nh_.advertise<hovercraft::LED>("hovercraft/LED",1);
 
   joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopHover::joyCallback, this);
+  gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &TeleopHover::gyroCallback, this);
 
 }
 
+/* gyroCallback: Function to log Gyro Rate */ 
+void TeleopHover::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
+{
+
+  /* Gyro Rate stops at  628 degrees/sec going ccw */
+  /* Gyro Rate Stops at -358 degrees/sec going cc  */ 
+  //ROS_INFO( "Rate: %f Angle: %f", gyro->rate, gyro->angle);
+  /* If the Gyro Rate is outside the limits, disable turning */
+  if( gyro->rate >= (GYRO_RATE_CCW_MAX - TURN_ON_THRESHOLD) || gyro->rate <= (GYRO_RATE_CC_MAX + TURN_ON_THRESHOLD) )
+  {
+    /* Approaching Gyro limits disable turning */
+    turn_on = false;
+  }else
+  {
+    /* Not Approaching Gyro limits Endable turning */
+    turn_on = true;
+  }
+  
+  gyro_rate = gyro->rate;
+
+} /* End gyroCallback */
+
+/* joyCallback: Main function for all joy processing  */
 void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
+  /* Turning on and off the LEDs on the board */
   led_on.led33_red = float( joy->buttons[XBOX_B_BTN] );
   led_on.led33_green = float( joy->buttons[XBOX_A_BTN] );
  
-  /* 
-
-	thruster1 = back thruster
-	thruster2 = Left front thruster
-	thruster3 = Not attached
-	thruster4 = right front thruster
-	thruster5 = Rotate Counter Clockwise
-	thruster6 = Rotate Clockwise
-  */ 
-
-  /* Emergency Kill logic */ 
-  if( float( joy->buttons[XBOX_XBOX_BTN] ) == 1 )
-  {
-    thrust.lift = 0;
-    thrust.thruster1 = 0;
-    thrust.thruster2 = 0;
-    thrust.thruster3 = 0;
-    thrust.thruster4 = 0;
-    thrust.thruster5 = 0; 
-    thrust.thruster6 = 0;
-
-    thruster_pub_.publish(thrust);
-
-  }
-  
   /*  Power Button Logic */ 
   if( float( joy->buttons[XBOX_START_BTN] ) == 1 )
   {
@@ -203,20 +202,55 @@ void TeleopHover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
  }
  /* End Translation Logic */
  
-  /* Turning Logic */ 
+  /* Turning Logic */
   if( float( joy->axes[XBOX_LS_X_AXIS] ) > 0 )
   {
-	  thrust.thruster5 = 1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) );
-	  thrust.thruster6 = 0;
+	/* Thruster5 - Rotate CCW */
+	/* Thruster6 - Rotate CC  */
+
+	/* Turning CCW only if not exceeding Gyro rate CCW max */
+	if( turn_on || ( gyro_rate < 0 ) )
+	{
+          thrust.thruster5 = 1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) );
+          thrust.thruster6 = 0;
+	}else /* Exceeding maxium Gyro Rate  */
+	{
+	  thrust.thruster5 = 0.0;
+	  thrust.thruster6 = 0.0;
+	  //ROS_INFO("Exceed max Gyro Rate CCW Shutting off motor" );
+	}
   }
   else
   {
-	  thrust.thruster6 = -1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) );  /* The Joy value is inverted */
+        /* Turning CC only if not exceeding Gyro rate CC max */
+        if( turn_on || ( gyro_rate > 0 ) )
+        {
+	  thrust.thruster6 = -1.0 * (TURN_SCALAR * float( joy->axes[XBOX_LS_X_AXIS] ) ); 
 	  thrust.thruster5 = 0;
+	}else /* Exceeding maxium Gyro Rate  */
+        {
+          thrust.thruster5 = 0.0;
+          thrust.thruster6 = 0.0;
+	  //ROS_INFO("Exceeding max Gyro Rate CC Shutting off motor" );
+        }
+
   }
   /* End Turning Logic*/
 
-  
+  /* Emergency Kill logic */
+  if( float( joy->buttons[XBOX_XBOX_BTN] ) == 1 )
+  {
+    thrust.lift = 0.0;
+    thrust.thruster1 = 0.0;
+    thrust.thruster2 = 0.0;
+    thrust.thruster3 = 0.0;
+    thrust.thruster4 = 0.0;
+    thrust.thruster5 = 0.0;
+    thrust.thruster6 = 0.0;
+    lift_on = false;
+
+  }
+ 
   
   /* Publish the thrust message */ 
   thruster_pub_.publish(thrust);
