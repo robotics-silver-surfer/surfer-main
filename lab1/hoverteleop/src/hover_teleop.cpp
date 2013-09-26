@@ -92,7 +92,6 @@ void TeleopHover::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 
   /* Gyro Rate stops at  628 degrees/sec going ccw */
   /* Gyro Rate Stops at -358 degrees/sec going cc  */ 
-  //ROS_INFO( "Rate: %f Angle: %f", gyro->rate, gyro->angle);
   /* If the Gyro Rate is outside the limits, disable turning */
   if( gyro->rate >= (GYRO_RATE_CCW_MAX - TURN_ON_THRESHOLD) )
   {
@@ -109,7 +108,7 @@ void TeleopHover::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
     turn_on = false;
   }else
   {
-    /* Not Approaching Gyro limits Endable turning */
+    /* Not Approaching Gyro limits Enable turning */
     turn_on = true;
   }
   
