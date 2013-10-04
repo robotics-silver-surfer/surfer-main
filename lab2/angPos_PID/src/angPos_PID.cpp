@@ -4,9 +4,13 @@
 #include <arbitrator/ArbAngle.h>
 #include <math.h>
 
-           
-    
-   //This is working now, nice 
+//It's implemented a PD controller.
+//The value for Kp is 0.002
+//The value for Kd is 0.043
+//This node receives a message from the arbitrator
+//The message is a Float64.
+//It sends the same message type to the thrusterMapping
+
 class anglePID
 {
 public:
@@ -14,12 +18,13 @@ public:
 private:
   
   ros::NodeHandle nh_;
-  //Suscriber for the arbitrator
+  //Subscriber for the arbitrator (The message is Float64)
   ros::Subscriber arbi_sub_;
+  //Subscriber for the gyroscope
   ros::Subscriber gyro_sub_;
   //Publisher for the node 
   ros::Publisher angle_pub_;
-  //Messages
+  //Messages(Float64)
   std_msgs::Float64 pidOutput;
   
   void gyroCallback(const hovercraft::Gyro::ConstPtr& gyro);
@@ -42,12 +47,14 @@ anglePID::anglePID()
   
   newAngle = 0;
   oldAngle = 0;
-  Kp = 0.5;
+  Kp = 0.002;
   nh_.param("angCtrl/P", Kp,Kp);
-  Kd = 0.75;
+  Kd = 0.043;
   nh_.param("angCtrl/D", Kd,Kd);
 }
 
+
+//Function that  checks the
 void anglePID::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 {
   //THis part corrects the value of the angle.
@@ -56,11 +63,14 @@ void anglePID::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
   anglePID::PID_controller();
 }
 
+//This function receives the desired angle from the arbitrator
 void anglePID::angleCallback (const std_msgs::Float64::ConstPtr& wannaBeAngle)
 {
    desiredAngle = wannaBeAngle->data; 
 }
 
+
+//Function that implements the PD controller
 void anglePID::PID_controller(void)	
 {
   double P,D,e1,e2;
