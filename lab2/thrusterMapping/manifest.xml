@@ -1,0 +1,21 @@
+<package>
+  <description brief="thrusterMapping">
+
+     thrusterMapping
+
+  </description>
+  <author>ROS</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/thrusterMapping</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="joy"/>
+  <depend package="hovercraft"/>
+  <depend package="hoverboard"/>
+  <depend package="cereal_port"/>
+  <depend package="rxtx"/>
+
+</package>
+
+

@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+import roslib; roslib.load_manifest('thrusterMapping')
+import rospy
+from std_msgs.msg import Float64
+from hovercraft.msg import *
+
+
+
+class ThrusterMapper:
+	def __init__(self):
+		self.Thrustpub = rospy.Publisher('hovercraft/Thruster', Thruster)
+		rospy.Subscriber("pidOutput", Float64, self.pidCallback)
+		rospy.Subscriber("hovercraft/Gyro", Gyro, self.gyroCallback)
+		self.rateTooFast = False;
+		self.thruster = Thruster()
+    
+	def pidCallback(self, data):
+		if not self.rateTooFast:
+			if data>0:
+				self.thruster.thruster6 = data.data
+				self.thruster.thruster5 = 0.0
+			else:
+				self.thruster.thruster5 = -1.0*data.data
+				self.thruster.thruster6 = 0.0
+			rospy.loginfo(self.thruster)
+			self.Thrustpub.publish(self.thruster)
+
+
+	def gyroCallback(self, data):
+		if data.rate>528 or data.rate<-215:
+			self.rateTooFast = True
+			self.thruster.thruster5 = 0.0
+			self.thruster.thruster5 = 0.0
+			self.Thrustpub.publish(self.thruster)
+		else:
+			self.rateTooFast = False
+
+
+
+
+			
+			
+
+
+
+if __name__ == '__main__':
+	try:
+		rospy.init_node('thrusterMapper')
+		m = ThrusterMapper()
+		rospy.spin()
+	except rospy.ROSInterruptException:
+		pass

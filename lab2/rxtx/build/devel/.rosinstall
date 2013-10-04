@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /projects/ros/surfer-main/lab2/rxtx/build/devel/setup.sh

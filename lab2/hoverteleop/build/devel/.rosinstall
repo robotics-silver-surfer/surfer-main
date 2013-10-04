@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /projects/ros/surfer-main/lab1/hoverteleop/build/devel/setup.sh

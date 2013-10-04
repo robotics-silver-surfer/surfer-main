@@ -1,0 +1,33 @@
+<launch>
+
+ <!-- RXTX node -->
+  <node name="RxTx" pkg="rxtx" type="RxTx" output="screen">
+    <param name="SerialPort" value="/dev/ttyUSB0"/>
+    <param name="BaudRate" value="38400" />
+  </node>
+
+ <!-- Hoverboard -->
+  <node name="HoverboardLL" pkg="hoverboard" type="HoverboardLL" output="screen" />
+
+ <!-- Hovercraft -->
+  <node name="Hovercraft" pkg="hovercraft" type="HoverCraft" output="screen" />
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="hover_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+ <!-- Axes -->
+  <param name="axis_linear" value="1" type="int"/>
+  <param name="axis_angular" value="0" type="int"/>
+  <param name="scale_linear" value="2" type="double"/>
+  <param name="scale_angular" value="2" type="double"/>
+  
+  <node pkg="arbitrator" type="arbitrator" name="arbi"/>
+  <node pkg="thrusterMapping" type="thrusterMapping" name="Mapi"/>
+  <node pkg="angPos_PID" type="angPos_PID" name="PIDi"/>
+
+</launch>
+
