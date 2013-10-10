@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g   -shared -Wl,-soname,libgtest.so -o /projects/ros/surfer-main/lab2/reactivecontrol/lib/libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o -L/projects/ros/surfer-main/lab2/reactivecontrol/build/gtest/src -lpthread -Wl,-rpath,/projects/ros/surfer-main/lab2/reactivecontrol/build/gtest/src 
