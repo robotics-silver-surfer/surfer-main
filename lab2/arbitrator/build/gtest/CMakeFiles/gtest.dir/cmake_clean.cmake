@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-  "/projects/ros/surfer-main/lab2/arbitrator/lib/libgtest.pdb"
-  "/projects/ros/surfer-main/lab2/arbitrator/lib/libgtest.so"
+  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/lib/libgtest.pdb"
+  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/lib/libgtest.so"
 )
 
 # Per-language clean rules from dependency scanning.

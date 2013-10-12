@@ -22,7 +22,7 @@ boost/function.hpp
 boost/thread/thread.hpp
 -
 
-/projects/ros/surfer-main/lab2/cereal_port/src/CerealPort.cpp
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/src/CerealPort.cpp
 stdio.h
 -
 string.h
@@ -44,5 +44,5 @@ iostream
 fstream
 -
 cereal_port/CerealPort.h
-/projects/ros/surfer-main/lab2/cereal_port/src/cereal_port/CerealPort.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/src/cereal_port/CerealPort.h
 

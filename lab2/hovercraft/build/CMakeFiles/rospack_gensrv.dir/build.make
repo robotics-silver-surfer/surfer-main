@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/hovercraft
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/hovercraft/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/build
 
 # Utility rule file for rospack_gensrv.
 
@@ -57,6 +57,6 @@ CMakeFiles/rospack_gensrv.dir/clean:
 .PHONY : CMakeFiles/rospack_gensrv.dir/clean
 
 CMakeFiles/rospack_gensrv.dir/depend:
-	cd /projects/ros/surfer-main/lab2/hovercraft/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/hovercraft /projects/ros/surfer-main/lab2/hovercraft /projects/ros/surfer-main/lab2/hovercraft/build /projects/ros/surfer-main/lab2/hovercraft/build /projects/ros/surfer-main/lab2/hovercraft/build/CMakeFiles/rospack_gensrv.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/build/CMakeFiles/rospack_gensrv.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rospack_gensrv.dir/depend
 

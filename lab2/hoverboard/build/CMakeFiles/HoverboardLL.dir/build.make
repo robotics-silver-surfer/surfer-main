@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/hoverboard
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/hoverboard/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HoverboardLL.dir/depend.make
@@ -64,20 +64,20 @@ CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /opt/ros/groovy/share/std_ms
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /projects/ros/surfer-main/lab2/rxtx/manifest.xml
-CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/manifest.xml
+CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o -c /projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp
 
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp > CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp > CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.i
 
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp -o CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/src/HoverboardLL.cpp -o CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.s
 
 CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o.requires:
 .PHONY : CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o.requires
@@ -113,6 +113,6 @@ CMakeFiles/HoverboardLL.dir/clean:
 .PHONY : CMakeFiles/HoverboardLL.dir/clean
 
 CMakeFiles/HoverboardLL.dir/depend:
-	cd /projects/ros/surfer-main/lab2/hoverboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/hoverboard /projects/ros/surfer-main/lab2/hoverboard /projects/ros/surfer-main/lab2/hoverboard/build /projects/ros/surfer-main/lab2/hoverboard/build /projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles/HoverboardLL.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles/HoverboardLL.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HoverboardLL.dir/depend
 

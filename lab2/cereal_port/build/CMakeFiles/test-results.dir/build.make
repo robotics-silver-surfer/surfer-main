@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/cereal_port
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/cereal_port/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/build
 
 # Utility rule file for test-results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/cereal_port/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/groovy/share/rosunit/scripts/summarize_results.py --nodeps cereal_port
+	/opt/ros/groovy/share/rosunit/cmake/../scripts/summarize_results.py --nodeps cereal_port
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /projects/ros/surfer-main/lab2/cereal_port/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/cereal_port /projects/ros/surfer-main/lab2/cereal_port /projects/ros/surfer-main/lab2/cereal_port/build /projects/ros/surfer-main/lab2/cereal_port/build /projects/ros/surfer-main/lab2/cereal_port/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 

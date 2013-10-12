@@ -1,15 +1,15 @@
 (cl:defpackage hovercraft-msg
   (:use )
   (:export
+   "<BATTERYVOLTAGE>"
+   "BATTERYVOLTAGE"
    "<GYRO>"
    "GYRO"
-   "<THRUSTER>"
-   "THRUSTER"
    "<CURRENT>"
    "CURRENT"
    "<LED>"
    "LED"
-   "<BATTERYVOLTAGE>"
-   "BATTERYVOLTAGE"
+   "<THRUSTER>"
+   "THRUSTER"
   ))
 

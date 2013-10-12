@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/rxtx
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/rxtx/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RxTx.dir/depend.make
@@ -64,18 +64,18 @@ CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /opt/ros/groovy/share/std_msgs/package.xml
 CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/RxTx.dir/src/RxTx.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/RxTx.dir/src/RxTx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/RxTx.dir/src/RxTx.cpp.o -c /projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/RxTx.dir/src/RxTx.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp
 
 CMakeFiles/RxTx.dir/src/RxTx.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RxTx.dir/src/RxTx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp > CMakeFiles/RxTx.dir/src/RxTx.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp > CMakeFiles/RxTx.dir/src/RxTx.cpp.i
 
 CMakeFiles/RxTx.dir/src/RxTx.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RxTx.dir/src/RxTx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp -o CMakeFiles/RxTx.dir/src/RxTx.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp -o CMakeFiles/RxTx.dir/src/RxTx.cpp.s
 
 CMakeFiles/RxTx.dir/src/RxTx.cpp.o.requires:
 .PHONY : CMakeFiles/RxTx.dir/src/RxTx.cpp.o.requires
@@ -111,6 +111,6 @@ CMakeFiles/RxTx.dir/clean:
 .PHONY : CMakeFiles/RxTx.dir/clean
 
 CMakeFiles/RxTx.dir/depend:
-	cd /projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/RxTx.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/RxTx.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RxTx.dir/depend
 
