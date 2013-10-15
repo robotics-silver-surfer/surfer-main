@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/rxtx
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/rxtx/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
@@ -48,7 +48,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_rxtxData.lisp
 
 ../msg_gen/lisp/rxtxData.lisp: ../msg/rxtxData.msg
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/rxtxData.lisp: ../manifest.xml
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -66,10 +66,10 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_rxtxData.lisp
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/rxtxData.lisp: /projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../msg_gen/lisp/rxtxData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/rxtxData.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_rxtxData.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/rxtxData.lisp
 
@@ -91,6 +91,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 

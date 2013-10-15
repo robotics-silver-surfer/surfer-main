@@ -3,6 +3,8 @@
 
 CMakeFiles/RxTx.dir/src/RxTx.cpp.o
  ../msg_gen/cpp/include/rxtx/rxtxData.h
+ /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/include/cereal_port/CerealPort.h
+ /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp
  /opt/ros/groovy/include/XmlRpcDecl.h
  /opt/ros/groovy/include/XmlRpcValue.h
  /opt/ros/groovy/include/ros/advertise_options.h
@@ -61,5 +63,3 @@ CMakeFiles/RxTx.dir/src/RxTx.cpp.o
  /opt/ros/groovy/include/std_msgs/MultiArrayDimension.h
  /opt/ros/groovy/include/std_msgs/MultiArrayLayout.h
  /opt/ros/groovy/include/std_msgs/UInt8MultiArray.h
- /projects/ros/surfer-main/lab2/cereal_port/include/cereal_port/CerealPort.h
- /projects/ros/surfer-main/lab2/rxtx/src/RxTx.cpp

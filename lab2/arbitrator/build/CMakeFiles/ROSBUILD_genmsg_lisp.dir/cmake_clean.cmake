@@ -3,9 +3,9 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../src/arbitrator/msg"
   "CMakeFiles/ROSBUILD_genmsg_lisp"
-  "../msg_gen/lisp/ArbAngle.lisp"
+  "../msg_gen/lisp/ArbData.lisp"
   "../msg_gen/lisp/_package.lisp"
-  "../msg_gen/lisp/_package_ArbAngle.lisp"
+  "../msg_gen/lisp/_package_ArbData.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

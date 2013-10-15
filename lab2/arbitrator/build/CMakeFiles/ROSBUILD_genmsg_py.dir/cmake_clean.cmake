@@ -4,7 +4,7 @@ FILE(REMOVE_RECURSE
   "../src/arbitrator/msg"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/arbitrator/msg/__init__.py"
-  "../src/arbitrator/msg/_ArbAngle.py"
+  "../src/arbitrator/msg/_ArbData.py"
 )
 
 # Per-language clean rules from dependency scanning.

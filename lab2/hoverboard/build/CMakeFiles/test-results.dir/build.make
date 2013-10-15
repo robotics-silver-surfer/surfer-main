@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/hoverboard
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/hoverboard/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build
 
 # Utility rule file for test-results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/hoverboard/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/groovy/share/rosunit/scripts/summarize_results.py --nodeps hoverboard
+	/opt/ros/groovy/share/rosunit/cmake/../scripts/summarize_results.py --nodeps hoverboard
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /projects/ros/surfer-main/lab2/hoverboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/hoverboard /projects/ros/surfer-main/lab2/hoverboard /projects/ros/surfer-main/lab2/hoverboard/build /projects/ros/surfer-main/lab2/hoverboard/build /projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 
