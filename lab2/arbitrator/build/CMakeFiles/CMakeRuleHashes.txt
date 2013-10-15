@@ -1,8 +1,11 @@
 # Hashes of file build rules.
 933adba151e4fbf8c935c7ccf1b15236 ../msg_gen/cpp/include/arbitrator/ArbAngle.h
+d814ca8375c3ab268e086e18743c610a ../msg_gen/cpp/include/arbitrator/ArbData.h
 abc1b0cebe1a5467dd078f35f3bb20a7 ../msg_gen/lisp/ArbAngle.lisp
+0fc4e547e58fdf954cd72d37a6b6a711 ../msg_gen/lisp/ArbData.lisp
 8bd96c297e2ce14ec83dffc90aeff0ca ../src/arbitrator/msg/_ArbAngle.py
-6a51a073213a1d33dd5ef62eddff466b ../src/arbitrator/msg/__init__.py
+96bad89af628d98b88365ce2c75034c6 ../src/arbitrator/msg/_ArbData.py
+eee38efef6684c3ca52922bfc1c6c7b8 ../src/arbitrator/msg/__init__.py
 842cfae6a7073091077d964d2e231a01 CMakeFiles/ROSBUILD_genmsg_cpp
 842cfae6a7073091077d964d2e231a01 CMakeFiles/ROSBUILD_genmsg_lisp
 842cfae6a7073091077d964d2e231a01 CMakeFiles/ROSBUILD_genmsg_py

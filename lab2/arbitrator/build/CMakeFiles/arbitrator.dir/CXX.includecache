@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../msg_gen/cpp/include/arbitrator/ArbAngle.h
+../msg_gen/cpp/include/arbitrator/ArbData.h
 string
 -
 vector
@@ -27,6 +27,8 @@ ros/macros.h
 ../msg_gen/cpp/include/arbitrator/ros/macros.h
 ros/assert.h
 ../msg_gen/cpp/include/arbitrator/ros/assert.h
+std_msgs/Header.h
+../msg_gen/cpp/include/arbitrator/std_msgs/Header.h
 
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/src/arbitrator.cpp
 ros/ros.h
@@ -39,7 +41,13 @@ hovercraft/LED.h
 -
 std_msgs/Float64.h
 -
-arbitrator/ArbAngle.h
+std_msgs/Float32.h
+-
+arbitrator/ArbData.h
+-
+joyAngleIntegrater/ItgrAngle.h
+-
+reactivecontrol/Control.h
 -
 
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/cpp/include/hovercraft/Gyro.h
@@ -89,6 +97,54 @@ ros/assert.h
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/cpp/include/hovercraft/ros/assert.h
 std_msgs/Header.h
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/cpp/include/hovercraft/std_msgs/Header.h
+
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ItgrAngle.h
+string
+-
+vector
+-
+map
+-
+ostream
+-
+ros/serialization.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/serialization.h
+ros/builtin_message_traits.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/builtin_message_traits.h
+ros/message_operations.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/message_operations.h
+ros/time.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/time.h
+ros/macros.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/macros.h
+ros/assert.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/ros/assert.h
+std_msgs/Header.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include/joyAngleIntegrater/std_msgs/Header.h
+
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/Control.h
+string
+-
+vector
+-
+map
+-
+ostream
+-
+ros/serialization.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/serialization.h
+ros/builtin_message_traits.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/builtin_message_traits.h
+ros/message_operations.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/message_operations.h
+ros/time.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/time.h
+ros/macros.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/macros.h
+ros/assert.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/ros/assert.h
+std_msgs/Header.h
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/std_msgs/Header.h
 
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h
@@ -357,6 +413,10 @@ common.h
 /opt/ros/groovy/include/ros/common.h
 XmlRpcValue.h
 /opt/ros/groovy/include/ros/XmlRpcValue.h
+vector
+-
+map
+-
 
 /opt/ros/groovy/include/ros/parameter_adapter.h
 ros/forwards.h
@@ -716,6 +776,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 std_msgs/Header.h
+-
+
+/opt/ros/groovy/include/std_msgs/Float32.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/groovy/include/std_msgs/Float64.h

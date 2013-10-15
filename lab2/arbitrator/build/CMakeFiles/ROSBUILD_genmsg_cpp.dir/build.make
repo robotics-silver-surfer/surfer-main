@@ -42,47 +42,52 @@ CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitr
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/ArbAngle.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/ArbData.h
 
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: ../msg/ArbAngle.msg
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: ../manifest.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/joy/package.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/manifest.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/manifest.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/manifest.xml
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/ArbData.h: ../msg/ArbData.msg
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/arbitrator/ArbData.h: ../manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /opt/ros/groovy/share/joy/package.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/manifest.xml
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/ArbData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/arbitrator/ArbAngle.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/msg/ArbAngle.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/arbitrator/ArbData.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/msg/ArbData.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/ArbAngle.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/ArbData.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 

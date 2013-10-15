@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/reactivecontrol
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/reactivecontrol/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -57,6 +57,6 @@ CMakeFiles/_catkin_empty_exported_target.dir/clean:
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /projects/ros/surfer-main/lab2/reactivecontrol/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/reactivecontrol /projects/ros/surfer-main/lab2/reactivecontrol /projects/ros/surfer-main/lab2/reactivecontrol/build /projects/ros/surfer-main/lab2/reactivecontrol/build /projects/ros/surfer-main/lab2/reactivecontrol/build/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/build/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/depend
 

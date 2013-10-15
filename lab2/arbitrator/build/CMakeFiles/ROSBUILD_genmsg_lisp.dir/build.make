@@ -42,55 +42,60 @@ CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitr
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ArbAngle.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ArbData.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ArbAngle.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ArbData.lisp
 
-../msg_gen/lisp/ArbAngle.lisp: ../msg/ArbAngle.msg
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/ArbAngle.lisp: ../manifest.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/joy/package.xml
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/manifest.xml
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/manifest.xml
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/manifest.xml
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated
-../msg_gen/lisp/ArbAngle.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/generated
+../msg_gen/lisp/ArbData.lisp: ../msg/ArbData.msg
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/ArbData.lisp: ../manifest.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/lisp/ArbData.lisp: /opt/ros/groovy/share/joy/package.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/manifest.xml
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/generated
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/generated
+../msg_gen/lisp/ArbData.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ArbAngle.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ArbAngle.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/msg/ArbAngle.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ArbData.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ArbData.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/msg/ArbData.msg
 
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ArbAngle.lisp
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ArbData.lisp
 
-../msg_gen/lisp/_package_ArbAngle.lisp: ../msg_gen/lisp/ArbAngle.lisp
+../msg_gen/lisp/_package_ArbData.lisp: ../msg_gen/lisp/ArbData.lisp
 
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ArbAngle.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ArbData.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ArbAngle.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ArbData.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

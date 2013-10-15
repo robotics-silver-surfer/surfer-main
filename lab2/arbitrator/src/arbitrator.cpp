@@ -8,18 +8,36 @@
 #include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h> 
 #include <std_msgs/Float64.h>
-#include <arbitrator/ArbAngle.h>
+#include <std_msgs/Float32.h>
+#include <arbitrator/ArbData.h>
+#include <joyAngleIntegrater/ItgrAngle.h>
+//#include <Triangle/message.h>
+#include <reactivecontrol/Control.h>
 
 //Class Constants
+#define ON		1.0
+#define OFF		0.0
+#define JOY_STATE	0
+#define TRIANGLE_STATE	1
+
+//Xbox Button Constants
+#define XBOX_A_BTN	0
+#define XBOX_B_BTN	1
+#define XBOX_X_BTN	2
+#define XBOX_Y_BTN	3
 #define XBOX_L_BUMPER	4
 #define XBOX_R_BUMPER	5
 #define XBOX_BACK_BTN	6
 #define XBOX_START_BTN  7
-#define ON		1.0
-#define OFF		0.0
-#define JOY_STATE	0
-#define JOY_AI_STATE	1
-#define TRIANGLE_STATE	2
+#define XBOX_XBOX_BTN	8
+
+//Xbox Joystick Constants
+#define XBOX_LS_X_AXIS	0
+#define XBOX_LS_Y_AXIS	1
+#define XBOX_L_TRIGGER	2
+#define XBOX_RS_X_AXIS  3
+#define XBOX_RS_Y_AXIS  4
+#define XBOX_R_TRIGGER  5
 
 //Class Declaration
 class Arbitrator
@@ -32,22 +50,29 @@ private:
   ros::NodeHandle nh_;
 
   ros::Publisher angle_pub_;
+  ros::Publisher axis_pub_;
   
   ros::Subscriber joy_sub_;
   ros::Subscriber gyro_sub_;
-  ros::Subscriber reactive_ctrl_sub_;
+  ros::Subscriber joyAngleItgr_sub_;
+  //ros::Subscriber triangle_sub_;
+  ros::Subscriber reactivectrl_sub_;
   ros::Publisher led_pub_;
   ros::Publisher thrust_pub_;
 
   //Published messages
-  hovercraft::LED led_on;
   std_msgs::Float64 arb_angle;
+  std_msgs::Float32 arb_x_axis;
+  std_msgs::Float32 arb_y_axis;
+  hovercraft::LED led_on;
   std_msgs::Float64 thrust;
 
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
   void gyroCalibration( const hovercraft::GyroConstPtr& gyro );
-//  void setControlState( const reactivecontrol::Control& rctrl );
+  void joyAngleItgrCallback( const joyAngleIntegrater::ItgrAngle& itgr_angle );
+  //void triangleCallback( const triangle::Message& triangle );
+  void setControlState( const reactivecontrol::Control& rctrl );
 
   //Class variables
   bool manual_on;
@@ -66,13 +91,24 @@ Arbitrator::Arbitrator()
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
   gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &Arbitrator::gyroCalibration, this);
-//  reactive_ctrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::setControlState, this);
+  joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/ItgrAngle", 10, &Arbitrator::joyAngleItgrCallback, this);
+  //triangle_sub_ = nh_.subscribe("triangle/Message", 10, &Arbitrator::triangleCallback, this);
+  reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::setControlState, this);
+  
+
+  //TODO - Guys! Part of my message is Float64, and part is Float32.
+  //       How do I publish to update all of my values at the same time?
+  //       Or can I?
+  angle_pub_ = nh_.advertise<std_msgs::Float64>("arbitrator/ArbData", 1);
+  axis_pub_ = nh_.advertise<std_msgs::Float32>("arbitrator/ArbData", 1);
+  
+
+
   led_pub_ = nh_.advertise<hovercraft::LED>("hovercraft/LED", 1);
-  angle_pub_ = nh_.advertise<std_msgs::Float64>("arbitrator/ArbAngle", 1);
-  thrust_pub_ = nh_.advertise<std_msgs::Float64>("arbitrator/thrust", 1 );
+  thrust_pub_ = nh_.advertise<std_msgs::Float64>("arbitrator/thrust", 1);
 
   //Set class variables
-  manual_on = false;
+  manual_on = true;
   calibrate = true;
   add_90 = false;
   sub_90 = false;
@@ -95,15 +131,20 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     {
       calibrate = true;
       manual_on = false;
-      led_on.led33_green = OFF;
+      led_on.led33_green = ON;
     }
     else
     {
       manual_on = true;
-      led_on.led33_green = ON;
+      led_on.led33_green = OFF;
     }
 
   }
+
+    //Add button to trigger triangle?
+    // --> Remove reactivecontrol state control
+    //     --> But in that case, what does reactivecontrol ever give?
+    // TODO - Decide on architecture/logic control between reactivecontrol and abitrator
 
   //Automatic right rotation
   if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 )
@@ -151,6 +192,7 @@ void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
   {
     arb_angle.data = gyro->angle;
     angle_pub_.publish( arb_angle );
+    // TODO - Add x,y axis info
     return;
   }
 
@@ -169,6 +211,8 @@ void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
       sub_90 = false;
     }
 
+
+    // TODO - Add x,y axis info
     angle_pub_.publish( arb_angle );
     calibrate = false;
   }
@@ -177,15 +221,52 @@ void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
 
 //---------------------------------------------------------------------
 
+/* Arbitrator::joyAngleItgrCallback
+ *   <description>
+ *
+ */
+void Arbitrator::joyAngleItgrCallback( const joyAngleIntegrater::ItgrAngle& itgr_angle )
+{
+  if( state == JOY_STATE )
+  {
+
+    //Grab joyAngleIntegrater angle
+    //Forward with the current x,y axis of the joystick (publish it)
+
+  }
+
+} /* end method Arbitrator::joyAngleItgrCallback() */
+
+//---------------------------------------------------------------------
+
+/* Arbitrator::triangleCallback
+ *   <description>
+ *
+ *
+void Arbitrator::triangleCallback( const triangle::Message& triangle )
+{
+
+  if( state == TRIANGLE_STATE )
+  {
+
+    //Grab triangle data and forward along (publish it)
+
+  }
+
+} * end method Arbitrator::triangleCallback() */
+
+//---------------------------------------------------------------------
+
 /* Arbitrator::setControlState
  *   <description>
  *
  */
-//void setControlState( const reactivecontrol::Control& rctrl )
-//{
-//  state = rctrl->state;
-//
-//} /* end method Arbitrator::controlState() */
+void Arbitrator::setControlState( const reactivecontrol::Control& rctrl )
+{
+
+  state = rctrl.state;
+
+} /* end method Arbitrator::controlState() */
 
 
 //---------------------------------------------------------------------
