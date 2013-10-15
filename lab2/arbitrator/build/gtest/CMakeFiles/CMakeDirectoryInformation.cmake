@@ -15,7 +15,6 @@ SET(CMAKE_C_INCLUDE_PATH
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/cpp/include"
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/cpp/include"
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/include"
-  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/msg_gen/cpp/include"
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include"
   "/opt/ros/groovy/include"
   "/usr/src/gtest/include"
