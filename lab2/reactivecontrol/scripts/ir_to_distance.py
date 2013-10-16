@@ -16,14 +16,14 @@ def adc_to_cm_ir2( adc_raw ):
 	"""
 	
 	#Measured values for IR2 -  cm equivelent, ADC measure
-	measured_values = ( ( 15, 2630 ), ( 16, 2602 ), ( 17, 2573 ), 
-						( 18, 2519 ), ( 19, 2446 ), ( 20, 2397 ), 
-						( 22, 2304 ), ( 24, 2187 ), ( 26, 2094 ),  
-						( 28, 1972 ), ( 30, 1860 ), ( 35, 1621 ), 
-						( 40, 1410 ), ( 45, 1259 ), ( 50, 1127 ), 
-						( 60, 932 ),  ( 70, 800 ), 	( 80, 717 ),  
-						( 90, 634 ),  ( 100, 561 ), ( 110, 502 ), 
-						( 120, 463 ), ( 130, 444 ), ( 140, 415 ), 
+	measured_values = ( ( 15, 2612 ), ( 16, 2602 ), ( 17, 2568 ), 
+						( 18, 2509 ), ( 19, 2475 ), ( 20, 2441 ), 
+						( 22, 2363 ), ( 24, 2265 ), ( 26, 2177 ),  
+						( 28, 2021 ), ( 30, 1938 ), ( 35, 1718 ), 
+						( 40, 1503 ), ( 45, 1337 ), ( 50, 1206 ), 
+						( 60, 1015 ), ( 70, 844 ), 	( 80, 776 ),  
+						( 90, 683 ),  ( 100, 644 ), ( 110, 581 ), 
+						( 120, 522 ), ( 130, 458 ), ( 140, 415 ), 
 						( 150, 400 ) ) 
 	
 	#Setting the max and min values to find the two nearest points
@@ -107,7 +107,7 @@ def input_callback(ADCRaw):
 		Publish the IR CM data
 	""" 
 	
-	pub = rospy.Publisher('IRoutput', IRdistance)	
+	pub = rospy.Publisher('ircm/IRoutput', IRdistance)	
 	ir_output = IRdistance()	
 	ir_output.IR1 = adc_to_cm_ir1( ADCRaw.adc5_0 )
 	ir_output.IR2 = adc_to_cm_ir2( ADCRaw.adc5_1 )	
@@ -119,7 +119,7 @@ def rawtocm():
 	"""
 		Setup IR CM node and subscribe to the correct node
 	"""
-	rospy.init_node('IRcm')    
+	rospy.init_node('ir2cm_converter')    
 	rospy.Subscriber("hoverboard/ADCRaw", ADCRaw, input_callback)
 	rospy.spin()	
 
