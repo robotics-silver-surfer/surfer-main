@@ -23,9 +23,25 @@ class reactive_control:
 		
 		# PID stuff 
 		self.previous_error = 0.0
+
+
+		#################################
+		#								#
+		#  PID CONTROLLER PARAMETERS	#
+		#  								#
+		#################################		
+
+		# Reacative Control Target Distance to maintain
 		self.setpoint = 30.0
-		self.Kp = .01
+
+		# PID propoartional Value
+		self.Kp = .05
+
+		# PD Derivative Value
 		self.Kd = 0.0
+
+		# Maximum Range for Reactive control to work (cm)
+		self.maxRange = 75.0
 
 	def start( self ): 
 		"""
@@ -64,7 +80,7 @@ class reactive_control:
 		output = 0.0
 		position = Transform()
 
-		if avg_distance is not 0.0 and avg_distance < 50 and avg_distance > 15: 
+		if avg_distance is not 0.0 and avg_distance < self.maxRange and avg_distance > 15: 
 			
 			error = avg_distance - self.setpoint
 		
