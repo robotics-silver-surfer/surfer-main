@@ -1,0 +1,20 @@
+<package>
+  <description brief="joyAngleIntegrater">
+
+     joyAngleIntegrater
+
+  </description>
+  <author>Courtney</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/joyAngleIntegrater</url>
+  <depend package="std_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="joy"/>
+  <depend package="hovercraft"/>
+  <depend package="sensor_msgs"/>
+
+</package>
+
+
