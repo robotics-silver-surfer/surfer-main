@@ -4,6 +4,7 @@
 
 //Libraries and Packages
 #include <ros/ros.h>
+#include <ros/console.h>
 #include <sensor_msgs/Joy.h>
 #include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h> 
@@ -72,7 +73,7 @@ private:
   void triangleCallback( const geometry_msgs::Transform& triangle );
   void reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl ); 
   void setControlState( int state );
-  void signalLED( hovercraft::LED& led, bool green );
+  void signalLED( hovercraft::LED& led, bool green, int blink );
 
   //Class variables
   bool lift_on;
@@ -147,12 +148,17 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     {
       calibrate = true;
       state = AUTO_STATE;
-      signalLED( led_on, false );
+      ROS_INFO("State = Auto");
+      ROS_INFO("  --> Press Back button to return to manual");
+      ROS_INFO("  --> Press Y button to begin Triangle");
+      signalLED( led_on, false, 3 ); //flash red led 3 times
     }
     else
     {
       state = MANUAL_STATE;
-      signalLED( led_on, true );
+      ROS_INFO("State = Manual");
+      ROS_INFO("  --> Press Back button to return to auto");    
+      signalLED( led_on, true, 3 ); //flash green led 3 times
     }
 
   }
@@ -173,17 +179,27 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
   //Automatic triangle execution (only allowed in auto mode)
   if( float( joy->buttons[XBOX_Y_BTN] ) == 1 && 
-      state == AUTO_STATE )
+      state != MANUAL_STATE )
   {
     //return to auto state
     if( state == TRIANGLE_STATE )
     {
       state = AUTO_STATE;
+      ROS_INFO("State = Auto");
+      ROS_INFO("  --> Press Back button to return to manual");
+      ROS_INFO("  --> Press Y button to begin Triangle");
+      signalLED( led_on, false, 3 ); //flash red led 3 times
     }
     //begin triangle execution
     else
     {
       state = TRIANGLE_STATE;
+      ROS_DEBUG("State = Triangle", 1);
+      ROS_DEBUG("  --> Press Back button to return to manual", 1);
+      ROS_DEBUG("  --> Press Y button to end Triangle", 1);
+      signalLED( led_on, true, 1 ); //flash led green, red, green pattern
+      signalLED( led_on, false, 1 );
+      signalLED( led_on, true, 1 );
     }
 
   }
@@ -315,12 +331,11 @@ void Arbitrator::setControlState( int state )//const reactivecontrol::Control& r
 /* Arbitrator::signalGreenLED
  *   Blink the green led quickly 3 times
  */
-void Arbitrator::signalLED( hovercraft::LED& led, bool green )
+void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
 {
   int i;
-  for( i = 0; i < 3; i++ )
+  for( i = 0; i < blink; i++ )
   {
-    //blink 3 times
     ros::Duration(0.2).sleep(); //sleep for 20ms
     if( green )
     {
@@ -333,7 +348,7 @@ void Arbitrator::signalLED( hovercraft::LED& led, bool green )
     
     led_pub_.publish( led_on );
 
-    ros::Duration(0.4).sleep(); //sleep for 40ms
+    ros::Duration(0.2).sleep(); //sleep for 40ms
     if( green )
     {
       led.led33_green = LED_OFF;
