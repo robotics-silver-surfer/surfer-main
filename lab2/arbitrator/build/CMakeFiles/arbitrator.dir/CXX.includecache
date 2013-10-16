@@ -9,6 +9,8 @@
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/src/arbitrator.cpp
 ros/ros.h
 -
+ros/console.h
+-
 sensor_msgs/Joy.h
 -
 hovercraft/Gyro.h
