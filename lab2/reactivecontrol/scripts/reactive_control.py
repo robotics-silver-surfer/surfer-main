@@ -23,7 +23,7 @@ class reactive_control:
 		
 		# PID stuff 
 		self.previous_error = 0.0
-		self.setpoint = 25.0
+		self.setpoint = 30.0
 		self.Kp = .01
 		self.Kd = 0.0
 
@@ -60,8 +60,11 @@ class reactive_control:
 		"""
 		
 		avg_distance = self.__avg_distance( distance )
+		
+		output = 0.0
+		position = Transform()
 
-		if avg_distance is not 0.0 and avg_distance < 80 and avg_distance > 15: 
+		if avg_distance is not 0.0 and avg_distance < 50 and avg_distance > 15: 
 			
 			error = avg_distance - self.setpoint
 		
@@ -69,20 +72,19 @@ class reactive_control:
 			output = self.Kp * error + self.Kd * derivative
 
 		
-			position = Transform()
-		
-			position.translation.x = 0.0;
-			position.translation.z = .5;
-			position.translation.y = output;
-	
+
+			
 			#rospy.loginfo("Distance " + str( self.__avg_distance( distance ) ) + " Error: " + str(error) + " PD Output: " + str(position.translation.y) )
 		
-			self.__publish_position( position ) 		
 
 			self.abitrator_takeover.publish(True)
 		else:
+			
 			rospy.loginfo("No valid IR data infromation or IR data is out of range measured: " + str( avg_distance) )
-		
+
+ 		
+		position.translation.y = output;
+		self.__publish_position( position )
 
 	def __avg_distance( self, distance ):
 		"""

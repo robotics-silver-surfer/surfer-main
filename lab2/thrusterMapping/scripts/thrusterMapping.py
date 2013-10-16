@@ -17,24 +17,40 @@ class ThrusterMapper:
 		self.Thrustpub = rospy.Publisher('hovercraft/Thruster', Thruster)
 		rospy.Subscriber("pidOutput", Transform, self.pidCallback)
 		rospy.Subscriber("hovercraft/Gyro", Gyro, self.gyroCallback)
-                self.rateTooFast = False;
+		self.rateTooFast = False;
 		self.thruster = Thruster()
     
 			
    
 	def pidCallback(self, data):
+		"""
+			Used to control translational movement
+		"""
 		self.thruster.thruster1 = 0.0;
 		self.thruster.thruster2 = 0.0;
 		self.thruster.thruster3 = 0.0;
 		self.thruster.thruster4 = 0.0;
 		self.thruster.lift = data.translation.z;
-		rospy.loginfo("crrap: " + str( data.translation.z ) )		
+		#rospy.loginfo("Thurster Lift: " + str( data.translation.z ) )		
 
+		# Check to see if maximum spin has been reached
 		if not self.rateTooFast and self.thruster.lift > 0.0:
-			if data.data<0.0:
-				self.thruster.thruster6 = -1.0*data.data
 
-		
+			#True if maximum spin has been reached cut off, if true, cut off motors
+			#In the direction of spin
+			if data.rotation.w < 0.0:
+				self.thruster.thruster6 = -1.0*data.rotation.w
+				self.thruster.thruster5 = 0.0
+			else:
+				self.thruster.thruster5 = data.rotation.w
+				self.thruster.thruster6 = 0.0
+			
+		else:
+			self.thruster.thruster6 = -1.0*data.rotation.w
+			self.thruster.thruster5 = data.rotation.w
+
+
+		#Power button logic now being handled in arbitrator
 		#if data.translation.z == 0.5:
 		#	if self.thruster.lift is 0.5:
 		#		self.thruster.lift = 0.0;
@@ -43,18 +59,7 @@ class ThrusterMapper:
 		#	else:
 		#		self.thruster.lift = 0.5;
 
-		if not self.rateTooFast and self.thruster.lift > 0.0:
-			if data.rotation.w<0.0:
-				self.thruster.thruster6 = -1.0*data.rotation.w
-				self.thruster.thruster5 = 0.0
-			else:
-				self.thruster.thruster5 = data.rotation.w
-				self.thruster.thruster6 = 0.0
-	                self.Thrustpub.publish(self.thruster)
-		else:
-			self.thruster.thruster6 = 0.0
-			self.thruster.thruster5 = 0.0
-			self.Thrustpub.publish(self.thruster)
+
 
 		mag = sqrt(pow(data.translation.x,2)+pow(data.translation.y,2)) * SCALE
 		angle = atan2(-1.0 * data.translation.x,data.translation.y)
@@ -87,20 +92,28 @@ class ThrusterMapper:
 
 
 	def gyroCallback(self, data):
+		"""
+			Limits Rotational spin of the Robot by implementing a 
+			Hard cut off
+		"""
+		
 		if data.rate>528 or data.rate<-215:
 			self.rateTooFast = True
-			self.thruster.thruster5 = 0.0
-			self.thruster.thruster5 = 0.0
-			self.Thrustpub.publish(self.thruster)
 		else:
 			self.rateTooFast = False
 
+		# Check to see if maximum spin has been reached
+		if not self.rateTooFast:
 
-
-
-
+			# Spin Rate is to fast, kill thruster motors
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
 			
-			
+		self.Thrustpub.publish(self.thruster)
+		
+
+
+
 
 
 
