@@ -3,7 +3,6 @@
 
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o
  /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/src/arbitrator.cpp
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/cpp/include/hovercraft/Gyro.h
  /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/msg_gen/cpp/include/hovercraft/LED.h
  /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include/reactivecontrol/Control.h
  /opt/ros/groovy/include/XmlRpcDecl.h

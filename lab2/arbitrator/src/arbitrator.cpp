@@ -6,7 +6,6 @@
 #include <ros/ros.h>
 #include <ros/console.h>
 #include <sensor_msgs/Joy.h>
-#include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h> 
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Vector3.h>
@@ -52,7 +51,6 @@ private:
   ros::NodeHandle nh_;
 
   ros::Subscriber joy_sub_;
-  ros::Subscriber gyro_sub_;
   ros::Subscriber joyAngleItgr_sub_;
   ros::Subscriber triangle_sub_;
   ros::Subscriber reactivectrl_sub_;
@@ -68,7 +66,6 @@ private:
 
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
-  void gyroCalibration( const hovercraft::GyroConstPtr& gyro );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
   void triangleCallback( const geometry_msgs::Transform& triangle );
   void reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl ); 
@@ -77,7 +74,6 @@ private:
 
   //Class variables
   bool lift_on;
-  bool calibrate;
   bool add_90;
   bool sub_90;
   int state;
@@ -91,7 +87,6 @@ Arbitrator::Arbitrator()
 {
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
-  gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &Arbitrator::gyroCalibration, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
   triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
   reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::reactiveCtrlCallback, this);
@@ -102,7 +97,6 @@ Arbitrator::Arbitrator()
 
   //Set class variables
   lift_on = false;
-  calibrate = true;
   add_90 = false;
   sub_90 = false;
   state = MANUAL_STATE;
@@ -146,7 +140,6 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   {
     if( state == MANUAL_STATE )
     {
-      calibrate = true;
       state = AUTO_STATE;
       ROS_INFO("State = Auto");
       ROS_INFO("  --> Press Back button to return to manual");
@@ -164,16 +157,16 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   }
 
   //Automatic right rotation
-  if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 )
+  if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 && 
+      state != TRIANGLE_STATE )
   {
-    calibrate = true;
     add_90 = true;
   }
 
   //Automatic left rotation
-  if( float( joy->buttons[XBOX_L_BUMPER] ) == 1 )
+  if( float( joy->buttons[XBOX_L_BUMPER] ) == 1 &&
+      state != TRIANGLE_STATE )
   {
-    calibrate = true;
     sub_90 = true;
   }
 
@@ -222,30 +215,16 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::gyroCalibration
- *   Sends a target angle to the PID.  
+/* Arbitrator::joyAngleItgrCallback
+ *   <description>
  *
- *   When in manual control, contiuously forwards the current angle.  
- *
- *   When in autonomous control, calibrates to the current angle, then
- *   holds at that angle (ignores all gyro changes). 
- *
- *   When specified by the controller in autonomous-mode, the target 
- *   angle is adjusted 90 degrees accordingly.
  */
-void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
+void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 {
-  if( state == MANUAL_STATE )
+  if( state != TRIANGLE_STATE )
   {
-    arb_data.rotation.w = gyro->angle;
-    arb_pub_.publish( arb_data );
-    return;
-  }
-
-  if( calibrate )
-  {
-    arb_data.rotation.w = gyro->angle;
-
+    arb_data.rotation.w = itgr.w;
+  
     if( add_90 )
     {
       arb_data.rotation.w += 90.0;
@@ -258,24 +237,8 @@ void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
     }
 
     arb_pub_.publish( arb_data );
-    calibrate = false;
   }
 
-} /* end method Arbitrator::gyroCalibration() */
-
-//---------------------------------------------------------------------
-
-/* Arbitrator::joyAngleItgrCallback
- *   <description>
- *
- */
-void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
-{
-  if( state == AUTO_STATE )
-  {
-    arb_data.rotation.w = itgr.w;
-    arb_pub_.publish( arb_data );
-  }
 
 } /* end method Arbitrator::joyAngleItgrCallback() */
 
