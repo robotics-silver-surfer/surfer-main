@@ -30,6 +30,11 @@ class ThrusterMapper:
 				
    
 	def pidCallback(self, data):
+<<<<<<< HEAD
+		if not self.rateTooFast and self.thruster.lift > 0.0:
+			if data.data<0.0:
+				self.thruster.thruster6 = -1.0*data.data
+=======
 		if data.Translation.z == 1.0
 			if self.thruster.lift is 0.5:
 				self.thruster.lift = 0.0;
@@ -41,10 +46,18 @@ class ThrusterMapper:
 		if not self.rateTooFast and self.thruster.lift > 0.0:
 			if data.rotation.w<0.0:
 				self.thruster.thruster6 = -1.0*data.rotation.w
+>>>>>>> 62a5bd6d8bf3cec2b209377a81da16d1cbda5627
 				self.thruster.thruster5 = 0.0
 			else:
 				self.thruster.thruster5 = data.rotation.w
 				self.thruster.thruster6 = 0.0
+<<<<<<< HEAD
+	                self.Thrustpub.publish(self.thruster)
+		else:
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
+			self.Thrustpub.publish(self.thruster)
+=======
 
 		mag = sqrt(pow(data.translation.x,2)+pow(data.translation.y,2))
 		angle = atan2(data.translation.x,data.translation.y)
@@ -72,6 +85,7 @@ class ThrusterMapper:
 
 		self.Thrustpub.publish(self.thruster)
  			
+>>>>>>> 62a5bd6d8bf3cec2b209377a81da16d1cbda5627
 
 
 	def gyroCallback(self, data):

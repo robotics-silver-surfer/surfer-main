@@ -1,7 +1,6 @@
 #include <ros/ros.h>
 #include <hovercraft/Gyro.h>
-#include <std_msgs/Float64.h>
-#include <arbitrator/ArbAngle.h>
+#include <geometry_msgs/Transform.h>
 #include <math.h>
 
 //It's implemented a PD controller.
@@ -24,11 +23,11 @@ private:
   ros::Subscriber gyro_sub_;
   //Publisher for the node 
   ros::Publisher angle_pub_;
-  //Messages(Float64)
-  std_msgs::Float64 pidOutput;
+  //Messages(Transform)
+  geometry_msgs::Transform pidOutput;
   
   void gyroCallback(const hovercraft::Gyro::ConstPtr& gyro);
-  void angleCallback(const std_msgs::Float64::ConstPtr& wannaBeAngle);
+  void angleCallback(const geometry_msgs::Transform::ConstPtr& wannaBeAngle);
   void PID_controller(void);
   
   double Kp;
@@ -41,20 +40,18 @@ private:
 
 anglePID::anglePID()
 {
-  arbi_sub_ = nh_.subscribe("arbitrator/ArbAngle", 10, &anglePID::angleCallback, this);
+  arbi_sub_ = nh_.subscribe("arbitrator/Data", 10, &anglePID::angleCallback, this);
   gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &anglePID::gyroCallback, this);
-  angle_pub_ = nh_.advertise<std_msgs::Float64>("pidOutput", 1);
+  angle_pub_ = nh_.advertise<geometry_msgs::Transform>("pidOutput", 1);
   
   newAngle = 0;
   oldAngle = 0;
-  Kp = 0.002;
+  Kp = 0.0;
   nh_.param("angCtrl/P", Kp,Kp);
-  Kd = 0.043;
+  Kd = 0.0;
   nh_.param("angCtrl/D", Kd,Kd);
 }
 
-
-//Function that  checks the
 void anglePID::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 {
   //THis part corrects the value of the angle.
@@ -64,24 +61,32 @@ void anglePID::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 }
 
 //This function receives the desired angle from the arbitrator
-void anglePID::angleCallback (const std_msgs::Float64::ConstPtr& wannaBeAngle)
+void anglePID::angleCallback (const geometry_msgs::Transform::ConstPtr& wannaBeAngle)
 {
-   desiredAngle = wannaBeAngle->data; 
+   desiredAngle = wannaBeAngle->rotation.x;
 }
 
 
 //Function that implements the PD controller
 void anglePID::PID_controller(void)	
 {
-  double P,D,e1,e2;
+  double P,D,e1,e2,deadBand;
 
   e1 = (desiredAngle - newAngle);
   P = Kp*e1;
   e2 = (desiredAngle - oldAngle);
   D =  Kd*(e1-e2);
 
-  pidOutput.data = P + D;
-
+  deadBand = fabs(e1);
+  
+  if(deadBand > 0.63)
+  {
+    pidOutput.rotation.x = P + D;
+  }
+  else 
+  {
+    pidOutput.rotation.x = 0.0;
+  }
   angle_pub_.publish(pidOutput);
 
 }
