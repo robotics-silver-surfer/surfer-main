@@ -15,7 +15,7 @@ class reactive_control:
 		
 
 		#publisher for control message
-		self.control_pub = rospy.Publisher('reactivecontol/Control', Transform)
+		self.control_pub = rospy.Publisher('reactivecontrol/Control', Transform)
 		
 		#Forcing take over of arbitrator to switch to reactive control 
 		self.abitrator_takeover = rospy.Publisher('reactivecontrol/ArbitratorForceTakeover', Bool)
@@ -61,7 +61,7 @@ class reactive_control:
 		
 		avg_distance = self.__avg_distance( distance )
 
-		if avg_distance is not 0.0: 
+		if avg_distance is not 0.0 and avg_distance < 80 and avg_distance > 15: 
 			
 			error = avg_distance - self.setpoint
 		
@@ -81,7 +81,7 @@ class reactive_control:
 
 			self.abitrator_takeover.publish(True)
 		else:
-			rospy.loginfo("No valid IR data infromation")
+			rospy.loginfo("No valid IR data infromation or IR data is out of range measured: " str( avg_distance) )
 		
 
 	def __avg_distance( self, distance ):
