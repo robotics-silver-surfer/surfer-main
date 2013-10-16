@@ -10,9 +10,8 @@
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Vector3.h>
 #include <geometry_msgs/Transform.h>
-#include <arbitrator/ArbData.h>
-//#include <Triangle/message.h>
 #include <reactivecontrol/Control.h>
+//#include <std_msgs/UInt8.msg>
 
 //Class Constants
 #define LED_ON		1
@@ -55,22 +54,24 @@ private:
   ros::Subscriber joy_sub_;
   ros::Subscriber gyro_sub_;
   ros::Subscriber joyAngleItgr_sub_;
-  //ros::Subscriber triangle_sub_;
-  ros::Subscriber reactivectrl_sub_;
+  ros::Subscriber triangle_sub_;
+  //ros::Subscriber reactivectrl_sub_;
 
   ros::Publisher arb_pub_;
   ros::Publisher led_pub_;
+  ros::Publisher ctrl_pub_;
 
   //Published messages
   geometry_msgs::Transform arb_data;
+  reactivecontrol::Control ctrl_state;
   hovercraft::LED led_on;
 
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
   void gyroCalibration( const hovercraft::GyroConstPtr& gyro );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
-  //void triangleCallback( const geometry_msgs::Transform& triangle );
-  void setControlState( const reactivecontrol::Control& rctrl );
+  void triangleCallback( const geometry_msgs::Transform& triangle );
+  void setControlState( int state );//const reactivecontrol::Control& rctrl );
   void signalLED( hovercraft::LED& led, bool green );
 
   //Class variables
@@ -91,10 +92,11 @@ Arbitrator::Arbitrator()
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
   gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &Arbitrator::gyroCalibration, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
-  //triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
-  reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::setControlState, this);
+  triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
+  //reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::setControlState, this);
 
   arb_pub_ = nh_.advertise<geometry_msgs::Quaternion>("arbitrator/Data", 1);
+  ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/Control", 1);
   led_pub_ = nh_.advertise<hovercraft::LED>("hovercraft/LED", 1);
 
   //Set class variables
@@ -145,12 +147,12 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     {
       calibrate = true;
       state = AUTO_STATE;
-      signalLED( led_on, true );
+      signalLED( led_on, false );
     }
     else
     {
       state = MANUAL_STATE;
-      signalLED( led_on, false );
+      signalLED( led_on, true );
     }
 
   }
@@ -239,8 +241,6 @@ void Arbitrator::gyroCalibration( const hovercraft::Gyro::ConstPtr& gyro )
       sub_90 = false;
     }
 
-
-    // TODO - Add x,y axis info
     arb_pub_.publish( arb_data );
     calibrate = false;
   }
@@ -268,7 +268,7 @@ void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 /* Arbitrator::triangleCallback
  *   <description>
  *
- *
+ */
 void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
 {
   if( state == TRIANGLE_STATE )
@@ -278,7 +278,7 @@ void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
     arb_pub_.publish( arb_data );
   }
 
-} * end method Arbitrator::triangleCallback() */
+} /* end method Arbitrator::triangleCallback() */
 
 //---------------------------------------------------------------------
 
@@ -286,9 +286,11 @@ void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
  *   <description>
  *
  */
-void Arbitrator::setControlState( const reactivecontrol::Control& rctrl )
+void Arbitrator::setControlState( int state )//const reactivecontrol::Control& rctrl )
 {
-  state = rctrl.state;
+
+  ctrl_state.state = state;
+  ctrl_pub_.publish( ctrl_state );
 
 } /* end method Arbitrator::controlState() */
 

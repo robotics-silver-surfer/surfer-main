@@ -1,7 +1,4 @@
 FILE(REMOVE_RECURSE
-  "../msg_gen"
-  "../msg_gen"
-  "../src/arbitrator/msg"
   "CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o"
   "../bin/arbitrator.pdb"
   "../bin/arbitrator"

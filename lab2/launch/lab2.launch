@@ -12,7 +12,7 @@
  <!-- Hovercraft -->
   <node name="Hovercraft" pkg="hovercraft" type="HoverCraft" output="screen" />
 
- <!-- joy node -->
+ <!-- Joy Node -->
   <node respawn="true" pkg="joy"
         type="joy_node" name="hover_joy" >
     <param name="dev" type="string" value="/dev/input/js0" />
@@ -20,17 +20,35 @@
   </node>
 
  <!-- Axes -->
-  <param name="axis_linear" value="1" type="int"/>
-  <param name="axis_angular" value="0" type="int"/>
-  <param name="scale_linear" value="2" type="double"/>
-  <param name="scale_angular" value="2" type="double"/>
- 
-  <node pkg="arbitrator" type="arbitrator" name="arbi" output="screen"/>
-  <node pkg="thrusterMapping" type="thrusterMapping.py" name="Mapi" output="screen"/>
-  <node pkg="angPos_PID" type="angPos_PID" name="PIDi" output = "screen"/>
+  <param name="axis_linear" type="int" value="1"/>
+  <param name="axis_angular" type="int" value="0"/>
+  <param name="scale_linear" type="double" value="2"/>
+  <param name="scale_angular" type="double" value="2"/>
 
+ <!-- Arbitrator --> 
+  <node name="Arbitrator" pkg="arbitrator" type="arbitrator" output="screen"/>
+
+ <!-- Thruster Mapping -->
+  <node name="ThrusterMapping" pkg="thrusterMapping" type="thrusterMapping.py" output="screen"/>
+  
+ <!-- Angle Position PID -->
+  <node name="AngPosPID" pkg="angPos_PID" type="angPos_PID" output="screen"/>
+
+ <!-- PD Values -->
   <param name="angCtrl/P" type="double" value="0.002"/>
   <param name="angCtrl/D" type="double" value="0.043"/>
+
+ <!-- Joy Angle Integrater -->
+  <node name="JoyAngIntegrater" pkg="joyAngleIntegrater" type="joyAngleIntegrater" output="screen"/>
+
+ <!-- IR to CM converter -->
+  <node name="IR_to_CM_converter" pkg="reactivecontrol" type="ir_to_distance.py" output="screen" />	
+
+ <!-- Reactive Control -->
+  <node name="ReactiveControl" pkg="reactivecontrol" type="reactive_control.py" />
+
+ <!-- Triangle -->
+  <node name="Triangle" pkg="triangle" type="triangle" output="screen"/>
 
 </launch>
 

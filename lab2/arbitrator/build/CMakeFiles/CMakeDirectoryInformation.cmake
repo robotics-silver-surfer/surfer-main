@@ -17,7 +17,6 @@ SET(CMAKE_C_INCLUDE_PATH
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/include"
   "/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/msg_gen/cpp/include"
   "/opt/ros/groovy/include"
-  "../msg_gen/cpp/include"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

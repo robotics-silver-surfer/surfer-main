@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/src/triangle.cpp
+ros/ros.h
+-
+geometry_msgs/Transform.h
+-
+math.h
+-
+
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h
 -
@@ -671,12 +679,4 @@ ros/forwards.h
 /opt/ros/groovy/include/ros/ros/forwards.h
 
 /opt/ros/groovy/include/rosconsole/macros_generated.h
-
-/projects/ros/surfer-main/lab2/triangle/src/triangle.cpp
-ros/ros.h
--
-geometry_msgs/Transform.h
--
-math.h
--
 

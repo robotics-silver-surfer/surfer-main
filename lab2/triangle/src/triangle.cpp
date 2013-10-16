@@ -23,7 +23,7 @@ triangle::triangle()
 { 
   //The timer is going to publish the message every 3 seconds
   timer = nh_.createTimer(ros::Duration(3.0), &triangle::timerCallback,this);
-  arbi_pub_ = nh_.advertise<geometry_msgs::Transform>("hereComesTheSun", 1);
+  arbi_pub_ = nh_.advertise<geometry_msgs::Transform>("triangle/Data", 1);
   
   side = 0;
   

@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../src/reactivecontrol/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
+  "../msg_gen/cpp/include/reactivecontrol/IRdistance.h"
   "../msg_gen/cpp/include/reactivecontrol/Control.h"
 )
 

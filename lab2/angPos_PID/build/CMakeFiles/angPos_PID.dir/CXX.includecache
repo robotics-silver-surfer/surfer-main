@@ -13,8 +13,6 @@ hovercraft/Gyro.h
 -
 geometry_msgs/Transform.h
 -
-arbitrator/ArbAngle.h
--
 math.h
 -
 

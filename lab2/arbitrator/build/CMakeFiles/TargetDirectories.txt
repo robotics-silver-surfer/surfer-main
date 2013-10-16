@@ -1,6 +1,5 @@
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
-/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/ROSBUILD_genmsg_py.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/_catkin_empty_exported_target.dir
@@ -13,7 +12,6 @@
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rosbuild_precompile.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rospack_genmsg.dir
-/home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rospack_genmsg_all.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rospack_genmsg_libexe.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rospack_gensrv.dir
 /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/run_tests.dir

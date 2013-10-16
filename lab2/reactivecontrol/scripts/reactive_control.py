@@ -81,7 +81,7 @@ class reactive_control:
 
 			self.abitrator_takeover.publish(True)
 		else:
-			rospy.loginfo("No valid IR data infromation or IR data is out of range measured: " str( avg_distance) )
+			rospy.loginfo("No valid IR data infromation or IR data is out of range measured: " + str( avg_distance) )
 		
 
 	def __avg_distance( self, distance ):

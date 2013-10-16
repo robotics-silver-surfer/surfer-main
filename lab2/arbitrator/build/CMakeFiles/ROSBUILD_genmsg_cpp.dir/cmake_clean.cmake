@@ -1,9 +1,5 @@
 FILE(REMOVE_RECURSE
-  "../msg_gen"
-  "../msg_gen"
-  "../src/arbitrator/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
-  "../msg_gen/cpp/include/arbitrator/ArbData.h"
 )
 
 # Per-language clean rules from dependency scanning.
