@@ -27,7 +27,7 @@ private:
   geometry_msgs::Transform pidOutput;
   
   void gyroCallback(const hovercraft::Gyro::ConstPtr& gyro);
-  void angleCallback(const geometry_msgs::Transform::ConstPtr& wannaBeAngle);
+  void angleCallback(const geometry_msgs::Transform::ConstPtr& transformData);
   void PID_controller(void);
   
   double Kp;
@@ -61,9 +61,15 @@ void anglePID::gyroCallback( const hovercraft::Gyro::ConstPtr& gyro)
 }
 
 //This function receives the desired angle from the arbitrator
-void anglePID::angleCallback (const geometry_msgs::Transform::ConstPtr& wannaBeAngle)
+void anglePID::angleCallback (const geometry_msgs::Transform::ConstPtr& transformData)
 {
-   desiredAngle = wannaBeAngle->rotation.x;
+	pidOutput.translation.x = transformData->translation.x;
+	pidOutput.translation.y = transformData->translation.y;
+	pidOutput.translation.z = transformData->translation.z;
+
+	angle_pub_.publish(pidOutput);
+	
+   desiredAngle = transformData->rotation.w;
 }
 
 
@@ -81,11 +87,11 @@ void anglePID::PID_controller(void)
   
   if(deadBand > 0.63)
   {
-    pidOutput.rotation.x = P + D;
+    pidOutput.rotation.w = P + D;
   }
   else 
   {
-    pidOutput.rotation.x = 0.0;
+    pidOutput.rotation.w = 0.0;
   }
   angle_pub_.publish(pidOutput);
 

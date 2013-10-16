@@ -11,7 +11,6 @@
 #include <geometry_msgs/Vector3.h>
 #include <geometry_msgs/Transform.h>
 #include <reactivecontrol/Control.h>
-//#include <std_msgs/UInt8.msg>
 
 //Class Constants
 #define LED_ON		1
@@ -55,7 +54,7 @@ private:
   ros::Subscriber gyro_sub_;
   ros::Subscriber joyAngleItgr_sub_;
   ros::Subscriber triangle_sub_;
-  //ros::Subscriber reactivectrl_sub_;
+  ros::Subscriber reactivectrl_sub_;
 
   ros::Publisher arb_pub_;
   ros::Publisher led_pub_;
@@ -71,7 +70,8 @@ private:
   void gyroCalibration( const hovercraft::GyroConstPtr& gyro );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
   void triangleCallback( const geometry_msgs::Transform& triangle );
-  void setControlState( int state );//const reactivecontrol::Control& rctrl );
+  void reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl ); 
+  void setControlState( int state );
   void signalLED( hovercraft::LED& led, bool green );
 
   //Class variables
@@ -93,10 +93,10 @@ Arbitrator::Arbitrator()
   gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &Arbitrator::gyroCalibration, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
   triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
-  //reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::setControlState, this);
+  reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::reactiveCtrlCallback, this);
 
-  arb_pub_ = nh_.advertise<geometry_msgs::Quaternion>("arbitrator/Data", 1);
-  ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/Control", 1);
+  arb_pub_ = nh_.advertise<geometry_msgs::Transform>("arbitrator/Data", 1);
+  ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/StateControl", 1);
   led_pub_ = nh_.advertise<hovercraft::LED>("hovercraft/LED", 1);
 
   //Set class variables
@@ -190,7 +190,7 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
   //Update current translational motion
   arb_data.translation.x = joy->axes[0];
-  if( state != TRIANGLE_STATE )
+  if( state == MANUAL_STATE )
   {
     arb_data.translation.y = joy->axes[1];
   }
@@ -266,7 +266,7 @@ void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 //---------------------------------------------------------------------
 
 /* Arbitrator::triangleCallback
- *   <description>
+ *  <description>
  *
  */
 void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
@@ -279,6 +279,22 @@ void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
   }
 
 } /* end method Arbitrator::triangleCallback() */
+
+//---------------------------------------------------------------------
+
+/* Arbitrator::reactiveCtrlCallback
+ *   <description>
+ *
+ */
+void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl )
+{
+  if( state == AUTO_STATE )
+  {
+    arb_data.translation.y = reactiveCtrl.translation.y;
+    arb_pub_.publish( arb_data );
+  }
+
+} /* end method Arbitrator::reactiveCtrlCallback() */
 
 //---------------------------------------------------------------------
 

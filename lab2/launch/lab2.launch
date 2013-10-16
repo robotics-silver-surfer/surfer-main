@@ -15,7 +15,7 @@
  <!-- Joy Node -->
   <node respawn="true" pkg="joy"
         type="joy_node" name="hover_joy" >
-    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="dev" type="string" value="/dev/input/js1" />
     <param name="deadzone" value="0.12" />
   </node>
 
