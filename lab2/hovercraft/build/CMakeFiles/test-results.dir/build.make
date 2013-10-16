@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/hovercraft/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/groovy/share/rosunit/scripts/summarize_results.py --nodeps hovercraft
+	/opt/ros/groovy/share/rosunit/cmake/../scripts/summarize_results.py --nodeps hovercraft
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make

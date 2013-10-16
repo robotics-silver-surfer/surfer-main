@@ -46,7 +46,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/ArbAngle.h
 
 ../msg_gen/cpp/include/arbitrator/ArbAngle.h: ../msg/ArbAngle.msg
 ../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/arbitrator/ArbAngle.h: ../manifest.xml
 ../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/cpp_common/package.xml
 ../msg_gen/cpp/include/arbitrator/ArbAngle.h: /opt/ros/groovy/share/rostime/package.xml

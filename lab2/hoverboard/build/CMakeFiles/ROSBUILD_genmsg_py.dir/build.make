@@ -57,7 +57,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_PWMRaw.py: ../msg/PWMRaw.msg
 ../src/hoverboard/msg/_PWMRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_PWMRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_PWMRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_PWMRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_PWMRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_PWMRaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -84,7 +84,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_GyroRaw.py: ../msg/GyroRaw.msg
 ../src/hoverboard/msg/_GyroRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_GyroRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_GyroRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_GyroRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_GyroRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_GyroRaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -111,7 +111,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_ADCRaw.py: ../msg/ADCRaw.msg
 ../src/hoverboard/msg/_ADCRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_ADCRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_ADCRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_ADCRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_ADCRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_ADCRaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -138,7 +138,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_ThrusterRaw.py: ../msg/ThrusterRaw.msg
 ../src/hoverboard/msg/_ThrusterRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_ThrusterRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_ThrusterRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_ThrusterRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_ThrusterRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_ThrusterRaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -165,7 +165,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_ServoRaw.py: ../msg/ServoRaw.msg
 ../src/hoverboard/msg/_ServoRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_ServoRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_ServoRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_ServoRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_ServoRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_ServoRaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -192,7 +192,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_GPIORaw.py: ../msg/GPIORaw.msg
 ../src/hoverboard/msg/_GPIORaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_GPIORaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_GPIORaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_GPIORaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_GPIORaw.py: ../manifest.xml
 ../src/hoverboard/msg/_GPIORaw.py: /opt/ros/groovy/share/catkin/package.xml
@@ -219,7 +219,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hoverboard/msg/__init__.py
 
 ../src/hoverboard/msg/_LEDRaw.py: ../msg/LEDRaw.msg
 ../src/hoverboard/msg/_LEDRaw.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hoverboard/msg/_LEDRaw.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hoverboard/msg/_LEDRaw.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hoverboard/msg/_LEDRaw.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hoverboard/msg/_LEDRaw.py: ../manifest.xml
 ../src/hoverboard/msg/_LEDRaw.py: /opt/ros/groovy/share/catkin/package.xml

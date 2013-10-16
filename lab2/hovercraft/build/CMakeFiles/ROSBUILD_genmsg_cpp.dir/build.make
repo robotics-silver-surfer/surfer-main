@@ -50,7 +50,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hovercraft/BatteryVoltage
 
 ../msg_gen/cpp/include/hovercraft/Gyro.h: ../msg/Gyro.msg
 ../msg_gen/cpp/include/hovercraft/Gyro.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hovercraft/Gyro.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hovercraft/Gyro.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hovercraft/Gyro.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hovercraft/Gyro.h: ../manifest.xml
 ../msg_gen/cpp/include/hovercraft/Gyro.h: /opt/ros/groovy/share/catkin/package.xml
@@ -79,7 +79,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hovercraft/BatteryVoltage
 
 ../msg_gen/cpp/include/hovercraft/Thruster.h: ../msg/Thruster.msg
 ../msg_gen/cpp/include/hovercraft/Thruster.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hovercraft/Thruster.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hovercraft/Thruster.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hovercraft/Thruster.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hovercraft/Thruster.h: ../manifest.xml
 ../msg_gen/cpp/include/hovercraft/Thruster.h: /opt/ros/groovy/share/catkin/package.xml
@@ -108,7 +108,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hovercraft/BatteryVoltage
 
 ../msg_gen/cpp/include/hovercraft/Current.h: ../msg/Current.msg
 ../msg_gen/cpp/include/hovercraft/Current.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hovercraft/Current.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hovercraft/Current.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hovercraft/Current.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hovercraft/Current.h: ../manifest.xml
 ../msg_gen/cpp/include/hovercraft/Current.h: /opt/ros/groovy/share/catkin/package.xml
@@ -137,7 +137,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hovercraft/BatteryVoltage
 
 ../msg_gen/cpp/include/hovercraft/LED.h: ../msg/LED.msg
 ../msg_gen/cpp/include/hovercraft/LED.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hovercraft/LED.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hovercraft/LED.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hovercraft/LED.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hovercraft/LED.h: ../manifest.xml
 ../msg_gen/cpp/include/hovercraft/LED.h: /opt/ros/groovy/share/catkin/package.xml
@@ -166,7 +166,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hovercraft/BatteryVoltage
 
 ../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: ../msg/BatteryVoltage.msg
 ../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: ../manifest.xml
 ../msg_gen/cpp/include/hovercraft/BatteryVoltage.h: /opt/ros/groovy/share/catkin/package.xml

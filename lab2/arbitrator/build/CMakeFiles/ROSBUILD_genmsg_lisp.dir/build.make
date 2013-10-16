@@ -48,7 +48,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ArbAngle.lisp
 
 ../msg_gen/lisp/ArbAngle.lisp: ../msg/ArbAngle.msg
 ../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/ArbAngle.lisp: ../manifest.xml
 ../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/cpp_common/package.xml
 ../msg_gen/lisp/ArbAngle.lisp: /opt/ros/groovy/share/rostime/package.xml

@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/rxtx/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/groovy/share/rosunit/scripts/summarize_results.py --nodeps rxtx
+	/opt/ros/groovy/share/rosunit/cmake/../scripts/summarize_results.py --nodeps rxtx
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make

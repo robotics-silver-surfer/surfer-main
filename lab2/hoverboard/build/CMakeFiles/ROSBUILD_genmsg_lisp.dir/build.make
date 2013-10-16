@@ -66,7 +66,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/PWMRaw.lisp: ../msg/PWMRaw.msg
 ../msg_gen/lisp/PWMRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/PWMRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/PWMRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/PWMRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/PWMRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/PWMRaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -97,7 +97,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/GyroRaw.lisp: ../msg/GyroRaw.msg
 ../msg_gen/lisp/GyroRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/GyroRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/GyroRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/GyroRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/GyroRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/GyroRaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -128,7 +128,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/ADCRaw.lisp: ../msg/ADCRaw.msg
 ../msg_gen/lisp/ADCRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ADCRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/ADCRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/ADCRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/ADCRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/ADCRaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -159,7 +159,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/ThrusterRaw.lisp: ../msg/ThrusterRaw.msg
 ../msg_gen/lisp/ThrusterRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ThrusterRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/ThrusterRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/ThrusterRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/ThrusterRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/ThrusterRaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -190,7 +190,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/ServoRaw.lisp: ../msg/ServoRaw.msg
 ../msg_gen/lisp/ServoRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ServoRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/ServoRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/ServoRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/ServoRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/ServoRaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -221,7 +221,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/GPIORaw.lisp: ../msg/GPIORaw.msg
 ../msg_gen/lisp/GPIORaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/GPIORaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/GPIORaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/GPIORaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/GPIORaw.lisp: ../manifest.xml
 ../msg_gen/lisp/GPIORaw.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -252,7 +252,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_LEDRaw.lisp
 
 ../msg_gen/lisp/LEDRaw.lisp: ../msg/LEDRaw.msg
 ../msg_gen/lisp/LEDRaw.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/LEDRaw.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/LEDRaw.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/LEDRaw.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/LEDRaw.lisp: ../manifest.xml
 ../msg_gen/lisp/LEDRaw.lisp: /opt/ros/groovy/share/catkin/package.xml

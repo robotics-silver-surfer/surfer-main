@@ -55,7 +55,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
 ../src/hovercraft/msg/_Gyro.py: ../msg/Gyro.msg
 ../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hovercraft/msg/_Gyro.py: ../manifest.xml
 ../src/hovercraft/msg/_Gyro.py: /opt/ros/groovy/share/catkin/package.xml
@@ -84,7 +84,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
 ../src/hovercraft/msg/_Thruster.py: ../msg/Thruster.msg
 ../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hovercraft/msg/_Thruster.py: ../manifest.xml
 ../src/hovercraft/msg/_Thruster.py: /opt/ros/groovy/share/catkin/package.xml
@@ -113,7 +113,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
 ../src/hovercraft/msg/_Current.py: ../msg/Current.msg
 ../src/hovercraft/msg/_Current.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_Current.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_Current.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hovercraft/msg/_Current.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hovercraft/msg/_Current.py: ../manifest.xml
 ../src/hovercraft/msg/_Current.py: /opt/ros/groovy/share/catkin/package.xml
@@ -142,7 +142,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
 ../src/hovercraft/msg/_LED.py: ../msg/LED.msg
 ../src/hovercraft/msg/_LED.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_LED.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_LED.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hovercraft/msg/_LED.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hovercraft/msg/_LED.py: ../manifest.xml
 ../src/hovercraft/msg/_LED.py: /opt/ros/groovy/share/catkin/package.xml
@@ -171,7 +171,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/hovercraft/msg/__init__.py
 
 ../src/hovercraft/msg/_BatteryVoltage.py: ../msg/BatteryVoltage.msg
 ../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/hovercraft/msg/_BatteryVoltage.py: ../manifest.xml
 ../src/hovercraft/msg/_BatteryVoltage.py: /opt/ros/groovy/share/catkin/package.xml

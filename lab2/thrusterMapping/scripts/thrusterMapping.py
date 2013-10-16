@@ -25,13 +25,17 @@ class ThrusterMapper:
 				
    
 	def pidCallback(self, data):
-		if not self.rateTooFast:
+		if not self.rateTooFast and self.thruster.lift > 0.0:
 			if data.data<0.0:
 				self.thruster.thruster6 = -1.0*data.data
 				self.thruster.thruster5 = 0.0
 			else:
 				self.thruster.thruster5 = data.data
 				self.thruster.thruster6 = 0.0
+	                self.Thrustpub.publish(self.thruster)
+		else:
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
 			self.Thrustpub.publish(self.thruster)
 
 

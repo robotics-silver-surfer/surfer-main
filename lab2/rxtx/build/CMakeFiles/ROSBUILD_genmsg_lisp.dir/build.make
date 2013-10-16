@@ -48,7 +48,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_rxtxData.lisp
 
 ../msg_gen/lisp/rxtxData.lisp: ../msg/rxtxData.msg
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/rxtxData.lisp: ../manifest.xml
 ../msg_gen/lisp/rxtxData.lisp: /opt/ros/groovy/share/catkin/package.xml

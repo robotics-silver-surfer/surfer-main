@@ -51,7 +51,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/rxtx/msg/__init__.py
 
 ../src/rxtx/msg/_rxtxData.py: ../msg/rxtxData.msg
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../src/rxtx/msg/_rxtxData.py: ../manifest.xml
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/catkin/package.xml

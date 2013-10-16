@@ -60,7 +60,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/Gyro.lisp: ../msg/Gyro.msg
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/Gyro.lisp: ../manifest.xml
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -93,7 +93,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/Thruster.lisp: ../msg/Thruster.msg
 ../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/Thruster.lisp: ../manifest.xml
 ../msg_gen/lisp/Thruster.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -126,7 +126,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/Current.lisp: ../msg/Current.msg
 ../msg_gen/lisp/Current.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/Current.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/Current.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/Current.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/Current.lisp: ../manifest.xml
 ../msg_gen/lisp/Current.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -159,7 +159,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/LED.lisp: ../msg/LED.msg
 ../msg_gen/lisp/LED.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/LED.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/LED.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/LED.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/LED.lisp: ../manifest.xml
 ../msg_gen/lisp/LED.lisp: /opt/ros/groovy/share/catkin/package.xml
@@ -192,7 +192,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_BatteryVoltage.lisp
 
 ../msg_gen/lisp/BatteryVoltage.lisp: ../msg/BatteryVoltage.msg
 ../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/lisp/BatteryVoltage.lisp: ../manifest.xml
 ../msg_gen/lisp/BatteryVoltage.lisp: /opt/ros/groovy/share/catkin/package.xml

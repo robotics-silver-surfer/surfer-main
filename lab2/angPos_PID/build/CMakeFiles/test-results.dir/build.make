@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/angPos_PID/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/groovy/share/rosunit/scripts/summarize_results.py --nodeps angPos_PID
+	/opt/ros/groovy/share/rosunit/cmake/../scripts/summarize_results.py --nodeps angPos_PID
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make

@@ -52,7 +52,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/PWMRaw.h: ../msg/PWMRaw.msg
 ../msg_gen/cpp/include/hoverboard/PWMRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/PWMRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/PWMRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/PWMRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/PWMRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/PWMRaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -79,7 +79,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/GyroRaw.h: ../msg/GyroRaw.msg
 ../msg_gen/cpp/include/hoverboard/GyroRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/GyroRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/GyroRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/GyroRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/GyroRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/GyroRaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -106,7 +106,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/ADCRaw.h: ../msg/ADCRaw.msg
 ../msg_gen/cpp/include/hoverboard/ADCRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/ADCRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/ADCRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/ADCRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/ADCRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/ADCRaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -133,7 +133,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: ../msg/ThrusterRaw.msg
 ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -160,7 +160,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/ServoRaw.h: ../msg/ServoRaw.msg
 ../msg_gen/cpp/include/hoverboard/ServoRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/ServoRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/ServoRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/ServoRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/ServoRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/ServoRaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -187,7 +187,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/GPIORaw.h: ../msg/GPIORaw.msg
 ../msg_gen/cpp/include/hoverboard/GPIORaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/GPIORaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/GPIORaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/GPIORaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/GPIORaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/GPIORaw.h: /opt/ros/groovy/share/catkin/package.xml
@@ -214,7 +214,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/hoverboard/LEDRaw.h
 
 ../msg_gen/cpp/include/hoverboard/LEDRaw.h: ../msg/LEDRaw.msg
 ../msg_gen/cpp/include/hoverboard/LEDRaw.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/hoverboard/LEDRaw.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/hoverboard/LEDRaw.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/hoverboard/LEDRaw.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/hoverboard/LEDRaw.h: ../manifest.xml
 ../msg_gen/cpp/include/hoverboard/LEDRaw.h: /opt/ros/groovy/share/catkin/package.xml
