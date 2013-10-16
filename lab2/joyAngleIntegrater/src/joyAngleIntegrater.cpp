@@ -9,6 +9,9 @@
 #include <hovercraft/Gyro.h>
 #include <geometry_msgs/Quaternion.h>
 
+//Xbox Joystick Constants
+#define XBOX_LS_X_AXIS  0
+
 //Class Declaration
 class JoyAngleIntegrater
 {
@@ -34,11 +37,11 @@ private:
 
   //Class variables
   ros::Timer timer;
-  float x_axis;
+  float previous_ang_rate;
+  float current_ang_rate;
   float previous_angle;
   float current_angle;
-  float previous_itgr;
-  float current_itgr;
+  float target_angle;
 
 }; /* end class declaration */
 
@@ -55,11 +58,11 @@ JoyAngleIntegrater::JoyAngleIntegrater()
 
   //Set class variables
   timer = nh_.createTimer(ros::Duration(0.1), &JoyAngleIntegrater::integrate, this);
-  x_axis = 0.0;
+  previous_ang_rate = 0.0;
+  current_ang_rate = 0.0;
   previous_angle = 0.0;
   current_angle = 0.0;
-  previous_itgr = 0.0;
-  current_itgr = 0.0;
+  target_angle = 0.0;
 
 } /* end class constructor */
 
@@ -71,7 +74,8 @@ JoyAngleIntegrater::JoyAngleIntegrater()
 void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 {
 
-  x_axis = (float) joy->axes[0];
+  previous_ang_rate = current_ang_rate;
+  current_ang_rate = (float) joy->axes[XBOX_LS_X_AXIS];
 
 } /* end method JoyAngleIntegrater::joyCallback() */
 
@@ -83,7 +87,7 @@ void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 void JoyAngleIntegrater::gyroUpdate( const hovercraft::Gyro::ConstPtr& gyro )
 {
 
-  previous_angle = current_angle;
+//  previous_angle = current_angle;
   current_angle = (float) gyro->angle;
 
 } /* end method JoyAngleIntegrater::gyroUpdate() */
@@ -96,16 +100,12 @@ void JoyAngleIntegrater::gyroUpdate( const hovercraft::Gyro::ConstPtr& gyro )
 void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
 {
 
-  if( current_angle != previous_angle )
-  {
-    previous_itgr = current_angle;
-    current_itgr = previous_itgr + ( previous_angle - current_angle );
-    current_itgr = current_itgr * x_axis;
-    previous_angle = current_angle;
-    
-    itgr_data.w = current_angle;
-    itgrData_pub_.publish( itgr_data );
-  }
+//  if( current_angle != previous_angle )
+//  {
+    target_angle = current_angle + ( current_ang_rate - previous_ang_rate );
+    itgr_data.w = target_angle;
+//  }
+  itgrData_pub_.publish( itgr_data );
 
 } /* end method JoyAngleIntegrater::integrate) */
 

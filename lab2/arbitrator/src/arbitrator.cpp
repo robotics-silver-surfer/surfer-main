@@ -194,9 +194,9 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     else
     {
       state = TRIANGLE_STATE;
-      ROS_DEBUG("State = Triangle", 1);
-      ROS_DEBUG("  --> Press Back button to return to manual", 1);
-      ROS_DEBUG("  --> Press Y button to end Triangle", 1);
+      ROS_INFO("State = Triangle");
+      ROS_INFO("  --> Press Back button to return to manual");
+      ROS_INFO("  --> Press Y button to end Triangle");
       signalLED( led_on, true, 1 ); //flash led green, red, green pattern
       signalLED( led_on, false, 1 );
       signalLED( led_on, true, 1 );
@@ -205,10 +205,10 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   }
 
   //Update current translational motion
-  arb_data.translation.x = joy->axes[0];
+  arb_data.translation.x = joy->axes[XBOX_RS_X_AXIS];
   if( state == MANUAL_STATE )
   {
-    arb_data.translation.y = joy->axes[1];
+    arb_data.translation.y = joy->axes[XBOX_RS_Y_AXIS];
   }
 
   //Turn on/off LEDs according to controller buttons
