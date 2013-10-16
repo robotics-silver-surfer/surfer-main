@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/rxtx
+CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/rxtx/build
+CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,9 +45,9 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/rxtx/msg/__init__.py
 
 ../src/rxtx/msg/__init__.py: ../src/rxtx/msg/_rxtxData.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/rxtx/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
 
 ../src/rxtx/msg/_rxtxData.py: ../msg/rxtxData.msg
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -69,10 +69,10 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/rxtx/msg/__init__.py
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
 ../src/rxtx/msg/_rxtxData.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/rxtx/msg/_rxtxData.py: /projects/ros/surfer-main/lab2/cereal_port/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/rxtx/msg/_rxtxData.py: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/rxtx/msg/_rxtxData.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg/rxtxData.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/rxtx/msg/__init__.py
@@ -89,6 +89,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build /projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 
