@@ -34,6 +34,10 @@ class reactive_control:
 		# Reacative Control Target Distance to maintain
 		self.setpoint = 30.0
 
+		# Reactive Control Target Tolerlerance 
+		# e.g. what is the +- value of the setpoint is accetable
+		self.target_tolerance = 1.0 		
+
 		# PID propoartional Value
 		self.Kp = .05
 
@@ -80,14 +84,17 @@ class reactive_control:
 		output = 0.0
 		position = Transform()
 
-		if avg_distance is not 0.0 and avg_distance < self.maxRange and avg_distance > 15: 
+		error = avg_distance - self.setpoint
+
+		if avg_distance is not 0.0 and avg_distance < self.maxRange and avg_distance > 15 and abs( error ) > self.target_tolerance: 
 			
 			error = avg_distance - self.setpoint
 		
 			derivative = ( error - self.previous_error )
 			output = self.Kp * error + self.Kd * derivative
 
-		
+
+			self.previous_error = error		
 
 			
 			#rospy.loginfo("Distance " + str( self.__avg_distance( distance ) ) + " Error: " + str(error) + " PD Output: " + str(position.translation.y) )
