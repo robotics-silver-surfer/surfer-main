@@ -1,5 +1,6 @@
-/* Hiya!
- *
+/* joyIntegraterAngle.cpp
+ *   Integrates the angular rate provided by the joystick
+ *   into a target angle.
  */
 
 //Libraries and Packages
@@ -9,9 +10,6 @@
 #include <hovercraft/Gyro.h>
 #include <geometry_msgs/Quaternion.h>
 #include <math.h>
-
-//TODO DELETE MEH
-#include <ros/console.h>
 
 //Class Constants
 #define OFFSET		0.05
@@ -73,18 +71,21 @@ JoyAngleIntegrater::JoyAngleIntegrater()
 
 //---------------------------------------------------------------------
 
-/* JoyAngleIntegrater::joyCallback
+/* JoyAngleIntegrater::joyCallback()
  *   Sets class variables according to changes on the controller.
  */
 void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 {
   
   joystick_loc = fabs( (float) joy->axes[XBOX_LS_X_AXIS] );
-  if( joystick_loc > OFFSET ) //update when away from center
+
+  //Update rate when away from center
+  if( joystick_loc > OFFSET ) 
   {
     current_ang_rate = ( (float) joy->axes[XBOX_LS_X_AXIS] ) * SCALE;
   }
-  else //back in center --> reset to zero
+  //Reset rate to zero when close to center
+  else
   {
     current_ang_rate = 0.0;
   }
@@ -93,8 +94,9 @@ void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
 //---------------------------------------------------------------------
 
-/* JoyAngleIntegrater::gyroUpdate
- *   <description>
+/* JoyAngleIntegrater::gyroUpdate()
+ *   Updates the current angle according to the
+ *   hovercraft's gyroscope.
  */
 void JoyAngleIntegrater::gyroUpdate( const hovercraft::Gyro::ConstPtr& gyro )
 {
@@ -105,12 +107,16 @@ void JoyAngleIntegrater::gyroUpdate( const hovercraft::Gyro::ConstPtr& gyro )
 
 //---------------------------------------------------------------------
 
-/* JoyAngleIntegrater::integrate
- *   <description>
+/* JoyAngleIntegrater::integrate()
+ *   Updates the target angle according to the joystick
+ *   position.  The target angle is limited within a
+ *   certain range from the current angle to prevent windup.
  */
 void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
 {
-  if( joystick_loc > OFFSET ) //only update target angle when joystick is not in the center
+  //Only update the target angle when the
+  //joystick is not in the center
+  if( joystick_loc > OFFSET )
   {
     if( fabs( target_angle - current_angle ) <= MAX_ANGLE )
     { 
@@ -118,15 +124,10 @@ void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
       itgr_data.w = target_angle;
     }
   }
-  //else
-  //{
-  //  target_angle = current_angle;
-  //  itgr_data.w = target_angle;
-  //}
 
   itgrData_pub_.publish( itgr_data );
 
-} /* end method JoyAngleIntegrater::integrate) */
+} /* end method JoyAngleIntegrater::integrate() */
 
 //---------------------------------------------------------------------
 
