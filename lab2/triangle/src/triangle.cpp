@@ -100,7 +100,7 @@ int main (int argc, char** argv)
 {
   int cont = 0;
   ros::init(argc, argv, "triangleMode");
-  triangle triangleMode();
+  triangle triangleMode;
   
   ros::spin();
   

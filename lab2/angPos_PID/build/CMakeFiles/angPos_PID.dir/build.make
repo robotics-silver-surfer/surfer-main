@@ -76,6 +76,7 @@ CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/diagnostic
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/joy/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/manifest.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/manifest.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/manifest.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated

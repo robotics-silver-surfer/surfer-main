@@ -29,7 +29,7 @@
   <node name="Arbitrator" pkg="arbitrator" type="arbitrator" output="screen"/>
 
  <!-- Thruster Mapping -->
-  <node name="ThrusterMapping" pkg="thrusterMapping" type="thrusterMapping.py" output="screen"/>
+  <node name="ThrusterMapping" pkg="thrusterMapping" type="thrusterMapping.py" output="screen" />
   
  <!-- Angle Position PID -->
   <node name="AngPosPID" pkg="angPos_PID" type="angPos_PID" output="screen"/>

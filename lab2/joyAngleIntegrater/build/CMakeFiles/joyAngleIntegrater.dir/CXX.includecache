@@ -41,6 +41,10 @@ hovercraft/Gyro.h
 -
 geometry_msgs/Quaternion.h
 -
+math.h
+-
+ros/console.h
+-
 
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h

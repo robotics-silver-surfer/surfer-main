@@ -15,7 +15,7 @@
   <depend package="hovercraft"/>
   <depend package="sensor_msgs"/>
   <depend package="joyAngleIntegrater"/>
-  <!--depend package="triangle"/-->
+  <depend package="triangle"/>
   <depend package="reactivecontrol"/>
   <depend package="geometry_msgs"/>
 

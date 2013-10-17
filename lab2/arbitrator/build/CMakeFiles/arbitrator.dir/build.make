@@ -76,6 +76,7 @@ CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/project
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/manifest.xml
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hovercraft/manifest.xml
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/joyAngleIntegrater/manifest.xml
+CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/manifest.xml
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/reactivecontrol/manifest.xml
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
 CMakeFiles/arbitrator.dir/src/arbitrator.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated

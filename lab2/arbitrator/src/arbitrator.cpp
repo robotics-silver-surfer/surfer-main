@@ -199,7 +199,7 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
   //Update current translational motion
   arb_data.translation.x = joy->axes[XBOX_RS_X_AXIS];
-  if( state == MANUAL_STATE )
+  if( state != TRIANGLE_STATE )
   {
     arb_data.translation.y = joy->axes[XBOX_RS_Y_AXIS];
   }
