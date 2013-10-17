@@ -6,6 +6,7 @@
 #include <ros/ros.h>
 #include <ros/console.h>
 #include <sensor_msgs/Joy.h>
+#include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h> 
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Vector3.h>
@@ -20,6 +21,7 @@
 #define MANUAL_STATE	0
 #define AUTO_STATE	1
 #define TRIANGLE_STATE	2
+#define TURN_STATE	3
 
 //Xbox Button Constants
 #define XBOX_A_BTN	0
@@ -51,6 +53,7 @@ private:
   ros::NodeHandle nh_;
 
   ros::Subscriber joy_sub_;
+  ros::Subscriber gyro_sub_;
   ros::Subscriber joyAngleItgr_sub_;
   ros::Subscriber triangle_sub_;
   ros::Subscriber reactivectrl_sub_;
@@ -66,17 +69,21 @@ private:
 
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
+  void gyroCallback( const hovercraft::Gyro& gyro );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
   void triangleCallback( const geometry_msgs::Transform& triangle );
   void reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl ); 
   void setControlState( int state );
   void signalLED( hovercraft::LED& led, bool green, int blink );
+  void stateChange( int state );
 
   //Class variables
   bool lift_on;
   bool add_90;
   bool sub_90;
+  bool gyro_listen;
   int state;
+  int previous_state;
 
 }; /* end class declaration */
 
@@ -87,6 +94,7 @@ Arbitrator::Arbitrator()
 {
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
+  gyro_sub_ = nh_.subscribe("gyro", 10, &Arbitrator::gyroCallback, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
   triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
   reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::reactiveCtrlCallback, this);
@@ -99,7 +107,9 @@ Arbitrator::Arbitrator()
   lift_on = false;
   add_90 = false;
   sub_90 = false;
+  gyro_listen = false;
   state = MANUAL_STATE;
+  previous_state = MANUAL_STATE;
 
 } /* end class constructor */
 
@@ -140,26 +150,25 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   {
     if( state == MANUAL_STATE )
     {
+      previous_state = state;
       state = AUTO_STATE;
-      ROS_INFO("State = Auto");
-      ROS_INFO("  --> Press Back button to return to manual");
-      ROS_INFO("  --> Press Y button to begin Triangle");
-      signalLED( led_on, false, 3 ); //flash red led 3 times
+      stateChange( state );
     }
     else
     {
+      previous_state = state;
       state = MANUAL_STATE;
-      ROS_INFO("State = Manual");
-      ROS_INFO("  --> Press Back button to return to auto");    
-      signalLED( led_on, true, 3 ); //flash green led 3 times
+      stateChange( state );
     }
 
   }
 
   //Automatic right rotation
-  if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 && 
+  if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
+    //previous_state = state;
+    //state = TURN_STATE;
     add_90 = true;
   }
 
@@ -167,32 +176,27 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   if( float( joy->buttons[XBOX_L_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
+    //previous_state = state;
+    //state = TURN_STATE;
     sub_90 = true;
   }
 
   //Automatic triangle execution (only allowed in auto mode)
-  if( float( joy->buttons[XBOX_Y_BTN] ) == 1 && 
-      state != MANUAL_STATE )
+  if( float( joy->buttons[XBOX_Y_BTN] ) == 1 )
   {
-    //return to auto state
+    //return to previous state
     if( state == TRIANGLE_STATE )
     {
-      state = AUTO_STATE;
-      ROS_INFO("State = Auto");
-      ROS_INFO("  --> Press Back button to return to manual");
-      ROS_INFO("  --> Press Y button to begin Triangle");
-      signalLED( led_on, false, 3 ); //flash red led 3 times
+      state = previous_state;
+      //previous_state = TRIANGLE_STATE;
+      stateChange( state );
     }
     //begin triangle execution
     else
     {
+      previous_state = state;
       state = TRIANGLE_STATE;
-      ROS_INFO("State = Triangle");
-      ROS_INFO("  --> Press Back button to return to manual");
-      ROS_INFO("  --> Press Y button to end Triangle");
-      signalLED( led_on, true, 1 ); //flash led green, red, green pattern
-      signalLED( led_on, false, 1 );
-      signalLED( led_on, true, 1 );
+      stateChange( state );
     }
 
   }
@@ -215,6 +219,36 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
 //---------------------------------------------------------------------
 
+/* Arbitrator::gyroCallback
+ *   <description>
+ *
+ */
+void Arbitrator::gyroCallback( const hovercraft::Gyro& gyro )
+{
+  if( gyro_listen )
+  {
+    if( add_90 )
+    {
+      //prevent any updates until target angle is achieved
+      while( arb_data.rotation.w > gyro.angle );
+      add_90 = false;
+      gyro_listen = false;
+      state = previous_state;
+    } 
+    else if( sub_90 )
+    {
+      //prevent any updates until target angle is achieved
+      while( arb_data.rotation.w < gyro.angle );
+      sub_90 = false;
+      gyro_listen = false;
+      state = previous_state;
+    }
+  }
+
+} /* end method Arbitrator::gyroCallback() */
+
+//---------------------------------------------------------------------
+
 /* Arbitrator::joyAngleItgrCallback
  *   <description>
  *
@@ -223,22 +257,25 @@ void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 {
   if( state != TRIANGLE_STATE )
   {
-    arb_data.rotation.w = itgr.w;
-  
-    if( add_90 )
+    if( !add_90 && !sub_90 )
+    {
+      arb_data.rotation.w = itgr.w;
+    }
+    else if( add_90 && !gyro_listen )
     {
       arb_data.rotation.w += 90.0;
-      add_90 = false;
+      gyro_listen = true;
+      //add_90 = false;
     }
-    else if( sub_90 )
+    else if( sub_90 && !gyro_listen )
     {
       arb_data.rotation.w -= 90.0;
-      sub_90 = false;
+      gyro_listen = true;
+      //sub_90 = false;
     }
 
     arb_pub_.publish( arb_data );
   }
-
 
 } /* end method Arbitrator::joyAngleItgrCallback() */
 
@@ -281,7 +318,7 @@ void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveC
  *   <description>
  *
  */
-void Arbitrator::setControlState( int state )//const reactivecontrol::Control& rctrl )
+void Arbitrator::setControlState( int state )
 {
 
   ctrl_state.state = state;
@@ -291,8 +328,8 @@ void Arbitrator::setControlState( int state )//const reactivecontrol::Control& r
 
 //---------------------------------------------------------------------
  
-/* Arbitrator::signalGreenLED
- *   Blink the green led quickly 3 times
+/* Arbitrator::signalLED
+ *   Blink the led
  */
 void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
 {
@@ -325,6 +362,41 @@ void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
   }
 
 } /* end method Arbitrator::signalGreenLED() */
+
+//---------------------------------------------------------------------
+
+/* Arbitrator::signalLED
+ *   Blink the led
+ */
+void Arbitrator::stateChange( int state )
+{
+  setControlState( state );
+  switch( state )
+  {
+    case MANUAL_STATE:
+      ROS_INFO("State = Manual");
+      ROS_INFO("  --> Press Back button to return to Auto");
+      ROS_INFO("  --> Press Y button to begin Triangle");
+      signalLED( led_on, true, 3 ); //flash green led 3 times
+      break;
+    case AUTO_STATE:
+      ROS_INFO("State = Auto");
+      ROS_INFO("  --> Press Back button to return to Manual");
+      ROS_INFO("  --> Press Y button to begin Triangle");
+      signalLED( led_on, false, 3 ); //flash red led 3 times
+      break;
+    case TRIANGLE_STATE:
+      ROS_INFO("State = Triangle");
+      ROS_INFO("  --> Press Y button to end Triangle");
+      signalLED( led_on, true, 1 ); //flash led green, red, green pattern
+      signalLED( led_on, false, 1 );
+      signalLED( led_on, true, 1 );
+      break;
+    default:
+      break;
+  }
+
+} /* end method Arbitrator::stateChange() */
 
 //---------------------------------------------------------------------
 
