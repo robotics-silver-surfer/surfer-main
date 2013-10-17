@@ -7,7 +7,6 @@
 #include <ros/ros.h>
 #include <ros/console.h>
 #include <sensor_msgs/Joy.h>
-#include <hovercraft/Gyro.h>
 #include <hovercraft/LED.h> 
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Vector3.h>
@@ -22,7 +21,8 @@
 #define MANUAL_STATE	0
 #define AUTO_STATE	1
 #define TRIANGLE_STATE	2
-#define TURN_STATE	3
+#define TURN_R_STATE	3
+#define TURN_L_STATE	4
 #define TURN_OFFSET	5.0
 
 //Xbox Button Constants
@@ -55,7 +55,6 @@ private:
   ros::NodeHandle nh_;
 
   ros::Subscriber joy_sub_;
-  ros::Subscriber gyro_sub_;
   ros::Subscriber joyAngleItgr_sub_;
   ros::Subscriber triangle_sub_;
   ros::Subscriber reactivectrl_sub_;
@@ -71,19 +70,15 @@ private:
 
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
-  void gyroCallback( const hovercraft::Gyro& gyro );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
   void triangleCallback( const geometry_msgs::Transform& triangle );
   void reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl ); 
-  void setControlState( int state );
+  void publishControlState( int state );
   void signalLED( hovercraft::LED& led, bool green, int blink );
   void stateChange( int state );
 
   //Class variables
   bool lift_on;
-  bool add_90;
-  bool sub_90;
-  bool gyro_listen;
   int state;
   int previous_state;
 
@@ -96,20 +91,16 @@ Arbitrator::Arbitrator()
 {
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
-  gyro_sub_ = nh_.subscribe("gyro", 10, &Arbitrator::gyroCallback, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
   triangle_sub_ = nh_.subscribe("triangle/Data", 10, &Arbitrator::triangleCallback, this);
   reactivectrl_sub_ = nh_.subscribe("reactivecontrol/Control", 10, &Arbitrator::reactiveCtrlCallback, this);
 
   arb_pub_ = nh_.advertise<geometry_msgs::Transform>("arbitrator/Data", 1);
-  ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/StateControl", 1);
+  ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/Control", 1);
   led_pub_ = nh_.advertise<hovercraft::LED>("hovercraft/LED", 1);
 
   //Set class variables
   lift_on = false;
-  add_90 = false;
-  sub_90 = false;
-  gyro_listen = false;
   state = MANUAL_STATE;
   previous_state = MANUAL_STATE;
 
@@ -169,14 +160,18 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
-    add_90 = true;
+    previous_state = state;
+    state = TURN_R_STATE;
+    stateChange( state );
   }
 
   //Automatic left rotation
   if( float( joy->buttons[XBOX_L_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
-    sub_90 = true;
+    previous_state = state;
+    state = TURN_L_STATE;
+    stateChange( state );
   }
 
   //Automatic triangle execution (only allowed in auto mode)
@@ -216,60 +211,15 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::gyroCallback()
- *   Only activated during an automatic 90 degree turn.
- *   Prevents commands on the controller until the gyroscope
- *   has finished its turn within a certain offset.
- */
-void Arbitrator::gyroCallback( const hovercraft::Gyro& gyro )
-{
-  if( gyro_listen )
-  {
-    if( add_90 )
-    {
-      //prevent any updates until target angle is achieved
-      while( ( arb_data.rotation.w - TURN_OFFSET ) > gyro.angle );
-      gyro_listen = false;
-      state = previous_state;
-    } 
-    else if( sub_90 )
-    {
-      //prevent any updates until target angle is achieved
-      while( ( arb_data.rotation.w + TURN_OFFSET ) < gyro.angle );
-      gyro_listen = false;
-      state = previous_state;
-    }
-  }
-
-} /* end method Arbitrator::gyroCallback() */
-
-//---------------------------------------------------------------------
-
 /* Arbitrator::joyAngleItgrCallback()
  *   Updates the target angle for the PID according to
  *   changes from the joyAngleIntegrater node.
  */
 void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 {
-  if( state != TRIANGLE_STATE )
+  if( state != TRIANGLE_STATE)
   {
-    if( state != TURN_STATE )
-    {
-      arb_data.rotation.w = itgr.w;
-    }
-    else if( add_90 && state == TURN_STATE )
-    {
-      arb_data.rotation.w += 90.0;
-      gyro_listen = true;
-      add_90 = false;
-    }
-    else if( sub_90 && state == TURN_STATE )
-    {
-      arb_data.rotation.w -= 90.0;
-      gyro_listen = true;
-      sub_90 = false;
-    }
-
+    arb_data.rotation.w = itgr.w;
     arb_pub_.publish( arb_data );
   }
 
@@ -296,7 +246,7 @@ void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
 
 /* Arbitrator::reactiveCtrlCallback()
  *   Updates the forward momentum for the PID as directed
- *   byt the reactivecontrol node.
+ *   by the reactivecontrol node.
  */
 void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl )
 {
@@ -311,16 +261,16 @@ void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveC
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::setControlState()
+/* Arbitrator::publishControlState()
  *   Publishes the current control state of the arbitrator.
  */
-void Arbitrator::setControlState( int state )
+void Arbitrator::publishControlState( int state )
 {
 
   ctrl_state.state = state;
   ctrl_pub_.publish( ctrl_state );
 
-} /* end method Arbitrator::controlState() */
+} /* end method Arbitrator::publishControlState() */
 
 //---------------------------------------------------------------------
  
@@ -367,7 +317,7 @@ void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink )
  */
 void Arbitrator::stateChange( int state )
 {
-  setControlState( state );
+  publishControlState( state );
   switch( state )
   {
     case MANUAL_STATE:
@@ -389,6 +339,9 @@ void Arbitrator::stateChange( int state )
       signalLED( led_on, false, 1 );
       signalLED( led_on, true, 1 );
       break;
+    case TURN_R_STATE:
+    case TURN_L_STATE:
+      state = previous_state;
     default:
       break;
   }

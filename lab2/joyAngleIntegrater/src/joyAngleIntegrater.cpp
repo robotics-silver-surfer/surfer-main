@@ -9,6 +9,7 @@
 #include <std_msgs/Float64.h>
 #include <hovercraft/Gyro.h>
 #include <geometry_msgs/Quaternion.h>
+#include <reactivecontrol/Control.h>
 #include <math.h>
 
 //Class Constants
@@ -16,6 +17,8 @@
 #define XBOX_LS_X_AXIS  0
 #define SCALE		40
 #define MAX_ANGLE	90
+#define TURN_R_STATE	3
+#define TURN_L_STATE	4
 
 //Class Declaration
 class JoyAngleIntegrater
@@ -31,6 +34,7 @@ private:
 
   ros::Subscriber joy_sub_;
   ros::Subscriber gyro_sub_;
+  ros::Subscriber arb_sub_;
 
   //Published messages
   geometry_msgs::Quaternion itgr_data;
@@ -39,6 +43,7 @@ private:
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
   void gyroUpdate( const hovercraft::GyroConstPtr& gyro );
   void integrate( const ros::TimerEvent& event );
+  void arbCallback( const reactivecontrol::Control& state );
 
   //Class variables
   ros::Timer timer;
@@ -58,6 +63,8 @@ JoyAngleIntegrater::JoyAngleIntegrater()
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &JoyAngleIntegrater::joyCallback, this);
   gyro_sub_ = nh_.subscribe("hovercraft/Gyro", 10, &JoyAngleIntegrater::gyroUpdate, this);
+  arb_sub_ = nh_.subscribe("arbitrator/Control", 10, &JoyAngleIntegrater::arbCallback, this);
+
   itgrData_pub_ = nh_.advertise<geometry_msgs::Quaternion>("joyAngleIntegrater/Data", 1);
 
   //Set class variables
@@ -131,6 +138,30 @@ void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
 
 //---------------------------------------------------------------------
 
+/* JoyAngleIntegrater::arbCallback()
+ *   Checks for turn states from the arbitrator.
+ */
+void JoyAngleIntegrater::arbCallback( const reactivecontrol::Control& ctrl )
+{
+  if( fabs( target_angle - current_angle ) <= MAX_ANGLE )
+  {
+    if( ctrl.state == TURN_R_STATE )
+    {
+      target_angle -= 90;
+      itgr_data.w = target_angle;
+      itgrData_pub_.publish( itgr_data );
+    }
+    else if( ctrl.state == TURN_L_STATE )
+    {
+      target_angle += 90;
+      itgr_data.w = target_angle;
+      itgrData_pub_.publish( itgr_data );
+    }
+  }
+
+} /* end method JoyAngleIntegrater::arbCallback() */
+
+//---------------------------------------------------------------------
 
 //Main Function
 int main(int argc, char** argv)

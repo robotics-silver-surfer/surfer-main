@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/arbitrator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/arbitrator/build
 
 # Utility rule file for rosbuild_precompile.
 
@@ -57,6 +57,6 @@ CMakeFiles/rosbuild_precompile.dir/clean:
 .PHONY : CMakeFiles/rosbuild_precompile.dir/clean
 
 CMakeFiles/rosbuild_precompile.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab2/arbitrator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/arbitrator /projects/ros/surfer-main/lab2/arbitrator /projects/ros/surfer-main/lab2/arbitrator/build /projects/ros/surfer-main/lab2/arbitrator/build /projects/ros/surfer-main/lab2/arbitrator/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_precompile.dir/depend
 
