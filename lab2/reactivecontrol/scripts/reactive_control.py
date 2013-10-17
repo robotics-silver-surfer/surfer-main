@@ -105,7 +105,8 @@ class reactive_control:
 			
 			rospy.loginfo("No valid IR data infromation or IR data is out of range measured: " + str( avg_distance) )
 
- 		
+		if output > 1:
+			output = 1 		
 		position.translation.y = output;
 		self.__publish_position( position )
 

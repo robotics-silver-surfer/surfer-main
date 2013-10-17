@@ -46,8 +46,8 @@ class ThrusterMapper:
 				self.thruster.thruster6 = 0.0
 			
 		else:
-			self.thruster.thruster6 = -1.0*data.rotation.w
-			self.thruster.thruster5 = data.rotation.w
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
 
 
 		#Power button logic now being handled in arbitrator
@@ -86,7 +86,7 @@ class ThrusterMapper:
 	 		self.thruster.thruster4 = mag*T1_offset_ratio
 	 		self.thruster.thruster1 = mag*T4_offset_ratio	
 
-
+		self.thruster.header.stamp = rospy.Time.now()
 		self.Thrustpub.publish(self.thruster)
  			
 

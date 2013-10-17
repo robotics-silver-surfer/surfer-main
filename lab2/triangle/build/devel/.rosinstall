@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build/devel/setup.sh
+    local-name: /projects/ros/surfer-main/lab2/triangle/build/devel/setup.sh

@@ -110,7 +110,9 @@ def input_callback(ADCRaw):
 	pub = rospy.Publisher('ircm/IRoutput', IRdistance)	
 	ir_output = IRdistance()	
 	ir_output.IR1 = adc_to_cm_ir1( ADCRaw.adc5_0 )
-	ir_output.IR2 = adc_to_cm_ir2( ADCRaw.adc5_1 )	
+	ir_output.IR2 = adc_to_cm_ir2( ADCRaw.adc5_1 )
+
+	ir_output.header.stamp = rospy.Time.now()	
 	pub.publish( ir_output )
      
    	

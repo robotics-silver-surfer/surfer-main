@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab2/triangle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab2/triangle/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/triangle.dir/depend.make
@@ -61,18 +61,28 @@ CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/std_msgs/packa
 CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/catkin/package.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/rospack/package.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/roslib/package.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/cereal_port/manifest.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/rxtx/manifest.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/hoverboard/manifest.xml
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/hovercraft/manifest.xml
 CMakeFiles/triangle.dir/src/triangle.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/rxtx/msg_gen/generated
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/hoverboard/msg_gen/generated
+CMakeFiles/triangle.dir/src/triangle.cpp.o: /projects/ros/surfer-main/lab2/hovercraft/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab2/triangle/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/triangle.dir/src/triangle.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/triangle.dir/src/triangle.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/src/triangle.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/triangle.dir/src/triangle.cpp.o -c /projects/ros/surfer-main/lab2/triangle/src/triangle.cpp
 
 CMakeFiles/triangle.dir/src/triangle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangle.dir/src/triangle.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/src/triangle.cpp > CMakeFiles/triangle.dir/src/triangle.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab2/triangle/src/triangle.cpp > CMakeFiles/triangle.dir/src/triangle.cpp.i
 
 CMakeFiles/triangle.dir/src/triangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangle.dir/src/triangle.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/src/triangle.cpp -o CMakeFiles/triangle.dir/src/triangle.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab2/triangle/src/triangle.cpp -o CMakeFiles/triangle.dir/src/triangle.cpp.s
 
 CMakeFiles/triangle.dir/src/triangle.cpp.o.requires:
 .PHONY : CMakeFiles/triangle.dir/src/triangle.cpp.o.requires
@@ -108,6 +118,6 @@ CMakeFiles/triangle.dir/clean:
 .PHONY : CMakeFiles/triangle.dir/clean
 
 CMakeFiles/triangle.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab2/triangle/build/CMakeFiles/triangle.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab2/triangle/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab2/triangle /projects/ros/surfer-main/lab2/triangle /projects/ros/surfer-main/lab2/triangle/build /projects/ros/surfer-main/lab2/triangle/build /projects/ros/surfer-main/lab2/triangle/build/CMakeFiles/triangle.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/triangle.dir/depend
 
