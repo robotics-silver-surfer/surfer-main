@@ -17,6 +17,7 @@
 #define OFFSET		0.05
 #define XBOX_LS_X_AXIS  0
 #define SCALE		40
+#define MAX_ANGLE	90
 
 //Class Declaration
 class JoyAngleIntegrater
@@ -43,7 +44,6 @@ private:
 
   //Class variables
   ros::Timer timer;
-  float previous_ang_rate;
   float current_ang_rate;
   float current_angle;
   float target_angle;
@@ -64,7 +64,6 @@ JoyAngleIntegrater::JoyAngleIntegrater()
 
   //Set class variables
   timer = nh_.createTimer(ros::Duration(0.1), &JoyAngleIntegrater::integrate, this);
-  //previous_ang_rate = 0.0;
   current_ang_rate = 0.0;
   current_angle = 0.0;
   target_angle = 0.0;
@@ -79,18 +78,16 @@ JoyAngleIntegrater::JoyAngleIntegrater()
  */
 void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 {
+  
   joystick_loc = fabs( (float) joy->axes[XBOX_LS_X_AXIS] );
-
   if( joystick_loc > OFFSET ) //update when away from center
   {
-    //ROS_INFO("Updating joystick difference");
     current_ang_rate = ( (float) joy->axes[XBOX_LS_X_AXIS] ) * SCALE;
   }
   else //back in center --> reset to zero
   {
     current_ang_rate = 0.0;
   }
-  //ROS_INFO("Jostick Location: %f Current Angle Rate: %f", joystick_loc, current_ang_rate);
 
 } /* end method JoyAngleIntegrater::joyCallback() */
 
@@ -115,23 +112,18 @@ void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
 {
   if( joystick_loc > OFFSET ) //only update target angle when joystick is not in the center
   {
-    //ROS_INFO("Updating target angle");
-    //ROS_INFO("Current Difference: %f", current_ang_rate);
-//    ROS_INFO("  >>Current Angular Rate = %f", current_ang_rate);
-//    ROS_INFO("  >>Previous Angular Rate = %f", previous_ang_rate);
-    
-    target_angle += current_ang_rate; //( current_ang_rate - previous_ang_rate );
-    itgr_data.w = target_angle;
-
-    //ROS_INFO("Integragtor, target_angle: %f current_angle: %f current_angle_rate: %f", target_angle, current_angle, current_ang_rate);
+    if( fabs( target_angle - current_angle ) <= MAX_ANGLE )
+    { 
+      target_angle += current_ang_rate;
+      itgr_data.w = target_angle;
+    }
   }
-  else
-  {
-    target_angle = current_angle;
-    itgr_data.w = target_angle;
-  }
+  //else
+  //{
+  //  target_angle = current_angle;
+  //  itgr_data.w = target_angle;
+  //}
 
-  //ROS_INFO("Published itgr_data: %f", itgr_data.w);
   itgrData_pub_.publish( itgr_data );
 
 } /* end method JoyAngleIntegrater::integrate) */
