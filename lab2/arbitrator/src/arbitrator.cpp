@@ -1,5 +1,6 @@
-/* Hiya!
- *
+/* arbitrator.cpp
+ *   Manages the state of the hovercraft based on
+ *   commands from the controller.
  */
 
 //Libraries and Packages
@@ -22,6 +23,7 @@
 #define AUTO_STATE	1
 #define TRIANGLE_STATE	2
 #define TURN_STATE	3
+#define TURN_OFFSET	5.0
 
 //Xbox Button Constants
 #define XBOX_A_BTN	0
@@ -115,7 +117,7 @@ Arbitrator::Arbitrator()
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::joyCallback
+/* Arbitrator::joyCallback()
  *   Sets class variables according to changes on the controller.
  */
 void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
@@ -167,8 +169,6 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   if( float( joy->buttons[XBOX_R_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
-    //previous_state = state;
-    //state = TURN_STATE;
     add_90 = true;
   }
 
@@ -176,8 +176,6 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   if( float( joy->buttons[XBOX_L_BUMPER] ) == 1 &&
       state != TRIANGLE_STATE )
   {
-    //previous_state = state;
-    //state = TURN_STATE;
     sub_90 = true;
   }
 
@@ -188,7 +186,6 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     if( state == TRIANGLE_STATE )
     {
       state = previous_state;
-      //previous_state = TRIANGLE_STATE;
       stateChange( state );
     }
     //begin triangle execution
@@ -219,9 +216,10 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::gyroCallback
- *   <description>
- *
+/* Arbitrator::gyroCallback()
+ *   Only activated during an automatic 90 degree turn.
+ *   Prevents commands on the controller until the gyroscope
+ *   has finished its turn within a certain offset.
  */
 void Arbitrator::gyroCallback( const hovercraft::Gyro& gyro )
 {
@@ -230,16 +228,14 @@ void Arbitrator::gyroCallback( const hovercraft::Gyro& gyro )
     if( add_90 )
     {
       //prevent any updates until target angle is achieved
-      while( arb_data.rotation.w > gyro.angle );
-      add_90 = false;
+      while( ( arb_data.rotation.w - TURN_OFFSET ) > gyro.angle );
       gyro_listen = false;
       state = previous_state;
     } 
     else if( sub_90 )
     {
       //prevent any updates until target angle is achieved
-      while( arb_data.rotation.w < gyro.angle );
-      sub_90 = false;
+      while( ( arb_data.rotation.w + TURN_OFFSET ) < gyro.angle );
       gyro_listen = false;
       state = previous_state;
     }
@@ -249,29 +245,29 @@ void Arbitrator::gyroCallback( const hovercraft::Gyro& gyro )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::joyAngleItgrCallback
- *   <description>
- *
+/* Arbitrator::joyAngleItgrCallback()
+ *   Updates the target angle for the PID according to
+ *   changes from the joyAngleIntegrater node.
  */
 void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 {
   if( state != TRIANGLE_STATE )
   {
-    if( !add_90 && !sub_90 )
+    if( state != TURN_STATE )
     {
       arb_data.rotation.w = itgr.w;
     }
-    else if( add_90 && !gyro_listen )
+    else if( add_90 && state == TURN_STATE )
     {
       arb_data.rotation.w += 90.0;
       gyro_listen = true;
-      //add_90 = false;
+      add_90 = false;
     }
-    else if( sub_90 && !gyro_listen )
+    else if( sub_90 && state == TURN_STATE )
     {
       arb_data.rotation.w -= 90.0;
       gyro_listen = true;
-      //sub_90 = false;
+      sub_90 = false;
     }
 
     arb_pub_.publish( arb_data );
@@ -281,9 +277,9 @@ void Arbitrator::joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::triangleCallback
- *  <description>
- *
+/* Arbitrator::triangleCallback()
+ *  Updates the target angle and forward momentum for the PID
+ *  as directed by the triangle node.
  */
 void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
 {
@@ -298,12 +294,13 @@ void Arbitrator::triangleCallback( const geometry_msgs::Transform& triangle )
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::reactiveCtrlCallback
- *   <description>
- *
+/* Arbitrator::reactiveCtrlCallback()
+ *   Updates the forward momentum for the PID as directed
+ *   byt the reactivecontrol node.
  */
 void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveCtrl )
 {
+
   if( state == AUTO_STATE )
   {
     arb_data.translation.y = reactiveCtrl.translation.y;
@@ -314,9 +311,8 @@ void Arbitrator::reactiveCtrlCallback( const geometry_msgs::Transform& reactiveC
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::setControlState
- *   <description>
- *
+/* Arbitrator::setControlState()
+ *   Publishes the current control state of the arbitrator.
  */
 void Arbitrator::setControlState( int state )
 {
@@ -328,10 +324,10 @@ void Arbitrator::setControlState( int state )
 
 //---------------------------------------------------------------------
  
-/* Arbitrator::signalLED
- *   Blink the led
+/* Arbitrator::signalLED()
+ *   Flashes an LED on the hovercraft.
  */
-void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
+void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink )
 {
   int i;
   for( i = 0; i < blink; i++ )
@@ -348,7 +344,7 @@ void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
     
     led_pub_.publish( led_on );
 
-    ros::Duration(0.2).sleep(); //sleep for 40ms
+    ros::Duration(0.2).sleep(); //sleep for 20ms
     if( green )
     {
       led.led33_green = LED_OFF;
@@ -361,12 +357,13 @@ void Arbitrator::signalLED( hovercraft::LED& led, bool green, int blink)
     led_pub_.publish( led_on );
   }
 
-} /* end method Arbitrator::signalGreenLED() */
+} /* end method Arbitrator::signalLED() */
 
 //---------------------------------------------------------------------
 
-/* Arbitrator::signalLED
- *   Blink the led
+/* Arbitrator::stateChange()
+ *   Displays a message on the console output and with the
+ *   hovercraft LEDs to signal the current control state.
  */
 void Arbitrator::stateChange( int state )
 {
