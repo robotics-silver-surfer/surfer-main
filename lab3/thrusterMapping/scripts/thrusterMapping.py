@@ -1,0 +1,126 @@
+#!/usr/bin/env python
+import roslib; roslib.load_manifest('thrusterMapping')
+import rospy
+from math import sqrt, pow, atan2
+from geometry_msgs.msg import Transform
+from hovercraft.msg import *
+
+
+pi = 3.14159
+SCALE = .75
+T1_ANGLE = 0.0
+T2_ANGLE = 2.0/3.0*pi
+T4_ANGLE = 4.0/3.0*pi
+
+class ThrusterMapper:
+	def __init__(self):
+		self.Thrustpub = rospy.Publisher('hovercraft/Thruster', Thruster)
+		rospy.Subscriber("pidOutput", Transform, self.pidCallback)
+		rospy.Subscriber("hovercraft/Gyro", Gyro, self.gyroCallback)
+		self.rateTooFast = False;
+		self.thruster = Thruster()
+    
+			
+   
+	def pidCallback(self, data):
+		"""
+			Used to control translational movement
+		"""
+		self.thruster.thruster1 = 0.0;
+		self.thruster.thruster2 = 0.0;
+		self.thruster.thruster3 = 0.0;
+		self.thruster.thruster4 = 0.0;
+		self.thruster.lift = data.translation.z;
+		#rospy.loginfo("Thurster Lift: " + str( data.translation.z ) )		
+
+		# Check to see if maximum spin has been reached
+		if not self.rateTooFast and self.thruster.lift > 0.0:
+
+			#True if maximum spin has been reached cut off, if true, cut off motors
+			#In the direction of spin
+			if data.rotation.w < 0.0:
+				self.thruster.thruster6 = -1.0*data.rotation.w
+				self.thruster.thruster5 = 0.0
+			else:
+				self.thruster.thruster5 = data.rotation.w
+				self.thruster.thruster6 = 0.0
+			
+		else:
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
+
+
+		#Power button logic now being handled in arbitrator
+		#if data.translation.z == 0.5:
+		#	if self.thruster.lift is 0.5:
+		#		self.thruster.lift = 0.0;
+		#		self.thruster.thruster6 = 0.0;
+		#		self.thruster.thruster5 = 0.0;
+		#	else:
+		#		self.thruster.lift = 0.5;
+
+
+
+		mag = sqrt(pow(data.translation.x,2)+pow(data.translation.y,2)) * SCALE
+		angle = atan2(-1.0 * data.translation.x,data.translation.y)
+		if angle<0:
+			angle = angle+2*pi
+
+		if angle>=0.0 and angle<(2.0/3.0*pi):
+ 			T1_offset_ratio = (angle-T1_ANGLE)/(2.0/3.0*pi)
+	 		T2_offset_ratio = (T2_ANGLE-angle)/(2.0/3.0*pi)
+	 
+	 		self.thruster.thruster1 = mag*T2_offset_ratio
+	 		self.thruster.thruster2 = mag*T1_offset_ratio
+		elif angle>=(2.0/3.0*pi) and angle<(4.0/3.0*pi):
+ 			T2_offset_ratio = (angle-T2_ANGLE)/(2.0/3.0*pi)
+	 		T4_offset_ratio = (T4_ANGLE-angle)/(2.0/3.0*pi)
+	 
+	 		self.thruster.thruster2 = mag*T4_offset_ratio
+	 		self.thruster.thruster4 = mag*T2_offset_ratio
+		else:
+			
+ 			T4_offset_ratio = (angle-T4_ANGLE)/(2.0/3.0*pi)
+	 		T1_offset_ratio = (2.0*pi-angle)/(2.0/3.0*pi)
+	 
+	 		self.thruster.thruster4 = mag*T1_offset_ratio
+	 		self.thruster.thruster1 = mag*T4_offset_ratio	
+
+		self.thruster.header.stamp = rospy.Time.now()
+		self.Thrustpub.publish(self.thruster)
+ 			
+
+
+	def gyroCallback(self, data):
+		"""
+			Limits Rotational spin of the Robot by implementing a 
+			Hard cut off
+		"""
+		
+		if data.rate>528 or data.rate<-215:
+			self.rateTooFast = True
+		else:
+			self.rateTooFast = False
+
+		# Check to see if maximum spin has been reached
+		if not self.rateTooFast:
+
+			# Spin Rate is to fast, kill thruster motors
+			self.thruster.thruster6 = 0.0
+			self.thruster.thruster5 = 0.0
+			
+		self.Thrustpub.publish(self.thruster)
+		
+
+
+
+
+
+
+if __name__ == '__main__':
+	try:
+		rospy.init_node('thrusterMapper')
+		m = ThrusterMapper()
+		rospy.spin()
+	except rospy.ROSInterruptException:
+		pass
