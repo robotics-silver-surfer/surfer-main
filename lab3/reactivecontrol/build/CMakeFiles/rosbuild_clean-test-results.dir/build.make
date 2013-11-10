@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/reactivecontrol
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/reactivecontrol/build
 
 # Utility rule file for rosbuild_clean-test-results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reacti
 include CMakeFiles/rosbuild_clean-test-results.dir/progress.make
 
 CMakeFiles/rosbuild_clean-test-results:
-	if ! rm -rf /home/courtney/.ros/test_results/reactivecontrol; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
+	if ! rm -rf /home/neo/.ros/test_results/reactivecontrol; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
 
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/rosbuild_clean-test-results.dir/clean:
 .PHONY : CMakeFiles/rosbuild_clean-test-results.dir/clean
 
 CMakeFiles/rosbuild_clean-test-results.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/reactivecontrol/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/reactivecontrol /projects/ros/surfer-main/lab3/reactivecontrol /projects/ros/surfer-main/lab3/reactivecontrol/build /projects/ros/surfer-main/lab3/reactivecontrol/build /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_clean-test-results.dir/depend
 

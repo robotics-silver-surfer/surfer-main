@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
@@ -76,12 +76,12 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_landmarkLocation.lisp
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/lisp/landmarkLocation.lisp: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/lisp/landmarkLocation.lisp: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/landmarkLocation.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_landmarkLocation.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/landmarkLocation.lisp
 
@@ -103,6 +103,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 

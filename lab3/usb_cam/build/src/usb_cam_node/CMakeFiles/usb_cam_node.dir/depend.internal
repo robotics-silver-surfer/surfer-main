@@ -3,7 +3,6 @@
 
 src/usb_cam_node/CMakeFiles/usb_cam_node.dir/usb_cam_node.cpp.o
  ../include/usb_cam/usb_cam.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp
  /opt/ros/groovy/include/XmlRpcDecl.h
  /opt/ros/groovy/include/XmlRpcValue.h
  /opt/ros/groovy/include/diagnostic_msgs/DiagnosticArray.h
@@ -84,3 +83,4 @@ src/usb_cam_node/CMakeFiles/usb_cam_node.dir/usb_cam_node.cpp.o
  /opt/ros/groovy/include/sensor_msgs/fill_image.h
  /opt/ros/groovy/include/sensor_msgs/image_encodings.h
  /opt/ros/groovy/include/std_msgs/Header.h
+ /projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp

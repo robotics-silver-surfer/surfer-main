@@ -4,8 +4,8 @@ FILE(REMOVE_RECURSE
   "../src/ballDetector/msg"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/ballDetector/msg/__init__.py"
-  "../src/ballDetector/msg/_ballLocation.py"
   "../src/ballDetector/msg/_debugTimes.py"
+  "../src/ballDetector/msg/_ballLocation.py"
   "../src/ballDetector/msg/_ballDebug.py"
 )
 

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/usb_cam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/usb_cam/build
 
 # Utility rule file for test-results.
 
@@ -58,6 +58,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/usb_cam /projects/ros/surfer-main/lab3/usb_cam /projects/ros/surfer-main/lab3/usb_cam/build /projects/ros/surfer-main/lab3/usb_cam/build /projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 

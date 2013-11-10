@@ -12,22 +12,6 @@ string
 sstream
 -
 
-/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp
-stdio.h
--
-iostream
--
-ros/ros.h
--
-sensor_msgs/fill_image.h
--
-usb_cam/usb_cam.h
--
-self_test/self_test.h
--
-image_transport/image_transport.h
--
-
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h
 -
@@ -972,5 +956,21 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp
+stdio.h
+-
+iostream
+-
+ros/ros.h
+-
+sensor_msgs/fill_image.h
+-
+usb_cam/usb_cam.h
+-
+self_test/self_test.h
+-
+image_transport/image_transport.h
 -
 

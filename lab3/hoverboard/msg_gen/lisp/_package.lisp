@@ -1,19 +1,19 @@
 (cl:defpackage hoverboard-msg
   (:use )
   (:export
-   "<GYRORAW>"
-   "GYRORAW"
    "<ADCRAW>"
    "ADCRAW"
-   "<GPIORAW>"
-   "GPIORAW"
-   "<LEDRAW>"
-   "LEDRAW"
    "<SERVORAW>"
    "SERVORAW"
+   "<LEDRAW>"
+   "LEDRAW"
    "<THRUSTERRAW>"
    "THRUSTERRAW"
    "<PWMRAW>"
    "PWMRAW"
+   "<GPIORAW>"
+   "GPIORAW"
+   "<GYRORAW>"
+   "GYRORAW"
   ))
 

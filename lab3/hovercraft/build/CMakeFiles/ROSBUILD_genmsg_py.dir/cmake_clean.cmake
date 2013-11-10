@@ -6,9 +6,9 @@ FILE(REMOVE_RECURSE
   "../src/hovercraft/msg/__init__.py"
   "../src/hovercraft/msg/_BatteryVoltage.py"
   "../src/hovercraft/msg/_Gyro.py"
-  "../src/hovercraft/msg/_Current.py"
-  "../src/hovercraft/msg/_LED.py"
   "../src/hovercraft/msg/_Thruster.py"
+  "../src/hovercraft/msg/_LED.py"
+  "../src/hovercraft/msg/_Current.py"
 )
 
 # Per-language clean rules from dependency scanning.

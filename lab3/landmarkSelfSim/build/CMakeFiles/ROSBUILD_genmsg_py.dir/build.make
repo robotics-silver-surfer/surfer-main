@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,9 +45,9 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/landmarkSelfSim/msg/__init__.py
 
 ../src/landmarkSelfSim/msg/__init__.py: ../src/landmarkSelfSim/msg/_landmarkLocation.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/landmarkSelfSim/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
 
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: ../msg/landmarkLocation.msg
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -79,12 +79,12 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/landmarkSelfSim/msg/__init__.py
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/self_test/package.xml
-../src/landmarkSelfSim/msg/_landmarkLocation.py: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../src/landmarkSelfSim/msg/_landmarkLocation.py: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/opencv2/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/landmarkSelfSim/msg/_landmarkLocation.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/landmarkSelfSim/msg/landmarkLocation.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/landmarkSelfSim/msg/__init__.py
@@ -101,6 +101,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

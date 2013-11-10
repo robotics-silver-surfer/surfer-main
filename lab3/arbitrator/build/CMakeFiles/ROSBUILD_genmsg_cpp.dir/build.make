@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/arbitrator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/arbitrator/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -71,20 +71,20 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/Control.h
 ../msg_gen/cpp/include/arbitrator/Control.h: /opt/ros/groovy/share/geometry_msgs/package.xml
 ../msg_gen/cpp/include/arbitrator/Control.h: /opt/ros/groovy/share/sensor_msgs/package.xml
 ../msg_gen/cpp/include/arbitrator/Control.h: /opt/ros/groovy/share/joy/package.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/joyAngleIntegrater/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/manifest.xml
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-../msg_gen/cpp/include/arbitrator/Control.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/reactivecontrol/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/joyAngleIntegrater/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/triangle/manifest.xml
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
+../msg_gen/cpp/include/arbitrator/Control.h: /projects/ros/surfer-main/lab3/reactivecontrol/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/arbitrator/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/arbitrator/Control.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/msg/Control.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/arbitrator/msg/Control.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/arbitrator/Control.h
@@ -100,6 +100,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/arbitrator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/arbitrator /projects/ros/surfer-main/lab3/arbitrator /projects/ros/surfer-main/lab3/arbitrator/build /projects/ros/surfer-main/lab3/arbitrator/build /projects/ros/surfer-main/lab3/arbitrator/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

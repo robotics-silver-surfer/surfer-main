@@ -3,8 +3,8 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../src/ballDetector/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
-  "../msg_gen/cpp/include/ballDetector/ballLocation.h"
   "../msg_gen/cpp/include/ballDetector/debugTimes.h"
+  "../msg_gen/cpp/include/ballDetector/ballLocation.h"
   "../msg_gen/cpp/include/ballDetector/ballDebug.h"
 )
 

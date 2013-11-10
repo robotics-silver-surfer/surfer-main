@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/angPos_PID
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/angPos_PID/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/angPos_PID.dir/depend.make
@@ -67,33 +67,33 @@ CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/rospy/pack
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/rosconsole/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /opt/ros/groovy/share/joy/package.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/joyAngleIntegrater/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/arbitrator/manifest.xml
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/reactivecontrol/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/reactivecontrol/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/joyAngleIntegrater/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/triangle/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/arbitrator/manifest.xml
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
+CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o: /projects/ros/surfer-main/lab3/reactivecontrol/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/angPos_PID/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o -c /projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp
 
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp > CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp > CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.i
 
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp -o CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/angPos_PID/src/angPos_PID.cpp -o CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.s
 
 CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o.requires:
 .PHONY : CMakeFiles/angPos_PID.dir/src/angPos_PID.cpp.o.requires
@@ -129,6 +129,6 @@ CMakeFiles/angPos_PID.dir/clean:
 .PHONY : CMakeFiles/angPos_PID.dir/clean
 
 CMakeFiles/angPos_PID.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/angPos_PID/build/CMakeFiles/angPos_PID.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/angPos_PID/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/angPos_PID /projects/ros/surfer-main/lab3/angPos_PID /projects/ros/surfer-main/lab3/angPos_PID/build /projects/ros/surfer-main/lab3/angPos_PID/build /projects/ros/surfer-main/lab3/angPos_PID/build/CMakeFiles/angPos_PID.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/angPos_PID.dir/depend
 

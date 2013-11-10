@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/usb_cam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/usb_cam/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,14 +107,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/src/libusb_cam/CMakeFiles/progress.marks
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles 0
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -E cmake_progress_start /projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles /projects/ros/surfer-main/lab3/usb_cam/build/src/libusb_cam/CMakeFiles/progress.marks
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /projects/ros/surfer-main/lab3/usb_cam/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/clean
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/clean
 .PHONY : clean
 
 # The main clean target
@@ -123,22 +123,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/preinstall
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/preinstall
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/libusb_cam/CMakeFiles/usb_cam.dir/rule:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/CMakeFiles/usb_cam.dir/rule
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f CMakeFiles/Makefile2 src/libusb_cam/CMakeFiles/usb_cam.dir/rule
 .PHONY : src/libusb_cam/CMakeFiles/usb_cam.dir/rule
 
 # Convenience name for target.
@@ -147,7 +147,7 @@ usb_cam: src/libusb_cam/CMakeFiles/usb_cam.dir/rule
 
 # fast build rule for target.
 usb_cam/fast:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/build
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/build
 .PHONY : usb_cam/fast
 
 usb_cam.o: usb_cam.cpp.o
@@ -155,7 +155,7 @@ usb_cam.o: usb_cam.cpp.o
 
 # target to build an object file
 usb_cam.cpp.o:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.o
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.o
 .PHONY : usb_cam.cpp.o
 
 usb_cam.i: usb_cam.cpp.i
@@ -163,7 +163,7 @@ usb_cam.i: usb_cam.cpp.i
 
 # target to preprocess a source file
 usb_cam.cpp.i:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.i
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.i
 .PHONY : usb_cam.cpp.i
 
 usb_cam.s: usb_cam.cpp.s
@@ -171,7 +171,7 @@ usb_cam.s: usb_cam.cpp.s
 
 # target to generate assembly for a file
 usb_cam.cpp.s:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.s
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(MAKE) -f src/libusb_cam/CMakeFiles/usb_cam.dir/build.make src/libusb_cam/CMakeFiles/usb_cam.dir/usb_cam.cpp.s
 .PHONY : usb_cam.cpp.s
 
 # Help Target
@@ -201,6 +201,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /projects/ros/surfer-main/lab3/usb_cam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

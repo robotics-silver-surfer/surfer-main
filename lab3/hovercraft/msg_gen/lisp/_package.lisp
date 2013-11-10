@@ -5,11 +5,11 @@
    "BATTERYVOLTAGE"
    "<GYRO>"
    "GYRO"
-   "<CURRENT>"
-   "CURRENT"
-   "<LED>"
-   "LED"
    "<THRUSTER>"
    "THRUSTER"
+   "<LED>"
+   "LED"
+   "<CURRENT>"
+   "CURRENT"
   ))
 

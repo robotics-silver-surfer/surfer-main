@@ -5,9 +5,9 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ROSBUILD_genmsg_cpp"
   "../msg_gen/cpp/include/hovercraft/BatteryVoltage.h"
   "../msg_gen/cpp/include/hovercraft/Gyro.h"
-  "../msg_gen/cpp/include/hovercraft/Current.h"
-  "../msg_gen/cpp/include/hovercraft/LED.h"
   "../msg_gen/cpp/include/hovercraft/Thruster.h"
+  "../msg_gen/cpp/include/hovercraft/LED.h"
+  "../msg_gen/cpp/include/hovercraft/Current.h"
 )
 
 # Per-language clean rules from dependency scanning.

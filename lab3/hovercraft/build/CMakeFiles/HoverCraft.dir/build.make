@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/hovercraft
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/hovercraft/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HoverCraft.dir/depend.make
@@ -64,22 +64,22 @@ CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /opt/ros/groovy/share/std_msgs/p
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/manifest.xml
-CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/hovercraft/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o -c /projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp
 
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp > CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp > CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.i
 
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp -o CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp -o CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.s
 
 CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o.requires:
 .PHONY : CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o.requires
@@ -115,6 +115,6 @@ CMakeFiles/HoverCraft.dir/clean:
 .PHONY : CMakeFiles/HoverCraft.dir/clean
 
 CMakeFiles/HoverCraft.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/build/CMakeFiles/HoverCraft.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/hovercraft/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/hovercraft /projects/ros/surfer-main/lab3/hovercraft /projects/ros/surfer-main/lab3/hovercraft/build /projects/ros/surfer-main/lab3/hovercraft/build /projects/ros/surfer-main/lab3/hovercraft/build/CMakeFiles/HoverCraft.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HoverCraft.dir/depend
 

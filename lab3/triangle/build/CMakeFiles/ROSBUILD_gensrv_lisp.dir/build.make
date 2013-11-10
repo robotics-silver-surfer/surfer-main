@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/triangle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/triangle/build
 
 # Utility rule file for ROSBUILD_gensrv_lisp.
 
@@ -57,6 +57,6 @@ CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_lisp.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/triangle/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/triangle/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/triangle /projects/ros/surfer-main/lab3/triangle /projects/ros/surfer-main/lab3/triangle/build /projects/ros/surfer-main/lab3/triangle/build /projects/ros/surfer-main/lab3/triangle/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/depend
 

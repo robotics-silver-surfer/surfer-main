@@ -33,11 +33,6 @@ CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: ../src/mcimg.h
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: ../src/misc.h
 
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../msg_gen/cpp/include/landmarkSelfSim/landmarkLocation.h
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/image.h
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/landmark.h
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/landmarkDetector.cpp
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/mcimg.h
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/misc.h
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/XmlRpcDecl.h
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/XmlRpcValue.h
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/cv_bridge/cv_bridge.h
@@ -115,4 +110,9 @@ CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/incl
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/sensor_msgs/RegionOfInterest.h
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/sensor_msgs/image_encodings.h
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/include/std_msgs/Header.h
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/image.h
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/landmark.h
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/landmarkDetector.cpp
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/mcimg.h
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: ../src/misc.h
 

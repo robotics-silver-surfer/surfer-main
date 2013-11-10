@@ -32,58 +32,19 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/ballDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/ballDetector/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballLocation.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/debugTimes.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballLocation.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballDebug.h
-
-../msg_gen/cpp/include/ballDetector/ballLocation.h: ../msg/ballLocation.msg
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/ballDetector/ballLocation.h: ../manifest.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/console_bridge/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/class_loader/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/pluginlib/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/image_transport/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/opencv2/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/cv_bridge/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ballDetector/ballLocation.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg
 
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: ../msg/debugTimes.msg
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -115,14 +76,53 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballDebug.h
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/cpp/include/ballDetector/debugTimes.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/cpp/include/ballDetector/debugTimes.h: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/cv_bridge/package.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/rosgraph/package.xml
 ../msg_gen/cpp/include/ballDetector/debugTimes.h: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ballDetector/debugTimes.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg
+
+../msg_gen/cpp/include/ballDetector/ballLocation.h: ../msg/ballLocation.msg
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/ballDetector/ballLocation.h: ../manifest.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/message_filters/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/console_bridge/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/class_loader/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/pluginlib/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/image_transport/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/self_test/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/opencv2/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/cv_bridge/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/cpp/include/ballDetector/ballLocation.h: /opt/ros/groovy/share/rospy/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ballDetector/ballLocation.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg
 
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: ../msg/ballDebug.msg
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -153,18 +153,18 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballDebug.h
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/cpp/include/ballDetector/ballDebug.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/cpp/include/ballDetector/ballDebug.h: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/cv_bridge/package.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/rosgraph/package.xml
 ../msg_gen/cpp/include/ballDetector/ballDebug.h: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ballDetector/ballDebug.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballLocation.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/debugTimes.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballLocation.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ballDetector/ballDebug.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
@@ -178,6 +178,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/ballDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/ballDetector /projects/ros/surfer-main/lab3/ballDetector /projects/ros/surfer-main/lab3/ballDetector/build /projects/ros/surfer-main/lab3/ballDetector/build /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

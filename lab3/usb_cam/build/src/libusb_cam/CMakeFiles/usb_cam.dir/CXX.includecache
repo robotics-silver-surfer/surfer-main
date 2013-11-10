@@ -12,7 +12,7 @@ string
 sstream
 -
 
-/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/src/libusb_cam/usb_cam.cpp
+/projects/ros/surfer-main/lab3/usb_cam/src/libusb_cam/usb_cam.cpp
 stdio.h
 -
 stdlib.h

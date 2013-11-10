@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/thrusterMapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/thrusterMapping/build
 
 # Utility rule file for test.
 
@@ -57,6 +57,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/thrusterMapping/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/thrusterMapping/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/thrusterMapping /projects/ros/surfer-main/lab3/thrusterMapping /projects/ros/surfer-main/lab3/thrusterMapping/build /projects/ros/surfer-main/lab3/thrusterMapping/build /projects/ros/surfer-main/lab3/thrusterMapping/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

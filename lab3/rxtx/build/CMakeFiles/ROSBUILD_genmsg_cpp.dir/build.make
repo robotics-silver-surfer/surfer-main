@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/rxtx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/rxtx/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -64,10 +64,10 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rxtx/rxtxData.h
 ../msg_gen/cpp/include/rxtx/rxtxData.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 ../msg_gen/cpp/include/rxtx/rxtxData.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
 ../msg_gen/cpp/include/rxtx/rxtxData.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/rxtx/rxtxData.h: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../msg_gen/cpp/include/rxtx/rxtxData.h: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rxtx/rxtxData.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg/rxtxData.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/rxtx/msg/rxtxData.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rxtx/rxtxData.h
@@ -83,6 +83,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/rxtx /projects/ros/surfer-main/lab3/rxtx /projects/ros/surfer-main/lab3/rxtx/build /projects/ros/surfer-main/lab3/rxtx/build /projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/cereal_port
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/cereal_port/build
 
 # Utility rule file for clean_test_results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/cmake -E remove_directory /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build/test_results
+	/usr/bin/cmake -E remove_directory /projects/ros/surfer-main/lab3/cereal_port/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/cereal_port/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/cereal_port /projects/ros/surfer-main/lab3/cereal_port /projects/ros/surfer-main/lab3/cereal_port/build /projects/ros/surfer-main/lab3/cereal_port/build /projects/ros/surfer-main/lab3/cereal_port/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

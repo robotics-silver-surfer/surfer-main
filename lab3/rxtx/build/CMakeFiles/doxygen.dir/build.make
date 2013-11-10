@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/rxtx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/rxtx/build
 
 # Utility rule file for doxygen.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/b
 include CMakeFiles/doxygen.dir/progress.make
 
 CMakeFiles/doxygen:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "doxygen found"
 
 doxygen: CMakeFiles/doxygen
@@ -59,6 +59,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/rxtx/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/rxtx /projects/ros/surfer-main/lab3/rxtx /projects/ros/surfer-main/lab3/rxtx/build /projects/ros/surfer-main/lab3/rxtx/build /projects/ros/surfer-main/lab3/rxtx/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

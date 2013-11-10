@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/landmarkSelfSim/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/landmarkDetector.dir/depend.make
@@ -74,20 +74,20 @@ CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/shar
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp
 
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp > CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp > CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.i
 
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp -o CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmarkDetector.cpp -o CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.s
 
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o.requires
@@ -126,20 +126,20 @@ CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/image_tra
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/landmarkDetector.dir/src/barcode.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/barcode.c.o   -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/barcode.c.o   -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c
 
 CMakeFiles/landmarkDetector.dir/src/barcode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/landmarkDetector.dir/src/barcode.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c > CMakeFiles/landmarkDetector.dir/src/barcode.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c > CMakeFiles/landmarkDetector.dir/src/barcode.c.i
 
 CMakeFiles/landmarkDetector.dir/src/barcode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/landmarkDetector.dir/src/barcode.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c -o CMakeFiles/landmarkDetector.dir/src/barcode.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/barcode.c -o CMakeFiles/landmarkDetector.dir/src/barcode.c.s
 
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/barcode.c.o.requires
@@ -178,20 +178,20 @@ CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/image_tran
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/digits.c.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/digits.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/landmarkDetector.dir/src/digits.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/digits.c.o   -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/digits.c.o   -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c
 
 CMakeFiles/landmarkDetector.dir/src/digits.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/landmarkDetector.dir/src/digits.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c > CMakeFiles/landmarkDetector.dir/src/digits.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c > CMakeFiles/landmarkDetector.dir/src/digits.c.i
 
 CMakeFiles/landmarkDetector.dir/src/digits.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/landmarkDetector.dir/src/digits.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c -o CMakeFiles/landmarkDetector.dir/src/digits.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/digits.c -o CMakeFiles/landmarkDetector.dir/src/digits.c.s
 
 CMakeFiles/landmarkDetector.dir/src/digits.c.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/digits.c.o.requires
@@ -230,20 +230,20 @@ CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/image_tr
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/landmarkDetector.dir/src/landmark.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/landmark.c.o   -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/landmark.c.o   -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c
 
 CMakeFiles/landmarkDetector.dir/src/landmark.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/landmarkDetector.dir/src/landmark.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c > CMakeFiles/landmarkDetector.dir/src/landmark.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c > CMakeFiles/landmarkDetector.dir/src/landmark.c.i
 
 CMakeFiles/landmarkDetector.dir/src/landmark.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/landmarkDetector.dir/src/landmark.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c -o CMakeFiles/landmarkDetector.dir/src/landmark.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/landmark.c -o CMakeFiles/landmarkDetector.dir/src/landmark.c.s
 
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/landmark.c.o.requires
@@ -282,20 +282,20 @@ CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/image_trans
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/landmarkDetector.dir/src/mcimg.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/mcimg.c.o   -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/mcimg.c.o   -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c
 
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/landmarkDetector.dir/src/mcimg.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c > CMakeFiles/landmarkDetector.dir/src/mcimg.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c > CMakeFiles/landmarkDetector.dir/src/mcimg.c.i
 
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/landmarkDetector.dir/src/mcimg.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c -o CMakeFiles/landmarkDetector.dir/src/mcimg.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/mcimg.c -o CMakeFiles/landmarkDetector.dir/src/mcimg.c.s
 
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/mcimg.c.o.requires
@@ -334,20 +334,20 @@ CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/image_t
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/landmarkDetector.dir/src/findlines.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/findlines.c.o   -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/landmarkDetector.dir/src/findlines.c.o   -c /projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c
 
 CMakeFiles/landmarkDetector.dir/src/findlines.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/landmarkDetector.dir/src/findlines.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c > CMakeFiles/landmarkDetector.dir/src/findlines.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c > CMakeFiles/landmarkDetector.dir/src/findlines.c.i
 
 CMakeFiles/landmarkDetector.dir/src/findlines.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/landmarkDetector.dir/src/findlines.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c -o CMakeFiles/landmarkDetector.dir/src/findlines.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/landmarkSelfSim/src/findlines.c -o CMakeFiles/landmarkDetector.dir/src/findlines.c.s
 
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o.requires:
 .PHONY : CMakeFiles/landmarkDetector.dir/src/findlines.c.o.requires
@@ -398,6 +398,6 @@ CMakeFiles/landmarkDetector.dir/clean:
 .PHONY : CMakeFiles/landmarkDetector.dir/clean
 
 CMakeFiles/landmarkDetector.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/landmarkDetector.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/landmarkSelfSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles/landmarkDetector.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/landmarkDetector.dir/depend
 

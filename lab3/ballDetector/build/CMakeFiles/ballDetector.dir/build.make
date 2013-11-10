@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/ballDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/ballDetector/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ballDetector.dir/depend.make
@@ -74,22 +74,22 @@ CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/image_
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/rosgraph/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o -c /projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp
 
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ballDetector.dir/src/ballDetector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp > CMakeFiles/ballDetector.dir/src/ballDetector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp > CMakeFiles/ballDetector.dir/src/ballDetector.cpp.i
 
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ballDetector.dir/src/ballDetector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp -o CMakeFiles/ballDetector.dir/src/ballDetector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/ballDetector/src/ballDetector.cpp -o CMakeFiles/ballDetector.dir/src/ballDetector.cpp.s
 
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o.requires:
 .PHONY : CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o.requires
@@ -125,6 +125,6 @@ CMakeFiles/ballDetector.dir/clean:
 .PHONY : CMakeFiles/ballDetector.dir/clean
 
 CMakeFiles/ballDetector.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles/ballDetector.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/ballDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/ballDetector /projects/ros/surfer-main/lab3/ballDetector /projects/ros/surfer-main/lab3/ballDetector/build /projects/ros/surfer-main/lab3/ballDetector/build /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles/ballDetector.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ballDetector.dir/depend
 

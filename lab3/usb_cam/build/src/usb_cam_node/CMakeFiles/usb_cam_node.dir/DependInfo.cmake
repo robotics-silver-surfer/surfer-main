@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp" "/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/src/usb_cam_node/CMakeFiles/usb_cam_node.dir/usb_cam_node.cpp.o"
+  "/projects/ros/surfer-main/lab3/usb_cam/src/usb_cam_node/usb_cam_node.cpp" "/projects/ros/surfer-main/lab3/usb_cam/build/src/usb_cam_node/CMakeFiles/usb_cam_node.dir/usb_cam_node.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,5 +15,5 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/build/src/libusb_cam/CMakeFiles/usb_cam.dir/DependInfo.cmake"
+  "/projects/ros/surfer-main/lab3/usb_cam/build/src/libusb_cam/CMakeFiles/usb_cam.dir/DependInfo.cmake"
   )

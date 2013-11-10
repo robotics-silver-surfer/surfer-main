@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/joyAngleIntegrater/src/joyAngleIntegrater.cpp" "/home/courtney/groovy_ws/projects/ros/surfer-main/lab3/joyAngleIntegrater/build/CMakeFiles/joyAngleIntegrater.dir/src/joyAngleIntegrater.cpp.o"
+  "/projects/ros/surfer-main/lab3/joyAngleIntegrater/src/joyAngleIntegrater.cpp" "/projects/ros/surfer-main/lab3/joyAngleIntegrater/build/CMakeFiles/joyAngleIntegrater.dir/src/joyAngleIntegrater.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

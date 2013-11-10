@@ -8,8 +8,6 @@ CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o
  ../msg_gen/cpp/include/hoverboard/LEDRaw.h
  ../msg_gen/cpp/include/hoverboard/PWMRaw.h
  ../msg_gen/cpp/include/hoverboard/ThrusterRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/src/HoverboardLL.cpp
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg_gen/cpp/include/rxtx/rxtxData.h
  /opt/ros/groovy/include/XmlRpcDecl.h
  /opt/ros/groovy/include/XmlRpcValue.h
  /opt/ros/groovy/include/ros/advertise_options.h
@@ -65,3 +63,5 @@ CMakeFiles/HoverboardLL.dir/src/HoverboardLL.cpp.o
  /opt/ros/groovy/include/ros/wall_timer_options.h
  /opt/ros/groovy/include/rosconsole/macros_generated.h
  /opt/ros/groovy/include/std_msgs/Header.h
+ /projects/ros/surfer-main/lab3/hoverboard/src/HoverboardLL.cpp
+ /projects/ros/surfer-main/lab3/rxtx/msg_gen/cpp/include/rxtx/rxtxData.h

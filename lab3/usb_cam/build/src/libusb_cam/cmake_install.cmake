@@ -1,4 +1,4 @@
-# Install script for directory: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/usb_cam/src/libusb_cam
+# Install script for directory: /projects/ros/surfer-main/lab3/usb_cam/src/libusb_cam
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

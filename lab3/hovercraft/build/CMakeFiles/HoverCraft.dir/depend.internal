@@ -7,13 +7,6 @@ CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o
  ../msg_gen/cpp/include/hovercraft/Gyro.h
  ../msg_gen/cpp/include/hovercraft/LED.h
  ../msg_gen/cpp/include/hovercraft/Thruster.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/ADCRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/GPIORaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/GyroRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/LEDRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/PWMRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/ThrusterRaw.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp
  /opt/ros/groovy/include/XmlRpcDecl.h
  /opt/ros/groovy/include/XmlRpcValue.h
  /opt/ros/groovy/include/ros/advertise_options.h
@@ -69,3 +62,10 @@ CMakeFiles/HoverCraft.dir/src/Hovercraft.cpp.o
  /opt/ros/groovy/include/ros/wall_timer_options.h
  /opt/ros/groovy/include/rosconsole/macros_generated.h
  /opt/ros/groovy/include/std_msgs/Header.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/ADCRaw.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/GPIORaw.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/GyroRaw.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/LEDRaw.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/PWMRaw.h
+ /projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include/hoverboard/ThrusterRaw.h
+ /projects/ros/surfer-main/lab3/hovercraft/src/Hovercraft.cpp

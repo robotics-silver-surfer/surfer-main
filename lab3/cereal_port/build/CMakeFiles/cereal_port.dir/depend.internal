@@ -3,4 +3,4 @@
 
 CMakeFiles/cereal_port.dir/src/CerealPort.cpp.o
  ../include/cereal_port/CerealPort.h
- /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/src/CerealPort.cpp
+ /projects/ros/surfer-main/lab3/cereal_port/src/CerealPort.cpp

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/hoverteleop
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/hoverteleop/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hoverteleop.dir/depend.make
@@ -71,24 +71,24 @@ CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /opt/ros/groovy/share/diagnos
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /opt/ros/groovy/share/joy/package.xml
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/manifest.xml
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/manifest.xml
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/hoverteleop/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o -c /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o -c /projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp
 
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp > CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp > CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.i
 
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp -o CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /projects/ros/surfer-main/lab3/hoverteleop/src/hover_teleop.cpp -o CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.s
 
 CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o.requires:
 .PHONY : CMakeFiles/hoverteleop.dir/src/hover_teleop.cpp.o.requires
@@ -124,6 +124,6 @@ CMakeFiles/hoverteleop.dir/clean:
 .PHONY : CMakeFiles/hoverteleop.dir/clean
 
 CMakeFiles/hoverteleop.dir/depend:
-	cd /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build /home/courtney/groovy_ws/projects/ros/surfer-main/lab3/hoverteleop/build/CMakeFiles/hoverteleop.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/hoverteleop/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/hoverteleop /projects/ros/surfer-main/lab3/hoverteleop /projects/ros/surfer-main/lab3/hoverteleop/build /projects/ros/surfer-main/lab3/hoverteleop/build /projects/ros/surfer-main/lab3/hoverteleop/build/CMakeFiles/hoverteleop.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hoverteleop.dir/depend
 
