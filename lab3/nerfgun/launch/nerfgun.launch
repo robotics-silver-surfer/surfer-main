@@ -1,0 +1,16 @@
+<!-- Hey, Emacs! This is an -*- xml -*- file!-->
+
+<launch>
+
+ <!-- nerfgun test -->
+  <node name="nerfgun" pkg="nerfgun" type="shooter.py" output="screen">
+	<param name="ServoFireValue" type="int" value="0"/>
+	<param name="ServoReloadValue" type="int" value="80"/>
+	
+	<!-- Distance at which ball Pickup Begins -->	
+	<param name="TriggerThresh" type="double" value="-.5"/>
+	<param name="ShooterServoNumber" type="int" value="4"/>
+  </node>
+
+</launch>
+
