@@ -15,7 +15,7 @@
 //Class Constants
 #define OFFSET		0.05
 #define XBOX_LS_X_AXIS  0
-#define SCALE		40
+#define SCALE		50
 #define MAX_ANGLE	90
 #define TURN_R_STATE	3
 #define TURN_L_STATE	4
@@ -90,12 +90,16 @@ void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   if( joystick_loc > OFFSET ) 
   {
     current_ang_rate = ( (float) joy->axes[XBOX_LS_X_AXIS] ) * SCALE;
+    target_angle = current_angle + current_ang_rate;	
+    //itgr_data.w = target_angle;
   }
   //Reset rate to zero when close to center
   else
   {
     current_ang_rate = 0.0;
   }
+
+  //itgrData_pub_.publish( itgr_data );
 
 } /* end method JoyAngleIntegrater::joyCallback() */
 
@@ -109,6 +113,9 @@ void JoyAngleIntegrater::gyroUpdate( const hovercraft::Gyro::ConstPtr& gyro )
 {
 
   current_angle = (float) gyro->angle;
+  target_angle = current_angle + current_ang_rate;	
+  itgr_data.w = target_angle;
+  itgrData_pub_.publish( itgr_data );
 
 } /* end method JoyAngleIntegrater::gyroUpdate() */
 
@@ -127,12 +134,12 @@ void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
   {
     if( fabs( target_angle - current_angle ) <= MAX_ANGLE )
     { 
-      target_angle += current_ang_rate;
-      itgr_data.w = target_angle;
+     // target_angle += current_ang_rate;
+    //  itgr_data.w = target_angle;
     }
   }
 
-  itgrData_pub_.publish( itgr_data );
+  //itgrData_pub_.publish( itgr_data );
 
 } /* end method JoyAngleIntegrater::integrate() */
 
