@@ -56,16 +56,17 @@ class ThrusterMapper:
 			# True if max spin has not been reached
 			# In the direction of spin
 			if data.rotation.w < 0.0:
-				self.thruster.thruster1 += -SCALE*data.rotation.w
+				self.thruster.thruster1 += 0.0
+				self.thruster.thruster2 += -SCALE*data.rotation.w				
+				self.thruster.thruster3 += 0.0
+				self.thruster.thruster4 += -SCALE*data.rotation.w
+			else:
+				self.thruster.thruster1 += SCALE*data.rotation.w
 				self.thruster.thruster2 += 0.0
-				self.thruster.thruster3 += -SCALE*data.rotation.w
+				self.thruster.thruster3 += SCALE*data.rotation.w
 				self.thruster.thruster4 += 0.0
 
-			else:
-				self.thruster.thruster1 += 0.0
-				self.thruster.thruster2 += SCALE*data.rotation.w				
-				self.thruster.thruster3 += 0.0
-				self.thruster.thruster4 += SCALE*data.rotation.w	
+	
 				
 		
 		self.thruster.header.stamp = rospy.Time.now()
