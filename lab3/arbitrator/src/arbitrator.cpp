@@ -59,6 +59,7 @@ private:
 
   ros::Subscriber joy_sub_;
   ros::Subscriber joyAngleItgr_sub_;
+  ros::Subscriber pathPlan_sub_;
 
   ros::Publisher arb_pub_;
   ros::Publisher led_pub_;
@@ -72,6 +73,7 @@ private:
   //Class functions
   void joyCallback( const sensor_msgs::Joy::ConstPtr& joy );
   void joyAngleItgrCallback( const geometry_msgs::Quaternion& itgr );
+  void pathPlanCallback( const geometry_msgs::Transform& path );
   void publishControlState( int state_change );
   void signalLED( hovercraft::LED& led, bool green, bool red, int blink );
   void stateChange( int state_change );
@@ -91,6 +93,8 @@ Arbitrator::Arbitrator()
   //Set subscribers and publishers
   joy_sub_ = nh_.subscribe("joy", 10, &Arbitrator::joyCallback, this);
   joyAngleItgr_sub_ = nh_.subscribe("joyAngleIntegrater/Data", 10, &Arbitrator::joyAngleItgrCallback, this);
+  pathPlan_sub_ = nh_.subscribe("pathPlan/Command", 10, &Arbitrator::pathPlanCallback, this);
+  
 
   arb_pub_ = nh_.advertise<geometry_msgs::Transform>("arbitrator/Data", 1);
   ctrl_pub_ = nh_.advertise<reactivecontrol::Control>("arbitrator/Control", 1);
@@ -104,6 +108,20 @@ Arbitrator::Arbitrator()
 
 //---------------------------------------------------------------------
 
+/* Arbitrator::pathPlanCallback()
+ *   Sets class variables according to magical path plan
+ */
+void Arbitrator::pathPlanCallback( const geometry_msgs::Transform& path  )
+{
+	if( state == AUTO_STATE )
+	  {
+		arb_data.translation.z = path.translation.z;
+		arb_data.translation.x = path.translation.x;
+		arb_data.translation.y = path.translation.y;
+		arb_data.rotation.w = path.rotation.w;
+		arb_pub_.publish( arb_data );
+	  }
+}
 /* Arbitrator::joyCallback()
  *   Sets class variables according to changes on the controller.
  */
@@ -165,8 +183,11 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   }
 
   //Update current translational motion
-  arb_data.translation.x = joy->axes[XBOX_RS_X_AXIS];
-  arb_data.translation.y = joy->axes[XBOX_RS_Y_AXIS];
+  if( state != AUTO_STATE )
+  {
+    arb_data.translation.x = joy->axes[XBOX_RS_X_AXIS];
+    arb_data.translation.y = joy->axes[XBOX_RS_Y_AXIS];
+  }
 
   //Turn on/off LEDs according to controller buttons
   if( state != AUTO_STATE )

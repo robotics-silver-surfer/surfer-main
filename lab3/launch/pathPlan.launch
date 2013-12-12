@@ -1,0 +1,11 @@
+<!-- Hey, Emacs! This is an -*- xml -*- file!-->
+
+<launch>
+
+ <group ns="LadyMcCormick" >
+  <!-- Path Plan -->
+  <node name="pathplan" pkg="pathPlan" type="pathPlan.py" output="screen">
+  </node>
+  </group>
+</launch>
+
