@@ -1,0 +1,17 @@
+<package>
+  <description brief="Ref">
+
+     Ref
+
+  </description>
+  <author>mkaatrtgheesw</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Ref</url>
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <!-- <depend package="hoverTracker"/> --> 
+
+</package>
+
+

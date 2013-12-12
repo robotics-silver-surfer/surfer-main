@@ -1,0 +1,9 @@
+Header header
+uint8 botID
+Position currentPosition
+Position nextCheckpoint
+uint8 checkpointIndex
+uint8 lap
+uint8 powerUp
+uint8 shotCount
+bool canRun

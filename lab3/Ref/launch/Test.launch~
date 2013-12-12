@@ -1,0 +1,28 @@
+<launch>
+
+<node name="Referee" pkg="Ref" type="Referee" output="screen" >
+	<param name="/Simulate" value="" />
+	<param name="/Team1Namespace" value="Team1" />
+	<param name="/Team1AprilID" value="7" />
+	<param name="/Team2Namespace" value="LadyMcCormick" />
+	<param name="/Team2AprilID" value="13" />
+	<param name="/Team3Namespace" value="Team3" />
+	<param name="/Team3AprilID" value="3" />
+<rosparam param="course">
+p1: [1, 2]
+p2: [3, 4]
+p3: [5, 5]
+</rosparam>
+<rosparam param="x">[1.0, 2.0, 3.0, 4.0, 5.0]</rosparam>
+<rosparam param="y">[5.0, 4.0, 3.0, 2.0, 1.0]</rosparam>
+</node>
+
+<node name="Controls" pkg="Ref" type="Controls" output="screen" />
+
+<node name="Joy_node" pkg="joy" type="joy_node" output="screen">
+	<param name="dev" value="/dev/input/js0" />
+</node>
+
+<node name="Simulation" pkg="Ref" type="Simulate" output="screen" />
+
+</launch>
