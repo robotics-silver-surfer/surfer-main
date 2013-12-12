@@ -166,6 +166,7 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
 
   //Update current translational motion
   arb_data.translation.x = joy->axes[XBOX_RS_X_AXIS];
+  arb_data.translation.y = joy->axes[XBOX_RS_Y_AXIS];
 
   //Turn on/off LEDs according to controller buttons
   if( state != AUTO_STATE )

@@ -19,6 +19,7 @@
 #define MAX_ANGLE	90
 #define TURN_R_STATE	3
 #define TURN_L_STATE	4
+#define XBOX_Y_BTN	3
 
 //Class Declaration
 class JoyAngleIntegrater
@@ -86,6 +87,12 @@ void JoyAngleIntegrater::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   
   joystick_loc = fabs( (float) joy->axes[XBOX_LS_X_AXIS] );
 
+  if( joy->buttons[XBOX_Y_BTN] == 1 )
+	{
+		target_angle = current_angle;
+	}
+  else
+
   //Update rate when away from center
   if( joystick_loc > OFFSET ) 
   {
@@ -150,8 +157,10 @@ void JoyAngleIntegrater::integrate( const ros::TimerEvent& event )
  */
 void JoyAngleIntegrater::arbCallback( const reactivecontrol::Control& ctrl )
 {
+
   if( fabs( target_angle - current_angle ) <= MAX_ANGLE )
   {
+	
     if( ctrl.state == TURN_R_STATE )
     {
       target_angle -= 90;
