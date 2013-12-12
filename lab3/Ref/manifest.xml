@@ -10,7 +10,7 @@
   <url>http://ros.org/wiki/Ref</url>
   <depend package="roscpp"/>
   <depend package="roslib"/>
-  <!-- <depend package="hoverTracker"/> --> 
+ <!--  <depend package="hoverTracker"/> --> 
 
 </package>
 
