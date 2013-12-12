@@ -17,27 +17,31 @@ class shooter:
 		"""
 		
 		self.servo = rospy.Publisher( 'hoverboard/PWMRaw', PWMRaw, latch=True )
-		self.firePub = rospy.Publisher( 'blah', BotToRef )
+		self.firePub = rospy.Publisher( 'hasFired', BotToRef )
 
 		# Opening up nodes and such
-		rospy.init_node('ballcollector')    
+		rospy.init_node('shooter')    
 
 		self.servoControl = PWMRaw() 
 		self.joy = Joy()
 
 		rospy.Subscriber( "joy", Joy, self.__joy )
-		rospy.Subscriber( "Ref", BotStatus, self.__botStatus ) 
+		rospy.Subscriber( "ToTeam", BotStatus, self.__refCallback )
 
 		self.shooterServoNumber = rospy.get_param("nerfgun/ShooterServoNumber") 
 		self.triggerThresh = rospy.get_param("nerfgun/TriggerThresh") 
 		
-		self.canFire = False		
+		self.canFire = rospy.get_param("nerfgun/TestingGun")
+		self.botID = 0
+		self.shotCount = 0
+		self.isShooting = False
 
-	def __botStatus( self, data ): 
+	def __refCallback( self, data ):
 		"""
-			Change bot to shoot
+			Obtain shot count
 		"""
-		self.canFire = True
+		self.shotCount = data.shotCount
+		self.botID = data.botID
 
 	def __joy( self, data ): 
 		"""
@@ -46,28 +50,46 @@ class shooter:
 
 		if( data.axes[5] < self.triggerThresh ): 
 			self.__fire_gun( True )
+
 		else:
 			self.__fire_gun( False ) 
 
 	
 	def __fire_gun( self, up_or_down ):
 		"""
-		Set the Servo value
-		 	False - Neutral
-			True - Fire	
+			Set the Servo value
+		 		False - Neutral
+				True - Fire	
 		""" 
 		
 		servoPWM = PWMRaw()
 		servoPWM.channel = self.shooterServoNumber
-		if up_or_down: 
+		if ( up_or_down & ( self.shotCount > 0 | self.canFire ) ): 
 			servoPWM.pwm = rospy.get_param("nerfgun/ServoFireValue")
 		else: 
 			servoPWM.pwm = rospy.get_param("nerfgun/ServoReloadValue")
 		
-		#rospy.loginfo("Setting Servo at: " + str( servoPWM.pwm ) )	
-		self.servo.publish( servoPWM ) 
+		#rospy.loginfo("Setting Servo at: " + str( servoPWM.pwm ) )
+		self.__has_fired( up_or_down )
+		self.servo.publish( servoPWM )
 
-		
+	def __has_fired( self, trigger_down ):
+		"""
+			Track number of shots and inform Ref node
+		"""
+
+		if( trigger_down ):
+			#trying to shoot - not yet successful
+			self.isShooting = True
+		else:
+			if( self.isShooting ):
+				#trigger has been released - shot successful
+				self.isShooting = False
+				self.shotCount -= 1
+
+				self.firePub.botID = self.botID
+				self.firePub.publish()
+
 if __name__ == '__main__':
 	
 	try:

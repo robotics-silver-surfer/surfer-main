@@ -10,6 +10,7 @@
 	<!-- Distance at which ball Pickup Begins -->	
 	<param name="TriggerThresh" type="double" value="-.5"/>
 	<param name="ShooterServoNumber" type="int" value="4"/>
+	<param name="TestingGun" type="bool" value="false"/>
   </node>
 
 </launch>
