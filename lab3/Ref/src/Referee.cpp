@@ -1,0 +1,249 @@
+#include <ros/ros.h>
+#include <sensor_msgs/Joy.h>
+#include <math.h>
+#include <vector>
+#include <Ref/controls.h>
+#include <Ref/Position.h>
+#include <Ref/HoverBot.h>
+#include <Ref/image.h>
+#include <Ref/BotStatus.h>
+#include <Ref/BotToRef.h>
+#include <hoverTracker/TagArray.h>
+#include <hoverTracker/Tag.h>
+#include <XmlRpcValue.h>
+#include <string>
+
+#define COURSELENGTH 4
+#define LAPS 3
+#define RANGE 150
+#define LIGHTNINGTIME 6
+#define SHELLTIME 6
+
+using namespace std;
+
+class Referee {
+public:
+	Referee();
+private:
+	ros::NodeHandle nh;
+	
+	ros::Subscriber control_sub;
+	void control_callback(const Ref::controls::ConstPtr& data);
+
+	ros::Subscriber bot_sub[3];
+	void bot_callback(const Ref::BotToRef::ConstPtr& data);
+
+	Ref::Position course[COURSELENGTH];
+
+	ros::Publisher pos_pub;
+	ros::Publisher hov_pub[3];
+
+	Ref::BotStatus bots[3];
+	
+	ros::Subscriber april_sub;
+	void april_callback(const hoverTracker::TagArray::ConstPtr& data);
+	
+	Ref::BotStatus initBot();
+	Ref::Position *initCourse();
+};
+
+int ID = 0;
+Ref::BotStatus Referee::initBot(){
+	Ref::BotStatus bot;
+	bot.botID = ID;
+	ID++;
+	bot.checkpointIndex = 0;
+	bot.lap = 1;
+	bot.nextCheckpoint = course[bot.checkpointIndex];
+	bot.powerUp = 0;
+	bot.shotCount = 0;
+	bot.canRun = false;
+	return bot;
+}
+
+enum PowerUp {NADA, GREENSHELL, LIGHTNING, KOOPA, BANANA};
+
+PowerUp MysteryBox(){
+	int i=rand() % 4 + 1;
+	PowerUp ret = (PowerUp)i;
+	return ret;
+}
+// GreenShell is 0, Lightening is 1, any others will be added as necessary
+std::string namespaces[3];
+int aprilcodes[3];
+std::string hoverlocation_namespace = "";
+
+Referee::Referee(){
+	XmlRpc::XmlRpcValue x;
+	XmlRpc::XmlRpcValue y;
+	nh.param("Referee/x",x,x);
+	nh.param("Referee/y",y,y);
+	std::vector<uint8_t> xs;
+	std::vector<uint8_t> ys;
+	int i;
+/*	for(i=0; i<x.size(); i++){
+		Ref::Position pos;
+		xs.push_back((int)x[i]);
+		ys.push_back((int)y[i]);
+		//pos.x = atof(std::to_string(x[i]));
+		//pos.y = atof(std::to_string(y[i]));
+		pos.rot = 0;
+		course[i] = pos;
+	}*/
+
+
+	for(i=0; i<COURSELENGTH; i++){
+		Ref::Position pos;
+		pos.x = i*100 + 100;
+		pos.y = i*100 + 100;
+		pos.rot = 0;
+		course[i] = pos;
+	}
+
+	nh.param("Referee/Team1Namespace",namespaces[0],namespaces[0]);
+	nh.setParam("Referee/Team1Namespace",namespaces[0]);
+	nh.param("Referee/Team1AprilID",aprilcodes[0],aprilcodes[0]);
+	nh.setParam("Referee/Team1AprilID",aprilcodes[0]);
+
+	nh.param("Referee/Team2Namespace",namespaces[1],namespaces[1]);
+	nh.setParam("Referee/Team2Namespace",namespaces[1]);
+	nh.param("Referee/Team2AprilID",aprilcodes[1],aprilcodes[1]);
+	nh.setParam("Referee/Team2AprilID",aprilcodes[1]);
+
+	nh.param("Referee/Team3Namespace",namespaces[2],namespaces[2]);
+	nh.setParam("Referee/Team3Namespace",namespaces[2]);
+	nh.param("Referee/Team3AprilID",aprilcodes[2],aprilcodes[2]);
+	nh.setParam("Referee/Team3AprilID",aprilcodes[2]);
+
+	nh.param("Referee/Simulate",hoverlocation_namespace,hoverlocation_namespace);
+	nh.setParam("Referee/Simulate",hoverlocation_namespace);
+
+	bot_sub[0] = nh.subscribe(namespaces[0] + "/FromTeam",1,&Referee::bot_callback,this);
+	bot_sub[1] = nh.subscribe(namespaces[1] + "/FromTeam",1,&Referee::bot_callback,this);
+	bot_sub[2] = nh.subscribe(namespaces[2] + "/FromTeam",1,&Referee::bot_callback,this);
+
+	control_sub = nh.subscribe("control",1,&Referee::control_callback,this);
+	april_sub = nh.subscribe(hoverlocation_namespace + "/hoverLocation",1,&Referee::april_callback,this);
+
+	pos_pub = nh.advertise<Ref::Position>("Position",1);
+
+	hov_pub[0] = nh.advertise<Ref::BotStatus>((namespaces[0] + "/ToTeam").c_str(),1);
+	hov_pub[1] = nh.advertise<Ref::BotStatus>((namespaces[1] + "/ToTeam").c_str(),1);
+	hov_pub[2] = nh.advertise<Ref::BotStatus>((namespaces[2] + "/ToTeam").c_str(),1);
+
+	bots[0] = Referee::initBot();
+	bots[1] = Referee::initBot();
+	bots[2] = Referee::initBot();
+}
+
+int off_counter[3] = {0, 0, 0};
+bool lifts[3];
+
+void Referee::bot_callback(const Ref::BotToRef::ConstPtr& data){
+	if(bots[data->botID].powerUp > 0){
+		if(bots[data->botID].powerUp == (int)LIGHTNING){
+			int i;
+			for(i=0; i<3; i++){
+				if(i == data->botID){
+					
+				}else{
+					lifts[i]=false;
+					off_counter[i] = LIGHTNINGTIME;
+				}
+			}
+		}
+		bots[data->botID].shotCount--;
+		if(bots[data->botID].shotCount == 0){
+			bots[data->botID].powerUp = 0;
+		}
+	}
+
+}
+
+void Referee::control_callback(const Ref::controls::ConstPtr& data){
+	int i;
+	for(i=0; i<3; i++){
+		if(data->liftchanges[i]){
+			if(lifts[i]){
+				lifts[i]=false;
+				off_counter[i] = SHELLTIME;
+			}else{
+				lifts[i]=true;
+				off_counter[i] = 0;
+			}
+		}
+	}
+}
+
+bool inRange(Ref::Position curr, Ref::Position checkpoint){
+	return	(curr.x > (checkpoint.x - RANGE)) && 
+		(curr.x < (checkpoint.x + RANGE)) &&
+		(curr.y > (checkpoint.y - RANGE)) &&
+		(curr.y < (checkpoint.y + RANGE));
+}
+
+void Referee::april_callback(const hoverTracker::TagArray::ConstPtr& data){
+	int i;
+	for(i=0; i<3; i++){
+		//if(off_counter[i] > 0){
+		//	off_counter[i]--;
+		//	if(off_counter[i] == 0){
+				lifts[i] = true;
+		//	}
+		//}
+		bots[i].canRun = lifts[i];
+	}
+	int j;
+	int length = data->size;
+	for(i=0; i<length; i++){
+		hoverTracker::Tag tag = data->tag[i];
+		for(j=0; j<3; j++){
+			if(tag.id == aprilcodes[j]){
+				bots[j].currentPosition.x = tag.x*320;
+				bots[j].currentPosition.y = tag.y*320;
+				bots[j].currentPosition.rot = tag.angle;
+			}
+		}
+	}
+
+
+	//check checkpoints
+	for(i=0; i<3; i++){
+		if(inRange(bots[i].currentPosition, bots[i].nextCheckpoint)){
+			if(bots[i].checkpointIndex == COURSELENGTH-1){
+				bots[i].checkpointIndex = 0;
+				bots[i].lap++;
+			}else{
+				bots[i].checkpointIndex++;
+			}
+			bots[i].nextCheckpoint = course[bots[i].checkpointIndex];
+			if(bots[i].powerUp == 0){
+				bots[i].powerUp = (int)MysteryBox();
+				if(bots[i].powerUp == (int)KOOPA){
+					bots[i].shotCount = 3;
+				}else{
+					bots[i].shotCount = 1;
+				}
+			}
+		}
+	}
+
+	for(i=0; i<3; i++){
+		hov_pub[i].publish(bots[i]);
+	}
+}
+
+int main(int argc, char **argv){
+	ros::init(argc, argv, "Referee");
+	Referee ref;
+ros::spin();
+return 0;
+}
+
+
+
+
+
+
+
+

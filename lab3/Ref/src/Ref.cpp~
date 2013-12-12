@@ -1,0 +1,71 @@
+#include <ros/ros.h>
+#include <sensor_msgs/Joy.h>
+#include <math.h>
+#include <Ref/controls.h>
+#include <Ref/Position.h>
+#include <Ref/HoverBot.h>
+
+class Ref {
+public:
+	Ref();
+private:
+	NodeHandle nh;
+	
+	ros::Subscriber control_sub;
+	void control_callback(const Ref::controls::ConstPtr& data);
+
+	ros::Publisher pos_pub;
+	ros::Publisher hov_pub;
+	
+	ros::Subscriber image_sub;
+	void image_callback(const Ref::image::ConstPtr& data);
+	
+
+};
+
+Ref::Ref(){
+	control_sub = nh.subscribe("Controls",1,&Ref::control_callback,this);
+	image_sub = nh.subscribe("Image",1,&Ref::image_callback,this);
+
+	ref_pub = nh.advertise<Ref::Position>("Position",1);
+
+	one_pub = nh.advertise<Ref::HoverBot>("Team1",1);
+	two_pub = nh.advertise<Ref::HoverBot>("Team2",1);
+	three_pub = nh.advertise<Ref::HoverBot>("Team3",1);
+}
+
+bool[] lifts;
+
+void Ref::control_callback(const Ref::controls::ConstPtr& data){
+	int i;
+	for(i=0; i<(data->lifts).length; i++){
+		lifts[i]=data->lifts[i];
+	}
+}
+
+void Ref::image_callback(const Ref::image::ConstPtr& data){
+	Ref::HoverBot[] bots;
+
+	int i;
+	for(i=0; i<lifts.length; i++){
+		bots[i].botID = i;
+		bots[i].canRun = lifts[i];
+	}
+
+
+}
+
+int main(int argc, char **argv){
+	ros::init(argc, argv, "Ref");
+	Ref ref;
+  ros::spin();
+  return 0;
+}
+
+
+
+
+
+
+
+
