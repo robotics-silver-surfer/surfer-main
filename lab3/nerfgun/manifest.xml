@@ -11,6 +11,7 @@
   <depend package="joy"/>
   <depend package="hoverboard"/>
   <depend package="rospy"/>
+  <depend package="Ref" />
 
 </package>
 

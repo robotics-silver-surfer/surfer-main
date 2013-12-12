@@ -2,6 +2,8 @@
 
 <launch>
 
+ <group ns="LadyMcCormick" >
+
  <!-- RXTX node -->
   <node name="RxTx" pkg="rxtx" type="RxTx" output="screen">
     <param name="SerialPort" value="/dev/ttyUSB0"/>
@@ -17,7 +19,7 @@
  <!-- Joy Node -->	
   <node respawn="true" pkg="joy"
         type="joy_node" name="hover_joy" >
-    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="dev" type="string" value="/dev/input/js1" />
     <param name="deadzone" value="0.12" />
   </node>
 
@@ -37,20 +39,19 @@
   <node name="AngPosPID" pkg="angPos_PID" type="angPos_PID" output="screen"/>
 
  <!-- PD Values -->
-  <param name="angCtrl/P" type="double" value="0.020"/>
-  <param name="angCtrl/D" type="double" value="0.000"/>
+  <param name="angCtrl/P" type="double" value="0.007"/>
+  <param name="angCtrl/D" type="double" value="0.060"/>
 
  <!-- Joy Angle Integrater -->
   <node name="JoyAngIntegrater" pkg="joyAngleIntegrater" type="joyAngleIntegrater" output="screen"/>
 
-  <!-- nerfgun test -->
+  <!-- Nerf Gun -->
   <node name="nerfgun" pkg="nerfgun" type="shooter.py" output="screen">
 	<param name="ServoFireValue" type="int" value="0"/>
 	<param name="ServoReloadValue" type="int" value="80"/>
-		
 	<param name="TriggerThresh" type="double" value="-.5"/>
 	<param name="ShooterServoNumber" type="int" value="2"/>
   </node>
-
+  </group>
 </launch>
 

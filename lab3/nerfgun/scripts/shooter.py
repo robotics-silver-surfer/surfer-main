@@ -3,8 +3,9 @@ import roslib; roslib.load_manifest('nerfgun')
 import rospy
 from hoverboard.msg import PWMRaw
 from sensor_msgs.msg import Joy
+from Ref.msg import BotToRef, BotStatus
 
-class ballCollector: 
+class shooter: 
 	"""
 		Class that controls ball Collector Parameters 
 
@@ -16,6 +17,7 @@ class ballCollector:
 		"""
 		
 		self.servo = rospy.Publisher( 'hoverboard/PWMRaw', PWMRaw, latch=True )
+		self.firePub = rospy.Publisher( 'blah', BotToRef )
 
 		# Opening up nodes and such
 		rospy.init_node('ballcollector')    
@@ -24,10 +26,18 @@ class ballCollector:
 		self.joy = Joy()
 
 		rospy.Subscriber( "joy", Joy, self.__joy )
+		rospy.Subscriber( "Ref", BotStatus, self.__botStatus ) 
 
 		self.shooterServoNumber = rospy.get_param("nerfgun/ShooterServoNumber") 
 		self.triggerThresh = rospy.get_param("nerfgun/TriggerThresh") 
 		
+		self.canFire = False		
+
+	def __botStatus( self, data ): 
+		"""
+			Change bot to shoot
+		"""
+		self.canFire = True
 
 	def __joy( self, data ): 
 		"""
@@ -61,7 +71,7 @@ class ballCollector:
 if __name__ == '__main__':
 	
 	try:
-		x = ballCollector()
+		x = shooter()
 		rospy.spin()
 
 	except rospy.ROSInterruptException:

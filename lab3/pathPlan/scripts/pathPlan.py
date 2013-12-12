@@ -23,7 +23,8 @@ def refCallback(data):
 	global gyro
 
 	if gyroFlag is True and startFlag is False:
-		goal.rotation.w = gyro - data.currentPosition.rot
+		goal.rotation.w = gyro + data.currentPosition.rot
+		startFlag = True
 
 if __name__ == '__main__':
 
@@ -32,12 +33,12 @@ if __name__ == '__main__':
 	global goal 
 
 	startFlag = False
-        gyroFlag = False
+	gyroFlag = False
 	goal = Transform()
 	goal.translation.z = 0.5
 	rospy.init_node('pathPlan')
 	rospy.Subscriber("hovercraft/Gyro", Gyro, gyroCallback)
-        rospy.Subscriber("hovercraft/Gyro", BotStatus, refCallback)
+	rospy.Subscriber("ToTeam", BotStatus, refCallback)
 	goalPub = rospy.Publisher('pathPlan/Command', Transform)
 
 	rospy.sleep(5)
