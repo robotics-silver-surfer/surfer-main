@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /projects/ros/surfer-main/lab3/pathPlan/build/devel/setup.sh
