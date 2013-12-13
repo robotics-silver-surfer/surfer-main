@@ -4,13 +4,13 @@ FILE(REMOVE_RECURSE
   "../src/Ref/msg"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/Ref/msg/__init__.py"
-  "../src/Ref/msg/_BotStatus.py"
+  "../src/Ref/msg/_CurrentStatus.py"
   "../src/Ref/msg/_BotToRef.py"
   "../src/Ref/msg/_HoverBot.py"
-  "../src/Ref/msg/_image.py"
+  "../src/Ref/msg/_BotStatus.py"
   "../src/Ref/msg/_Position.py"
   "../src/Ref/msg/_controls.py"
-  "../src/Ref/msg/_CurrentStatus.py"
+  "../src/Ref/msg/_image.py"
 )
 
 # Per-language clean rules from dependency scanning.

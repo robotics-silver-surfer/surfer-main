@@ -32,228 +32,23 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/refnode/projects/Ref
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/Ref
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/refnode/projects/Ref/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/Ref/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotStatus.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/CurrentStatus.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotToRef.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/HoverBot.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/image.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotStatus.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/Position.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/controls.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/CurrentStatus.h
-
-../msg_gen/cpp/include/Ref/BotStatus.h: ../msg/BotStatus.msg
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/Ref/BotStatus.h: ../msg/Position.msg
-../msg_gen/cpp/include/Ref/BotStatus.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/BotStatus.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/BotStatus.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/BotStatus.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/BotStatus.msg
-
-../msg_gen/cpp/include/Ref/BotToRef.h: ../msg/BotToRef.msg
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/Ref/BotToRef.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/BotToRef.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/BotToRef.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/BotToRef.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/BotToRef.msg
-
-../msg_gen/cpp/include/Ref/HoverBot.h: ../msg/HoverBot.msg
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/Ref/HoverBot.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/HoverBot.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/HoverBot.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/HoverBot.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/HoverBot.msg
-
-../msg_gen/cpp/include/Ref/image.h: ../msg/image.msg
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/Ref/image.h: ../msg/Position.msg
-../msg_gen/cpp/include/Ref/image.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/image.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/image.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/image.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/image.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/image.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/image.msg
-
-../msg_gen/cpp/include/Ref/Position.h: ../msg/Position.msg
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/Position.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/Position.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/Position.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/Position.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/Position.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/Position.msg
-
-../msg_gen/cpp/include/Ref/controls.h: ../msg/controls.msg
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/Ref/controls.h: ../manifest.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/controls.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/controls.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/controls.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/controls.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/controls.msg
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/image.h
 
 ../msg_gen/cpp/include/Ref/CurrentStatus.h: ../msg/CurrentStatus.msg
 ../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -276,28 +71,163 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/CurrentStatus.h
 ../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/catkin/package.xml
 ../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/rospack/package.xml
 ../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /home/refnode/projects/april/april_msgs/manifest.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /opt/ros/groovy/share/tf/package.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /home/refnode/projects/hoverTracker/manifest.xml
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /home/refnode/projects/april/april_msgs/msg_gen/generated
-../msg_gen/cpp/include/Ref/CurrentStatus.h: /home/refnode/projects/hoverTracker/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/refnode/projects/Ref/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/CurrentStatus.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/refnode/projects/Ref/msg/CurrentStatus.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/CurrentStatus.msg
+
+../msg_gen/cpp/include/Ref/BotToRef.h: ../msg/BotToRef.msg
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/Ref/BotToRef.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/BotToRef.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/BotToRef.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/BotToRef.msg
+
+../msg_gen/cpp/include/Ref/HoverBot.h: ../msg/HoverBot.msg
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/Ref/HoverBot.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/HoverBot.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/HoverBot.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/HoverBot.msg
+
+../msg_gen/cpp/include/Ref/BotStatus.h: ../msg/BotStatus.msg
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/Ref/BotStatus.h: ../msg/Position.msg
+../msg_gen/cpp/include/Ref/BotStatus.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/BotStatus.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/BotStatus.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/BotStatus.msg
+
+../msg_gen/cpp/include/Ref/Position.h: ../msg/Position.msg
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/Position.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/Position.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/Position.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/Position.msg
+
+../msg_gen/cpp/include/Ref/controls.h: ../msg/controls.msg
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/Ref/controls.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/controls.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/controls.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/controls.msg
+
+../msg_gen/cpp/include/Ref/image.h: ../msg/image.msg
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/Ref/image.h: ../msg/Position.msg
+../msg_gen/cpp/include/Ref/image.h: ../manifest.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/cpp/include/Ref/image.h: /opt/ros/groovy/share/roslib/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/Ref/image.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /projects/ros/surfer-main/lab3/Ref/msg/image.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotStatus.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/CurrentStatus.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotToRef.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/HoverBot.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/image.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/BotStatus.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/Position.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/controls.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/CurrentStatus.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/Ref/image.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 
@@ -310,6 +240,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/refnode/projects/Ref/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/refnode/projects/Ref /home/refnode/projects/Ref /home/refnode/projects/Ref/build /home/refnode/projects/Ref/build /home/refnode/projects/Ref/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /projects/ros/surfer-main/lab3/Ref/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /projects/ros/surfer-main/lab3/Ref /projects/ros/surfer-main/lab3/Ref /projects/ros/surfer-main/lab3/Ref/build /projects/ros/surfer-main/lab3/Ref/build /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

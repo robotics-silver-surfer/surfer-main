@@ -4,8 +4,8 @@ FILE(REMOVE_RECURSE
   "../src/reactivecontrol/msg"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/reactivecontrol/msg/__init__.py"
-  "../src/reactivecontrol/msg/_IRdistance.py"
   "../src/reactivecontrol/msg/_Control.py"
+  "../src/reactivecontrol/msg/_IRdistance.py"
 )
 
 # Per-language clean rules from dependency scanning.

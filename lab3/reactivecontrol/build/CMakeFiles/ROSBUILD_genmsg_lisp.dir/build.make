@@ -42,49 +42,12 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/reactivecontrol/build
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/IRdistance.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_IRdistance.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Control.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Control.lisp
-
-../msg_gen/lisp/IRdistance.lisp: ../msg/IRdistance.msg
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/IRdistance.lisp: ../manifest.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rospy/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/IRdistance.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_IRdistance.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/IRdistance.lisp
-
-../msg_gen/lisp/_package_IRdistance.lisp: ../msg_gen/lisp/IRdistance.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/IRdistance.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_IRdistance.lisp
 
 ../msg_gen/lisp/Control.lisp: ../msg/Control.msg
 ../msg_gen/lisp/Control.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -115,7 +78,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Control.lisp
 ../msg_gen/lisp/Control.lisp: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
 ../msg_gen/lisp/Control.lisp: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
 ../msg_gen/lisp/Control.lisp: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Control.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Control.lisp"
 	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/reactivecontrol/msg/Control.msg
 
@@ -123,13 +86,50 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Control.lisp
 
 ../msg_gen/lisp/_package_Control.lisp: ../msg_gen/lisp/Control.lisp
 
+../msg_gen/lisp/IRdistance.lisp: ../msg/IRdistance.msg
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/IRdistance.lisp: ../manifest.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rospy/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/IRdistance.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+../msg_gen/lisp/IRdistance.lisp: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/IRdistance.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_IRdistance.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/IRdistance.lisp
+
+../msg_gen/lisp/_package_IRdistance.lisp: ../msg_gen/lisp/IRdistance.lisp
+
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/IRdistance.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_IRdistance.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Control.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Control.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/IRdistance.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_IRdistance.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

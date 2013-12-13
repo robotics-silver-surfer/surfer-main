@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/refnode/projects/Ref/build/devel/setup.sh
+    local-name: /projects/ros/surfer-main/lab3/Ref/build/devel/setup.sh

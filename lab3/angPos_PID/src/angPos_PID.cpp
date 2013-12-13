@@ -85,7 +85,7 @@ void anglePID::PID_controller(void)
 
   deadBand = fabs(e1);
   
-  if(deadBand > 0.63)
+  if(deadBand > 4.00)
   {
     pidOutput.rotation.w = P + D;
   }

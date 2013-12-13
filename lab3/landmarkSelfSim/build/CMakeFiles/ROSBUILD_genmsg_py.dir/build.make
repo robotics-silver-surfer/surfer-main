@@ -79,7 +79,9 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/landmarkSelfSim/msg/__init__.py
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/self_test/package.xml
-../src/landmarkSelfSim/msg/_landmarkLocation.py: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/camera_info_manager/package.xml
+../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/usb_cam/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/opencv2/package.xml
 ../src/landmarkSelfSim/msg/_landmarkLocation.py: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)

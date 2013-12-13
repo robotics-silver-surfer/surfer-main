@@ -3,11 +3,11 @@
 
 # compile C with /usr/bin/gcc
 # compile CXX with /usr/bin/c++
-C_FLAGS = -O2 -g -I/projects/ros/surfer-main/lab3/landmarkSelfSim/include -I/projects/ros/surfer-main/lab3/usb_cam/include -I/projects/ros/surfer-main/lab3/usb_cam/msg/cpp -I/opt/ros/groovy/include -I/opt/ros/groovy/include/opencv -I/projects/ros/surfer-main/lab3/landmarkSelfSim/msg_gen/cpp/include    -DROS_PACKAGE_NAME='"landmarkSelfSim"'
+C_FLAGS = -O2 -g -I/projects/ros/surfer-main/lab3/landmarkSelfSim/include -I/opt/ros/groovy/include -I/opt/ros/groovy/include/opencv -I/projects/ros/surfer-main/lab3/landmarkSelfSim/msg_gen/cpp/include    -DROS_PACKAGE_NAME='"landmarkSelfSim"'
 
 C_DEFINES = 
 
-CXX_FLAGS = -O2 -g -I/projects/ros/surfer-main/lab3/landmarkSelfSim/include -I/projects/ros/surfer-main/lab3/usb_cam/include -I/projects/ros/surfer-main/lab3/usb_cam/msg/cpp -I/opt/ros/groovy/include -I/opt/ros/groovy/include/opencv -I/projects/ros/surfer-main/lab3/landmarkSelfSim/msg_gen/cpp/include    -DROS_PACKAGE_NAME='"landmarkSelfSim"'
+CXX_FLAGS = -O2 -g -I/projects/ros/surfer-main/lab3/landmarkSelfSim/include -I/opt/ros/groovy/include -I/opt/ros/groovy/include/opencv -I/projects/ros/surfer-main/lab3/landmarkSelfSim/msg_gen/cpp/include    -DROS_PACKAGE_NAME='"landmarkSelfSim"'
 
 CXX_DEFINES = 
 

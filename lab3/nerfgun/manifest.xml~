@@ -1,0 +1,17 @@
+<package>
+  <description brief="nerfgun">
+
+     nerfgun
+
+  </description>
+  <author>neo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/nerfgun</url>
+  <depend package="joy"/>
+  <depend package="hoverboard"/>
+  <depend package="rospy"/>
+
+</package>
+
+

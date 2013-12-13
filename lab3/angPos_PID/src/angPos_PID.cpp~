@@ -66,6 +66,8 @@ void anglePID::angleCallback (const geometry_msgs::Transform::ConstPtr& transfor
 	pidOutput.translation.x = transformData->translation.x;
 	pidOutput.translation.y = transformData->translation.y;
 	pidOutput.translation.z = transformData->translation.z;
+
+	angle_pub_.publish(pidOutput);
 	
    desiredAngle = transformData->rotation.w;
 }

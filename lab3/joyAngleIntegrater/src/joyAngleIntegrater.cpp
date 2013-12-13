@@ -15,7 +15,7 @@
 //Class Constants
 #define OFFSET		0.05
 #define XBOX_LS_X_AXIS  0
-#define SCALE		50
+#define SCALE		100
 #define MAX_ANGLE	90
 #define TURN_R_STATE	3
 #define TURN_L_STATE	4

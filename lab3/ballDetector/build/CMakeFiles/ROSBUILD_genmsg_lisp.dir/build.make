@@ -42,15 +42,59 @@ CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/ballDetector/build
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballDebug.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/debugTimes.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_debugTimes.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballLocation.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballLocation.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballDebug.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
+
+../msg_gen/lisp/ballDebug.lisp: ../msg/ballDebug.msg
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../msg_gen/lisp/ballDebug.lisp: ../manifest.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/cpp_common/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rostime/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosconsole/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/genmsg/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/genpy/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/message_runtime/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/std_msgs/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/message_filters/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/console_bridge/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/class_loader/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/catkin/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rospack/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslib/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/pluginlib/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/image_transport/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/self_test/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/camera_info_manager/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/usb_cam/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/opencv2/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosgraph/package.xml
+../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rospy/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ballDebug.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ballDebug.lisp"
+	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ballDebug.lisp
+
+../msg_gen/lisp/_package_ballDebug.lisp: ../msg_gen/lisp/ballDebug.lisp
 
 ../msg_gen/lisp/debugTimes.lisp: ../msg/debugTimes.msg
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -82,12 +126,14 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/lisp/debugTimes.lisp: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/camera_info_manager/package.xml
+../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/usb_cam/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/rosgraph/package.xml
 ../msg_gen/lisp/debugTimes.lisp: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/debugTimes.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_debugTimes.lisp"
 	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg
 
@@ -125,12 +171,14 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/lisp/ballLocation.lisp: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/camera_info_manager/package.xml
+../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/usb_cam/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/rosgraph/package.xml
 ../msg_gen/lisp/ballLocation.lisp: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ballLocation.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ballLocation.lisp"
 	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg
 
@@ -138,58 +186,16 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 
 ../msg_gen/lisp/_package_ballLocation.lisp: ../msg_gen/lisp/ballLocation.lisp
 
-../msg_gen/lisp/ballDebug.lisp: ../msg/ballDebug.msg
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../msg_gen/lisp/ballDebug.lisp: ../manifest.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/cpp_common/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rostime/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosconsole/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp_traits/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/genmsg/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/genpy/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/message_runtime/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/std_msgs/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roscpp/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/message_filters/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/console_bridge/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/class_loader/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/catkin/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rospack/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/roslib/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/pluginlib/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/geometry_msgs/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/sensor_msgs/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/image_transport/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/lisp/ballDebug.lisp: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/opencv2/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rosgraph/package.xml
-../msg_gen/lisp/ballDebug.lisp: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ballDebug.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ballDebug.lisp"
-	/opt/ros/groovy/share/roslisp/rosbuild/scripts/genmsg_lisp.py /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ballDebug.lisp
-
-../msg_gen/lisp/_package_ballDebug.lisp: ../msg_gen/lisp/ballDebug.lisp
-
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballDebug.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/debugTimes.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_debugTimes.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballLocation.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballLocation.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ballDebug.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ballDebug.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

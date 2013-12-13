@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/refnode/projects/Ref
+CMAKE_SOURCE_DIR = /projects/ros/surfer-main/lab3/Ref
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/refnode/projects/Ref/build
+CMAKE_BINARY_DIR = /projects/ros/surfer-main/lab3/Ref/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,9 +107,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/refnode/projects/Ref/build/CMakeFiles /home/refnode/projects/Ref/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/refnode/projects/Ref/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /projects/ros/surfer-main/lab3/Ref/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,19 +135,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named Controls
-
-# Build rule for target.
-Controls: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Controls
-.PHONY : Controls
-
-# fast build rule for target.
-Controls/fast:
-	$(MAKE) -f CMakeFiles/Controls.dir/build.make CMakeFiles/Controls.dir/build
-.PHONY : Controls/fast
 
 #=============================================================================
 # Target rules for targets named ROSBUILD_genmsg_cpp
@@ -213,32 +200,6 @@ ROSBUILD_gensrv_lisp: cmake_check_build_system
 ROSBUILD_gensrv_lisp/fast:
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make CMakeFiles/ROSBUILD_gensrv_lisp.dir/build
 .PHONY : ROSBUILD_gensrv_lisp/fast
-
-#=============================================================================
-# Target rules for targets named Referee
-
-# Build rule for target.
-Referee: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Referee
-.PHONY : Referee
-
-# fast build rule for target.
-Referee/fast:
-	$(MAKE) -f CMakeFiles/Referee.dir/build.make CMakeFiles/Referee.dir/build
-.PHONY : Referee/fast
-
-#=============================================================================
-# Target rules for targets named Simulate
-
-# Build rule for target.
-Simulate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Simulate
-.PHONY : Simulate
-
-# fast build rule for target.
-Simulate/fast:
-	$(MAKE) -f CMakeFiles/Simulate.dir/build.make CMakeFiles/Simulate.dir/build
-.PHONY : Simulate/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -474,92 +435,17 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/Controls.o: src/Controls.cpp.o
-.PHONY : src/Controls.o
-
-# target to build an object file
-src/Controls.cpp.o:
-	$(MAKE) -f CMakeFiles/Controls.dir/build.make CMakeFiles/Controls.dir/src/Controls.cpp.o
-.PHONY : src/Controls.cpp.o
-
-src/Controls.i: src/Controls.cpp.i
-.PHONY : src/Controls.i
-
-# target to preprocess a source file
-src/Controls.cpp.i:
-	$(MAKE) -f CMakeFiles/Controls.dir/build.make CMakeFiles/Controls.dir/src/Controls.cpp.i
-.PHONY : src/Controls.cpp.i
-
-src/Controls.s: src/Controls.cpp.s
-.PHONY : src/Controls.s
-
-# target to generate assembly for a file
-src/Controls.cpp.s:
-	$(MAKE) -f CMakeFiles/Controls.dir/build.make CMakeFiles/Controls.dir/src/Controls.cpp.s
-.PHONY : src/Controls.cpp.s
-
-src/Referee.o: src/Referee.cpp.o
-.PHONY : src/Referee.o
-
-# target to build an object file
-src/Referee.cpp.o:
-	$(MAKE) -f CMakeFiles/Referee.dir/build.make CMakeFiles/Referee.dir/src/Referee.cpp.o
-.PHONY : src/Referee.cpp.o
-
-src/Referee.i: src/Referee.cpp.i
-.PHONY : src/Referee.i
-
-# target to preprocess a source file
-src/Referee.cpp.i:
-	$(MAKE) -f CMakeFiles/Referee.dir/build.make CMakeFiles/Referee.dir/src/Referee.cpp.i
-.PHONY : src/Referee.cpp.i
-
-src/Referee.s: src/Referee.cpp.s
-.PHONY : src/Referee.s
-
-# target to generate assembly for a file
-src/Referee.cpp.s:
-	$(MAKE) -f CMakeFiles/Referee.dir/build.make CMakeFiles/Referee.dir/src/Referee.cpp.s
-.PHONY : src/Referee.cpp.s
-
-src/Simulate.o: src/Simulate.cpp.o
-.PHONY : src/Simulate.o
-
-# target to build an object file
-src/Simulate.cpp.o:
-	$(MAKE) -f CMakeFiles/Simulate.dir/build.make CMakeFiles/Simulate.dir/src/Simulate.cpp.o
-.PHONY : src/Simulate.cpp.o
-
-src/Simulate.i: src/Simulate.cpp.i
-.PHONY : src/Simulate.i
-
-# target to preprocess a source file
-src/Simulate.cpp.i:
-	$(MAKE) -f CMakeFiles/Simulate.dir/build.make CMakeFiles/Simulate.dir/src/Simulate.cpp.i
-.PHONY : src/Simulate.cpp.i
-
-src/Simulate.s: src/Simulate.cpp.s
-.PHONY : src/Simulate.s
-
-# target to generate assembly for a file
-src/Simulate.cpp.s:
-	$(MAKE) -f CMakeFiles/Simulate.dir/build.make CMakeFiles/Simulate.dir/src/Simulate.cpp.s
-.PHONY : src/Simulate.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Controls"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
 	@echo "... ROSBUILD_genmsg_py"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
-	@echo "... Referee"
-	@echo "... Simulate"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... clean_test_results"
 	@echo "... doxygen"
@@ -584,15 +470,6 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/Controls.o"
-	@echo "... src/Controls.i"
-	@echo "... src/Controls.s"
-	@echo "... src/Referee.o"
-	@echo "... src/Referee.i"
-	@echo "... src/Referee.s"
-	@echo "... src/Simulate.o"
-	@echo "... src/Simulate.i"
-	@echo "... src/Simulate.s"
 .PHONY : help
 
 

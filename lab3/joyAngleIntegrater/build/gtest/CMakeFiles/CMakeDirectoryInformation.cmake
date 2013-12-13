@@ -11,6 +11,12 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "/projects/ros/surfer-main/lab3/joyAngleIntegrater/include"
+  "/projects/ros/surfer-main/lab3/hovercraft/msg_gen/cpp/include"
+  "/projects/ros/surfer-main/lab3/hoverboard/msg_gen/cpp/include"
+  "/projects/ros/surfer-main/lab3/rxtx/msg_gen/cpp/include"
+  "/projects/ros/surfer-main/lab3/cereal_port/include"
+  "/projects/ros/surfer-main/lab3/reactivecontrol/msg_gen/cpp/include"
+  "/opt/ros/groovy/include"
   "/usr/src/gtest/include"
   "/usr/src/gtest"
   )

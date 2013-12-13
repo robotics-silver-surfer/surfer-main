@@ -3,16 +3,14 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/refnode/projects/Ref/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/projects/ros/surfer-main/lab3/Ref/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/home/refnode/projects/Ref/include"
-  "/home/refnode/projects/hoverTracker/msg_gen/cpp/include"
-  "/home/refnode/projects/april/april_msgs/msg_gen/cpp/include"
+  "/projects/ros/surfer-main/lab3/Ref/include"
   "/opt/ros/groovy/include"
   "/usr/src/gtest/include"
   "/usr/src/gtest"

@@ -74,7 +74,9 @@ CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/image_
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
 CMakeFiles/ballDetector.dir/src/ballDetector.cpp.o: /opt/ros/groovy/share/rosgraph/package.xml

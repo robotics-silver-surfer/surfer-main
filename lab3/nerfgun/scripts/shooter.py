@@ -17,7 +17,7 @@ class shooter:
 		"""
 		
 		self.servo = rospy.Publisher( 'hoverboard/PWMRaw', PWMRaw, latch=True )
-		self.firePub = rospy.Publisher( 'hasFired', BotToRef )
+		self.firePub = rospy.Publisher( 'FromTeam', BotToRef )
 
 		# Opening up nodes and such
 		rospy.init_node('shooter')    
@@ -31,10 +31,11 @@ class shooter:
 		self.shooterServoNumber = rospy.get_param("nerfgun/ShooterServoNumber") 
 		self.triggerThresh = rospy.get_param("nerfgun/TriggerThresh") 
 		
-		self.canFire = rospy.get_param("nerfgun/TestingGun")
+		self.canFire = True #rospy.get_param("nerfgun/TestingGun")
 		self.botID = 0
 		self.shotCount = 0
 		self.isShooting = False
+		self.toRef = BotToRef()
 
 	def __refCallback( self, data ):
 		"""
@@ -50,6 +51,8 @@ class shooter:
 
 		if( data.axes[5] < self.triggerThresh ): 
 			self.__fire_gun( True )
+			self.toRef.botID = self.botID
+			self.firePub.publish( self.toRef )
 
 		else:
 			self.__fire_gun( False ) 
@@ -64,7 +67,7 @@ class shooter:
 		
 		servoPWM = PWMRaw()
 		servoPWM.channel = self.shooterServoNumber
-		if ( up_or_down & ( self.shotCount > 0 | self.canFire ) ): 
+		if ( up_or_down or ( self.shotCount > 0 ) ): 
 			servoPWM.pwm = rospy.get_param("nerfgun/ServoFireValue")
 		else: 
 			servoPWM.pwm = rospy.get_param("nerfgun/ServoReloadValue")
@@ -72,6 +75,7 @@ class shooter:
 		#rospy.loginfo("Setting Servo at: " + str( servoPWM.pwm ) )
 		self.__has_fired( up_or_down )
 		self.servo.publish( servoPWM )
+
 
 	def __has_fired( self, trigger_down ):
 		"""
@@ -82,13 +86,15 @@ class shooter:
 			#trying to shoot - not yet successful
 			self.isShooting = True
 		else:
+			
 			if( self.isShooting ):
 				#trigger has been released - shot successful
 				self.isShooting = False
 				self.shotCount -= 1
-
-				self.firePub.botID = self.botID
-				self.firePub.publish()
+			
+				rospy.loginfo("WE FIRED")
+				self.toRef.botID = self.botID
+				self.firePub.publish( self.toRef )
 
 if __name__ == '__main__':
 	

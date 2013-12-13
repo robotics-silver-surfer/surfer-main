@@ -11,8 +11,6 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "../include"
-  "/projects/ros/surfer-main/lab3/usb_cam/include"
-  "/projects/ros/surfer-main/lab3/usb_cam/msg/cpp"
   "/opt/ros/groovy/include"
   "/opt/ros/groovy/include/opencv"
   "../msg_gen/cpp/include"

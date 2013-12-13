@@ -153,8 +153,12 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
   }
 
   //Set manual vs. auto control
-  if( float( joy->buttons[XBOX_BACK_BTN] == 1) )
+  if( float( joy->buttons[XBOX_X_BTN] == 1) )
   {
+	state = AUTO_STATE;
+    stateChange( state );
+
+/*
     if( state == MANUAL_STATE )
     {
       state = AUTO_STATE;
@@ -164,8 +168,13 @@ void Arbitrator::joyCallback( const sensor_msgs::Joy::ConstPtr& joy )
     {
       state = MANUAL_STATE;
       stateChange( state );
-    }
+    } */
 
+  }
+  if( float( joy->buttons[XBOX_BACK_BTN] == 1) )
+  {
+	state = MANUAL_STATE;
+    stateChange( state );
   }
 
   //Automatic right rotation
@@ -304,11 +313,11 @@ void Arbitrator::stateChange( int state_change )
   {
     case MANUAL_STATE:
       ROS_INFO("State = Manual");
-      ROS_INFO("  --> Press Back button to return to Auto");
+      ROS_INFO("  --> Press X button to return to Auto");
       signalLED( led_on, true, false, 3 ); //flash green led 3 times
       break;
     case AUTO_STATE:
-      ROS_INFO("State = Auto");
+      ROS_INFO("State = Auto: Path Planning");
       ROS_INFO("  --> Press Back button to return to Manual");
       signalLED( led_on, false, true, 3 ); //flash red led 3 times
   } //end switch state_change

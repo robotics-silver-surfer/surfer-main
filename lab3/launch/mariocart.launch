@@ -39,8 +39,8 @@
   <node name="AngPosPID" pkg="angPos_PID" type="angPos_PID" output="screen"/>
 
  <!-- PD Values -->
-  <param name="angCtrl/P" type="double" value="0.003"/>
-  <param name="angCtrl/D" type="double" value="0.060"/>
+  <param name="angCtrl/P" type="double" value="0.020"/> <!--.003 --> 
+  <param name="angCtrl/D" type="double" value="0.000"/> <!--.060 -->
 
  <!-- Joy Angle Integrater -->
   <node name="JoyAngIntegrater" pkg="joyAngleIntegrater" type="joyAngleIntegrater" output="screen"/>

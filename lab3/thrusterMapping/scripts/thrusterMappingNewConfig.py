@@ -8,7 +8,8 @@ from hovercraft.msg import *
 
 
 SCALE = .5
-
+TURN_LEFT_SCALE = 1.1 # Naturally turns right, increasing left scale
+MOTOR_4_SCALE = 0.6
 
 class ThrusterMapper:
 	def __init__(self):
@@ -67,10 +68,10 @@ class ThrusterMapper:
 				#Turning CC and going forwad
 				if data.translation.y > 0.0:
 					#rospy.loginfo("CC and F: ") 
-					thruster[1] += abs( -SCALE*data.rotation.w - mag )
+					thruster[1] += abs( -SCALE*data.rotation.w - mag ) * TURN_LEFT_SCALE
 					thruster[2] += 0.0
 					thruster[3] += 0.0					
-					thruster[4] += abs( -SCALE*data.rotation.w + mag )
+					thruster[4] += abs( -SCALE*data.rotation.w + mag ) * MOTOR_4_SCALE
 				# Turning CC and going backward				
 				else:
 					#rospy.loginfo("CC and B: ")
@@ -83,10 +84,10 @@ class ThrusterMapper:
 				# Turning CCW and going forward
 				if data.translation.y > 0.0:
 					#rospy.loginfo("CCW and F: ")
-					thruster[1] += abs( SCALE*data.rotation.w + mag )
+					thruster[1] += abs( SCALE*data.rotation.w + mag ) * TURN_LEFT_SCALE
 					thruster[2] += 0.0
 					thruster[3] += 0.0
-					thruster[4] += abs( SCALE*data.rotation.w - mag )
+					thruster[4] += abs( SCALE*data.rotation.w - mag ) * MOTOR_4_SCALE
 				# Turning CCW and going backward
 				else:
 					#rospy.loginfo("CCW and B: ")
@@ -96,16 +97,26 @@ class ThrusterMapper:
 					thruster[4] += 0.0
 
 	
-		# Remove any negative value 
+		# Remove any negative value or if for some odd reason it goes over 1
 		if thruster[1] < 0.0: 
 			thruster[1] = 0.0
+		elif thruster[1] > 1.0: 
+			thruster[1] = 1.0
+		
 		if thruster[2] < 0.0: 
 			thruster[2] = 0.0
+		elif thruster[2] > 1.0: 
+			thruster[2] = 1.0
+		
 		if thruster[3] < 0.0: 
 			thruster[3] = 0.0
+		elif thruster[3] > 1.0: 
+			thruster[3] = 1.0
+
 		if thruster[4] < 0.0: 
 			thruster[4] = 0.0
-		
+		elif thruster[4] > 1.0: 
+			thruster[4] = 1.0		
 
 		self.thruster.thruster1 = thruster[1]
 		self.thruster.thruster2 = thruster[2]

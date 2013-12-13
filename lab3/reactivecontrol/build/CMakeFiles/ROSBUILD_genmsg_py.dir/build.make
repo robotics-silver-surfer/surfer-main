@@ -44,44 +44,11 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/__init__.py
 
-../src/reactivecontrol/msg/__init__.py: ../src/reactivecontrol/msg/_IRdistance.py
 ../src/reactivecontrol/msg/__init__.py: ../src/reactivecontrol/msg/_Control.py
+../src/reactivecontrol/msg/__init__.py: ../src/reactivecontrol/msg/_IRdistance.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reactivecontrol/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg /projects/ros/surfer-main/lab3/reactivecontrol/msg/Control.msg
-
-../src/reactivecontrol/msg/_IRdistance.py: ../msg/IRdistance.msg
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
-../src/reactivecontrol/msg/_IRdistance.py: ../manifest.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/genpy/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosgraph/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rostime/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/catkin/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospack/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roslib/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospy/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
-../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reactivecontrol/msg/_IRdistance.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab3/reactivecontrol/msg/Control.msg /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg
 
 ../src/reactivecontrol/msg/_Control.py: ../msg/Control.msg
 ../src/reactivecontrol/msg/_Control.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -112,14 +79,47 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/__init__.py
 ../src/reactivecontrol/msg/_Control.py: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
 ../src/reactivecontrol/msg/_Control.py: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
 ../src/reactivecontrol/msg/_Control.py: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reactivecontrol/msg/_Control.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/reactivecontrol/msg/Control.msg
 
+../src/reactivecontrol/msg/_IRdistance.py: ../msg/IRdistance.msg
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/std_msgs/msg/Header.msg
+../src/reactivecontrol/msg/_IRdistance.py: ../manifest.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/genpy/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosgraph/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rostime/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/catkin/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospack/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roslib/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rospy/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/cereal_port/manifest.xml
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/rxtx/manifest.xml
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hoverboard/manifest.xml
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hovercraft/manifest.xml
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/rxtx/msg_gen/generated
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hoverboard/msg_gen/generated
+../src/reactivecontrol/msg/_IRdistance.py: /projects/ros/surfer-main/lab3/hovercraft/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/reactivecontrol/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reactivecontrol/msg/_IRdistance.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/reactivecontrol/msg/IRdistance.msg
+
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/_IRdistance.py
 ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/_Control.py
+ROSBUILD_genmsg_py: ../src/reactivecontrol/msg/_IRdistance.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 

@@ -1,19 +1,19 @@
 (cl:defpackage Ref-msg
   (:use )
   (:export
-   "<BOTSTATUS>"
-   "BOTSTATUS"
+   "<CURRENTSTATUS>"
+   "CURRENTSTATUS"
    "<BOTTOREF>"
    "BOTTOREF"
    "<HOVERBOT>"
    "HOVERBOT"
-   "<IMAGE>"
-   "IMAGE"
+   "<BOTSTATUS>"
+   "BOTSTATUS"
    "<POSITION>"
    "POSITION"
    "<CONTROLS>"
    "CONTROLS"
-   "<CURRENTSTATUS>"
-   "CURRENTSTATUS"
+   "<IMAGE>"
+   "IMAGE"
   ))
 

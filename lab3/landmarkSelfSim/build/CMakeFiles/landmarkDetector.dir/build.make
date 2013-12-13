@@ -74,7 +74,9 @@ CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/shar
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmarkDetector.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
@@ -126,7 +128,9 @@ CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/image_tra
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/barcode.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
@@ -178,7 +182,9 @@ CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/image_tran
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/digits.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/digits.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_3)
@@ -230,7 +236,9 @@ CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/image_tr
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/landmark.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_4)
@@ -282,7 +290,9 @@ CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/image_trans
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/mcimg.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_5)
@@ -334,7 +344,9 @@ CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/image_t
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/diagnostic_updater/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/self_test/package.xml
-CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/camera_info_manager/package.xml
+CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/usb_cam/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/opencv2/package.xml
 CMakeFiles/landmarkDetector.dir/src/findlines.c.o: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_6)

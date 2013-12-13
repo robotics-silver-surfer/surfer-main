@@ -76,7 +76,9 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_landmarkLocation.lisp
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/self_test/package.xml
-../msg_gen/lisp/landmarkLocation.lisp: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/camera_info_manager/package.xml
+../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/usb_cam/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/opencv2/package.xml
 ../msg_gen/lisp/landmarkLocation.lisp: /opt/ros/groovy/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/landmarkSelfSim/build/CMakeFiles $(CMAKE_PROGRESS_1)

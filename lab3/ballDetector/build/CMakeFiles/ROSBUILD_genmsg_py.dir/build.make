@@ -44,12 +44,52 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/ballDetector/msg/__init__.py
 
+../src/ballDetector/msg/__init__.py: ../src/ballDetector/msg/_ballDebug.py
 ../src/ballDetector/msg/__init__.py: ../src/ballDetector/msg/_debugTimes.py
 ../src/ballDetector/msg/__init__.py: ../src/ballDetector/msg/_ballLocation.py
-../src/ballDetector/msg/__init__.py: ../src/ballDetector/msg/_ballDebug.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ballDetector/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg /projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg /projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg /projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg
+
+../src/ballDetector/msg/_ballDebug.py: ../msg/ballDebug.msg
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
+../src/ballDetector/msg/_ballDebug.py: ../manifest.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rostime/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/genpy/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/message_filters/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/console_bridge/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/class_loader/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/catkin/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospack/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roslib/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/pluginlib/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/geometry_msgs/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/sensor_msgs/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/image_transport/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/self_test/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/camera_info_manager/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/usb_cam/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/opencv2/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/cv_bridge/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosgraph/package.xml
+../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospy/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ballDetector/msg/_ballDebug.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
 
 ../src/ballDetector/msg/_debugTimes.py: ../msg/debugTimes.msg
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -81,12 +121,14 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ballDetector/msg/__init__.py
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/self_test/package.xml
-../src/ballDetector/msg/_debugTimes.py: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/camera_info_manager/package.xml
+../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/usb_cam/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/opencv2/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/cv_bridge/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/rosgraph/package.xml
 ../src/ballDetector/msg/_debugTimes.py: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ballDetector/msg/_debugTimes.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/ballDetector/msg/debugTimes.msg
 
@@ -120,58 +162,22 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ballDetector/msg/__init__.py
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/self_test/package.xml
-../src/ballDetector/msg/_ballLocation.py: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
+../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/camera_calibration_parsers/package.xml
+../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/camera_info_manager/package.xml
+../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/usb_cam/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/opencv2/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/cv_bridge/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/rosgraph/package.xml
 ../src/ballDetector/msg/_ballLocation.py: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ballDetector/msg/_ballLocation.py"
 	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/ballDetector/msg/ballLocation.msg
 
-../src/ballDetector/msg/_ballDebug.py: ../msg/ballDebug.msg
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roslib/cmake/../../../lib/roslib/gendeps
-../src/ballDetector/msg/_ballDebug.py: ../manifest.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rostime/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/genpy/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/message_filters/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/console_bridge/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/class_loader/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/catkin/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospack/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/roslib/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/pluginlib/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/geometry_msgs/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/image_transport/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/diagnostic_msgs/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/diagnostic_updater/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/self_test/package.xml
-../src/ballDetector/msg/_ballDebug.py: /projects/ros/surfer-main/lab3/usb_cam/manifest.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/opencv2/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/cv_bridge/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rosgraph/package.xml
-../src/ballDetector/msg/_ballDebug.py: /opt/ros/groovy/share/rospy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /projects/ros/surfer-main/lab3/ballDetector/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ballDetector/msg/_ballDebug.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /projects/ros/surfer-main/lab3/ballDetector/msg/ballDebug.msg
-
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/ballDetector/msg/__init__.py
+ROSBUILD_genmsg_py: ../src/ballDetector/msg/_ballDebug.py
 ROSBUILD_genmsg_py: ../src/ballDetector/msg/_debugTimes.py
 ROSBUILD_genmsg_py: ../src/ballDetector/msg/_ballLocation.py
-ROSBUILD_genmsg_py: ../src/ballDetector/msg/_ballDebug.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
